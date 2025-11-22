@@ -20,7 +20,8 @@ author: Mathieu Beaugrand
 ###############################################
 
 navbar-links:
-  Home: "https://matt95b.github.io/blog/"
+  Home: "https://blog.beaugtech.com"
+  Posts: "posts"
   About Me: "aboutme"
 #  Resources:
 #    - Beautiful Jekyll: "https://beautifuljekyll.com"
