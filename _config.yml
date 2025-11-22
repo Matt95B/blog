@@ -234,7 +234,7 @@ gtag: "G-DP7WC78ZFJ"
 # See more details about giscus and each of the following parameters at https://giscus.app
 #giscus:
 hostname: giscus.app # Replace with your giscus instance's hostname if self-hosting
-repository: matt95b/blog
+repository: Matt95B/blog
 repository-id: R_kgDOQYvsjg # ID of your repository, retrieve this info from https://giscus.app
 category: Announcements # Category name of your GitHub Discussion posts
 category-id: DIC_kwDOQYvsjs4CyFuK # ID of your category, retrieve this info from https://giscus.app
