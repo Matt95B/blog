@@ -3,7 +3,7 @@ layout: page
 title: About me
 ---
 
-My name is Mathieu Beaugrand and I am a Senior Solution Engineer at Omnissa.
+My name is Mathieu Beaugrand, I am a Senior Solution Engineer at Omnissa.
 
 IT consultant with 17+ years of experience specialising in Modern Workplace and End User Computing (EUC) technologies. Passionate about technology and driven by innovation, I thrive on helping organisations exceed their goals by crafting efficient, user-centric solutions.
 
