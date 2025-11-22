@@ -6,5 +6,3 @@ tags: [Launcher, CICO, SSO]
 comments: true
 author: Mathieu Beaugrand
 ---
-
-## Overview

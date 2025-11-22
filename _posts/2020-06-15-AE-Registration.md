@@ -1,14 +1,11 @@
 ---
 layout: post
-title: Android Enterprise – Google Account Registration Guide
+title: Android Enterprise – Google account registration guide
 subtitle: Step-by-step instructions for creating a Google account for Android Enterprise
 tags: [Android, Google, AE, AndroidEnterprise]
 comments: true
 author: Mathieu Beaugrand
 ---
-
-## Overview
-
 This guide provides a clear, step-by-step walkthrough on how to create a dedicated Google account for **Android Enterprise (AE)**. This account will later be used to bind your EMM to Android Enterprise.
 
 ---

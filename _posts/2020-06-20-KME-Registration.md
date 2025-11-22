@@ -6,9 +6,6 @@ tags: [Samsung, Knox, KME]
 comments: true
 author: Mathieu Beaugrand
 ---
-
-## Overview
-
 This guide outlines the steps required to register for **Samsung Knox Mobile Enrollment (KME)**, whether you already have an existing Knox web portal account or need to create one.
 
 ---
