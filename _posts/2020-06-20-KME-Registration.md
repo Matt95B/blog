@@ -13,10 +13,11 @@ This guide outlines the steps required to register for **Samsung Knox Mobile Enr
 
 ---
 
-## If You Already Have a Knox Web Portal Account
+## If you already have a Knox account
 
-1. Sign in to the **Samsung Knox Portal**.  
-2. Navigate to **Knox Mobile Enrollment** and click **Get Started**.  
+1. Sign in to the **Samsung Knox Portal**.
+- <https://www.samsungknox.com/en/solutions/it-solutions/knox-mobile-enrollment>
+2. Navigate to **Knox Mobile Enrollment** and click **Get Started**.
 3. Complete the required fields and click **Apply**.
 
 Once your application is approved, Samsung will send a welcome email with instructions on how to begin using the Knox Mobile Enrollment tool.
@@ -25,9 +26,10 @@ Once your application is approved, Samsung will send a welcome email with instru
 
 ---
 
-## If You Do Not Have a Knox Web Portal Account
+## If you don't have a Knox account
 
-1. Go to the **Knox Mobile Enrollment** page and click **Get Started**.  
+1. Go to the **Knox Mobile Enrollment** page and click **Get Started**.
+- <https://www.samsungknox.com/en/solutions/it-solutions/knox-mobile-enrollment>
 2. Fill out the required registration fields.  
 3. Check your inbox for a confirmation email and click **Complete Registration**.  
 4. Set and confirm your **Knox web portal password**.  
@@ -46,4 +48,4 @@ Once your application is approved, Samsung will send a welcome email with instru
 
 ## References
 
-- About KME: "https://docs.samsungknox.com/KME-Getting-Started/Content/about-kme.htm"
+- About KME: <https://docs.samsungknox.com/KME-Getting-Started/Content/about-kme.htm>

@@ -98,5 +98,4 @@ This ensures all eligible devices purchased from Apple or authorised resellers a
 ---
 
 ## References
-- **Apple Business Manager – Getting Started Guide**  
-  "http://apple.com/business/docs/site/Apple_Business_Manager_Getting_Started_Guide.pdf"
+- **Apple Business Manager – Getting Started Guide:** <http://apple.com/business/docs/site/Apple_Business_Manager_Getting_Started_Guide.pdf>

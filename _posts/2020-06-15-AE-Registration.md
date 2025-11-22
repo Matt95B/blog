@@ -17,7 +17,7 @@ This guide provides a clear, step-by-step walkthrough on how to create a dedicat
 ### 1. Start the Google Account Creation
 1. Open your preferred web browser.
 2. Navigate to:  
-   **https://accounts.google.com/SignUp?hl=en**
+   **<https://accounts.google.com/SignUp?hl=en>**
 
 ---
 
