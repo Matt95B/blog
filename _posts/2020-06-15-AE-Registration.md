@@ -8,6 +8,7 @@ author: Mathieu Beaugrand
 ---
 
 ## Overview
+
 This guide provides a clear, step-by-step walkthrough on how to create a dedicated Google account for **Android Enterprise (AE)**. This account will later be used to bind your EMM to Android Enterprise.
 
 ---

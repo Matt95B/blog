@@ -8,6 +8,7 @@ author: Mathieu Beaugrand
 ---
 
 ## Overview
+
 This guide outlines the step-by-step process for enrolling your organisation in Apple Business Manager (ABM). Apple Business Manager centralises device deployment, app distribution, and identity management, making it an essential component of any Apple device strategy in the enterprise.
 
 ## Pre-Requisites
