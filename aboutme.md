@@ -1,16 +1,12 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+My name is Mathieu Beaugrand and I am a Senior Solution Engineer at Omnissa.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+IT consultant with 17+ years of experience specialising in Modern Workplace and End User Computing (EUC) technologies. Passionate about technology and driven by innovation, I thrive on helping organisations exceed their goals by crafting efficient, user-centric solutions.
 
-What else do you need?
+A lifelong learner, I’m always exploring emerging technologies and products to stay ahead of industry trends. My expertise lies in discovering and scoping EUC requirements for customers, focusing on Unified Endpoint Management (UEM), endpoint security, and Virtual Desktop Infrastructure (VDI) solutions. I also enjoy optimising endpoint deployment processes to enhance business efficiency and deliver a seamless user experience.
 
-### My story
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+What truly excites me is collaborating with clients to design and implement practical, user-friendly EUC solutions that make a tangible impact on their daily operations. Seeing those solutions improve productivity and simplify work is what makes this field so rewarding.
