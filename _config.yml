@@ -235,13 +235,15 @@ gtag: "G-DP7WC78ZFJ"
 #giscus:
 hostname: giscus.app # Replace with your giscus instance's hostname if self-hosting
 repository: Matt95B/blog
-repository-id: R_kgDOQYvsjg # ID of your repository, retrieve this info from https://giscus.app
-category: Announcements # Category name of your GitHub Discussion posts
-category-id: DIC_kwDOQYvsjs4CyFuK # ID of your category, retrieve this info from https://giscus.app
-mapping: pathname
-reactions-enabled: 1
-emit-metadata: 0
+# Instead I modified the script in _includes/giscus-comment.html
+# repository-id: R_kgDOQYvsjg # ID of your repository, retrieve this info from https://giscus.app
+# category: Announcements # Category name of your GitHub Discussion posts
+# category-id: DIC_kwDOQYvsjs4CyFuK # ID of your category, retrieve this info from https://giscus.app
+# mapping: pathname
+# reactions-enabled: 1
+# emit-metadata: 0
 # theme: light
+
 
 ################
 # --- Misc --- #
