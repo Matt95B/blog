@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrating Omnissa DEM from AD Mode to No-AD Mode
+title: Migrating Omnissa DEM from AD mode to No-AD mode
 subtitle: A step-by-step guide for modernising your Dynamic Environment Manager (DEM) deployment
 tags: [DEM, Horizon]
 comments: true
@@ -23,14 +23,14 @@ By following a staged migration plan, you can ensure minimal disruption and main
 
 ---
 
-## AD vs. No-AD Mode
+## AD vs. No-AD mode
 
-### AD Mode
+### AD mode
 - Uses Group Policy Objects (GPOs) for configuration  
 - Requires Active Directory for targeting and policy delivery  
 - Best suited for traditional on-premises environments  
 
-### No-AD Mode
+### No-AD mode
 - Uses a `NoAD.xml` config file stored on the configuration share  
 - No dependency on AD or GPOs  
 - Ideal for cloud-based or hybrid deployments  
@@ -38,25 +38,25 @@ By following a staged migration plan, you can ensure minimal disruption and main
 
 ---
 
-## Why Migrate to No-AD Mode?
+## Why migrate to No-AD mode?
 
 Migrating to No-AD mode offers several advantages:
 
-- **Simplified Management** – No more GPO administration or AD filtering  
-- **Cloud Readiness** – Supports cloud-only and hybrid environments  
-- **Faster Deployment** – File-based configuration is easy to replicate, and logins are typically faster since GPO processing is reduced  
-- **Improved Flexibility** – Ideal for modern workspace use cases  
+- **Simplified management** – No more GPO administration or AD filtering  
+- **Cloud readiness** – Supports cloud-only and hybrid environments  
+- **Faster deployment** – File-based configuration is easy to replicate, and logins are typically faster since GPO processing is reduced  
+- **Improved flexibility** – Ideal for modern workspace use cases  
 
-## Change Considerations
+## Change considerations
 
-### What Changes
+### What changes
 - **FlexEngine configuration mechanism:**  
   In No-AD mode, FlexEngine reads settings from a `NoAD.xml` file instead of GPOs.
 
 - **Installation method:**  
   FlexEngine must be installed using the `NOADCONFIGFILEPATH` MSI property.
 
-### What Doesn’t Change
+### What doesn’t change
 Your existing configuration remains fully compatible:
 - Configuration share  
 - Profile archive share  
@@ -64,38 +64,38 @@ Your existing configuration remains fully compatible:
 - User Environment settings  
 - Predefined/Default settings  
 
-### Co-Existence
+### Co-existence
 - FlexEngine in No-AD mode *ignores DEM GPO settings*, enabling staged rollout by pool or OU.
 - You do **not** need to remove GPOs immediately.
 
 ---
 
-## Migration Steps
+## Migration steps
 
-### 1. Create a `NoAD.xml` Configuration File
+### 1. Create a `NoAD.xml` configuration file
 Use the [sample](https://docs.omnissa.com/bundle/DEMInstallConfigGuideV2309/page/SampleNoAD.xmlFile.html) provided by Omnissa to create your `NoAD.xml` file and place it on your DEM configuration share.
 
-### 2. Enable No-AD Mode on Client Machines
+### 2. Enable No-AD mode on client machines
 
 Reinstall the DEM agent in No-AD mode on your gold image or test ring devices:
 
-```bash
+```
 msiexec /i "Omnissa Dynamic Environment Manager x64.msi" /qn /l*v %TEMP%\DEM-NoAD.log NOADCONFIGFILEPATH=\\FileSrv\DEMConfig$\General
 ```
 
 - This enables No-AD mode.
 - FlexEngine will now read NoAD.xml from the specified path.
 
-### 3. Verify Policy Application
+### 3. Verify policy application
 - Confirm Personalization and User Environment settings apply correctly
 - Validate behavior across different user scenarios
 
-### 4. Roll Out in Batches or Rings
+### 4. Roll out in batches or rings
 - Reinstall FlexEngine with the `NOADCONFIGFILEPATH` property on all target devices
 - Since No-AD clients ignore DEM GPOs, GPOs may remain during migration
 - Once all clients are migrated, unlink or disable DEM GPOs
 
-### 5. Rollback (If Needed)
+### 5. Rollback (If needed)
 
 If rollback is required:
 1.	Uninstall FlexEngine
