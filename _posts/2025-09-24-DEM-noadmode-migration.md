@@ -87,20 +87,20 @@ msiexec /i "Omnissa Dynamic Environment Manager x64.msi" /qn /l*v %TEMP%\DEM-NoA
 - FlexEngine will now read NoAD.xml from the specified path.
 
 ### 3. Verify Policy Application
-	•	Confirm Personalization and User Environment settings apply correctly
-	•	Validate behavior across different user scenarios
+- Confirm Personalization and User Environment settings apply correctly
+- Validate behavior across different user scenarios
 
 ### 4. Roll Out in Batches or Rings
-	•	Reinstall FlexEngine with the `NOADCONFIGFILEPATH` property on all target devices
-	•	Since No-AD clients ignore DEM GPOs, GPOs may remain during migration
-	•	Once all clients are migrated, unlink or disable DEM GPOs
+- Reinstall FlexEngine with the `NOADCONFIGFILEPATH` property on all target devices
+- Since No-AD clients ignore DEM GPOs, GPOs may remain during migration
+- Once all clients are migrated, unlink or disable DEM GPOs
 
 ### 5. Rollback (If Needed)
 
 If rollback is required:
-	1.	Uninstall FlexEngine
-	2.	Reinstall without the `NOADCONFIGFILEPATH` property
-	3.	Re-enable DEM GPOs
+1.	Uninstall FlexEngine
+2.	Reinstall without the `NOADCONFIGFILEPATH` property
+3.	Re-enable DEM GPOs
 
 Since configuration and profile archives are unchanged, rollback is quick and low-risk.
 
