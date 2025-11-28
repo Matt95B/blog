@@ -1,0 +1,44 @@
+---
+layout: page
+title: Blog posts
+---
+
+<!-- Search Box -->
+<input
+  type="text"
+  id="searchInput"
+  placeholder="Search blog posts..."
+  style="width: 100%; padding: 10px; margin-bottom: 20px; font-size: 16px;"
+>
+
+<ul id="postList">
+  {% for post in site.posts %}
+  <li class="post-item" style="margin-bottom: 20px;">
+    <a href="{{ post.url | relative_url }}">
+      <strong>{{ post.title }}</strong>
+    </a>
+    <br>
+    <small>{{ post.date | date: "%Y-%m-%d" }}</small>
+
+    {% if post.subtitle %}
+      <p style="margin: 5px 0; font-style: italic;">
+        {{ post.subtitle }}
+      </p>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+
+<script>
+  const searchInput = document.getElementById("searchInput");
+  const posts = document.querySelectorAll(".post-item");
+
+  searchInput.addEventListener("keyup", function () {
+    const filter = searchInput.value.toLowerCase();
+
+    posts.forEach(function (post) {
+      const text = post.textContent.toLowerCase();
+      post.style.display = text.includes(filter) ? "" : "none";
+    });
+  });
+</script>
