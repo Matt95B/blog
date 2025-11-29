@@ -240,6 +240,13 @@ Login to your Workspace ONE UEM console, go to **Groups & Settings > All Setting
 
 ## 5. Workspace ONE UEM
 ### 5.1 Authentication settings
+Workspace ONE UEM supports several authentication workflows, and in this setup I’ve configured Workspace ONE UEM to use Omnissa Access as the authentication source. This in turn allows for Workspace ONE Launcher to use SAML for authentication instead of Active Directory.
+In this setup Omnissa Access is then federated with EntraID, so any authentication for device enrolment or Hub authentication will leverage EntraID conditional access policies.
+
+Also you need to make sure that your Google integration is set to:
+- Management Mode: **Work Managed**
+- Account Generation: **Device-Based**
+- Management Source: **Custom DPC**
 
 | EMM Registration | Enrollment |
 |:-------------------:|:-------------------:|
