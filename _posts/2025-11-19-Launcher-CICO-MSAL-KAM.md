@@ -202,7 +202,7 @@ Run the below `PowerShell` script, and replace the placeholder attributes with y
 {: .box-note}
 **Tip:** The script provided seem to only works on Windows, so if you are using macOS or Linux, make sure to run this script from a Windows VM.
 
-Once completed, the script will generate two certifcate files (.cer and .pfx). Keep them in a safe place in case you need them in future. Note that the signing certifcate is only valid for 1 year, so you will need to renew it before its expiration
+Once completed, the script will generate two certificate files (.cer and .pfx). Keep them in a safe place in case you need them in future. Note that the signing certifcate is only valid for 1 year, so you will need to renew it before its expiration
 .
 
 ### 4.2 Microsoft Authenticator
