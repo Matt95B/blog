@@ -7,14 +7,11 @@ readtime: true
 comments: true
 author: Mathieu Beaugrand
 ---
-![](http://blog.beaugtech.com/assets/img/under-construction.jpg)
-
 I was recently invited to present at a Samsung Expert training event to demonstrate how solutions from Omnissa seamlessly integrate with and enhance the capabilities of Samsung Knox. To support this presentation, I built a full demo environment showcasing how KME (Knox Mobile Enrollment), KSP (Knox Service Plugin), and KAM (Knox Authentication Manager) when combined with Workspace ONE create a powerful, end-to-end solution uniquely positioned to address frontline workforce needs.
 
-This solution is made up of several key components, each playing a critical role in enabling secure, efficient, and scalable device operations. 
-It ultimately provides a simple login screen, workers can “check out” a device at the start of their shift and automatically receive the apps, policies, and permissions assigned to their role. When the shift ends, “checking in” the device clears personal data and returns it to a clean, ready-for-the-next-user state. This reduces device sprawl, ensures consistent user experiences, and maintains strong data privacy.
+This solution is made up of several key components, each playing a critical role in enabling secure, efficient, and scalable device operations. Once configured, workers can simply “check out” a device at the start of their shift by login in, automatically receive the apps, policies, and permissions assigned to their role. When the shift ends, “checking in” the device clears personal data and returns it to a clean, ready-for-the-next-user state. This reduces device sprawl, ensures consistent user experiences, and maintains strong data privacy.
 
-The section below provides a high-level overview of the components making up the solutions, while the remainder of this blog will dive deeper into some of the configuration details.
+The section below provides a high-level overview of the components making up the solutions, while the remainder of this blog will dive deeper into the configuration details.
 
 - Identity
     - On-premises Active Directory (AD) synchronised to EntraID via cloud sync
@@ -155,7 +152,7 @@ To create your KAM config, login to your Workspace ONE UEM console, go to **Reso
 The [Microsoft Authentication Library (MSAL)](https://learn.microsoft.com/en-us/entra/msal/android/) is a modern authentication framework developed by Microsoft that enables apps to securely sign in users. By enabling Microsoft SSO for shared Android devices, your shift workers can seamlessly sign into mobile applications when they check-out (sign-in) a shared device. This feature enables single sign-on into:
 - Many first-party Microsoft apps, such as Microsoft Teams.
     - A list of first-party Microsoft apps that support this mode of single sign-on can be found [here](https://learn.microsoft.com/en-us/entra/msal/android/shared-devices#microsoft-applications-that-support-shared-device-mode).
-- Any other application that supports Microsoft’s Shared Device Mode using the Microsoft Authentication Library (MSAL).
+- Any other application that supports Microsoft’s shared device mode using the Microsoft Authentication Library (MSAL).
 
 ### 4.1 Configure Microsoft SSO
 To configure Microsoft SSO, login to your Workspace ONE UEM console, go to **Groups & Settings > All Settings > System > Enterprise Integration > Directory Services**.
@@ -195,7 +192,7 @@ Then login to **Microsoft Entra admin center**, go to **Enterprise Applications*
 
 ![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/Entra-MSAL-SSO-Claim.png)
 
-Next, you’ll need to create a signing key to securely issue the custom claim (Immutable ID). This signing key is made up of three components, a public key file, a private key file, and the password used to decrypt that private key. To generate the certifcate, download the PowerShell script provided by Omnissa called: [Set Custom Signing Key - Microsoft SSO](https://customerconnect.omnissa.com/downloads/details?downloadGroup=WS1-UEM-SS&productId=1589&rPId=118923).
+Next, you’ll need to create a signing key to securely issue the custom claim (Immutable ID). This signing key is made up of three components, a public key file, a private key file, and the password used to decrypt that private key. To generate the certificate, download the PowerShell script provided by Omnissa called: [Set Custom Signing Key - Microsoft SSO](https://customerconnect.omnissa.com/downloads/details?downloadGroup=WS1-UEM-SS&productId=1589&rPId=118923).
 
 Run the below `PowerShell` script, and replace the placeholder attributes with your tenant details.
 ```powershell
@@ -205,7 +202,8 @@ Run the below `PowerShell` script, and replace the placeholder attributes with y
 {: .box-note}
 **Tip:** The script provided seem to only works on Windows, so if you are using macOS or Linux, make sure to run this script from a Windows VM.
 
-Once completed, the script will generate two certifcate files (.cer and .pfx). Keep them in a safe place in case you need them in future. Note that the signing certifcate is only valid for 1 year, so you will need to renew it before it expires.
+Once completed, the script will generate two certifcate files (.cer and .pfx). Keep them in a safe place in case you need them in future. Note that the signing certifcate is only valid for 1 year, so you will need to renew it before its expiration
+.
 
 ### 4.2 Microsoft Authenticator
 When configured in shared device mode, Microsoft Authenticator enables a secure and streamlined sign-in experience on devices used by multiple frontline workers. Instead of treating the device as personally owned, shared mode binds the authentication flow to a single, shift-based user session.
@@ -240,8 +238,7 @@ Login to your Workspace ONE UEM console, go to **Groups & Settings > All Setting
 
 ## 5. Workspace ONE UEM
 ### 5.1 Authentication settings
-Workspace ONE UEM supports several authentication workflows, and in this setup I’ve configured Workspace ONE UEM to use Omnissa Access as the authentication source. This in turn allows for Workspace ONE Launcher to use SAML for authentication instead of Active Directory.
-In this setup Omnissa Access is then federated with EntraID, so any authentication for device enrolment or Hub authentication will leverage EntraID conditional access policies.
+Workspace ONE UEM supports several authentication workflows. In this setup, I’ve configured Workspace ONE UEM to use Omnissa Access as the authentication source. This in turn allows for Workspace ONE Launcher to use SAML for authentication instead of Active Directory. Omnissa Access is then federated with EntraID, so any authentication for device enrolment or Intelligent Hub will leverage EntraID conditional access policies.
 
 Also you need to make sure that your Google integration is set to:
 - Management Mode: **Work Managed**
@@ -252,10 +249,10 @@ Also you need to make sure that your Google integration is set to:
 |:-------------------:|:-------------------:|
 | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-EMMRegistration.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-EMMRegistration.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Enrollment.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Enrollment.png) |
 
-### 5.2 Mutli-user staging account
-Workspace ONE UEM supports several staging workflows, and in this setup I’ve configured a multi-user staging account. This allows each device to be fully staged once, after which frontline workers simply sign in at the start of their shift and sign out when they’re finished. At logoff, user specific data is cleared and the device returns to its clean, staged state, ready for the next worker.
+### 5.2 Multi-user staging account
+Workspace ONE UEM supports several staging workflows. In this setup, I’ve configured a multi-user staging account so that each device only needs to be staged once. Thereafter, frontline workers simply sign in at the start of their shift and sign out when they finish. At logoff, user specific data is cleared and the device returns to its clean, staged state, ready for the next worker.
 
-To configure a mutli user staging account, login to your Workspace ONE UEM console, go to **Accounts > Users** and click **Add User**.
+To configure a mutli-user staging account, login to your Workspace ONE UEM console, go to **Accounts > Users** and click **Add User**.
 
 - Complete the necessary fields
     - This staging account could either be a Directory or Basic account
@@ -296,7 +293,7 @@ Login to your Workspace ONE UEM console, go to **Groups & Settings > All Setting
 
 ![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-SDK.png)
 
-### 5.5 Worksapce ONE Launcher
+### 5.5 Workspace ONE Launcher
 Now onto the last piece of the puzzle, configuring Workspace ONE Launcher to customise the device layout.
 
 Workspace ONE Launcher is a customisable Android home screen to give organisations tighter control over corporate and frontline devices. By replacing the standard Android launcher, it allows IT teams to present only approved apps, apply kiosk settings, and lock down system settings to ensure a secure, task-focused environment. This creates a simpler experience for workers, reduces distractions, strengthens security, and ensures devices stay consistent and compliant. With flexible branding options Launcher is an ideal solution for retail, logistics, field services, and any scenario where devices need to stay focused, secure, and easy to use.
