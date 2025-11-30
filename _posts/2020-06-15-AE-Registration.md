@@ -2,7 +2,7 @@
 layout: post
 title: Android Enterprise – Google account registration guide
 subtitle: Step-by-step instructions for creating a Google account for Android Enterprise
-tags: [Android, Google, AE, AndroidEnterprise]
+tags: [Android, Google, Android Enterprise]
 readtime: true
 comments: true
 author: Mathieu Beaugrand
@@ -28,6 +28,8 @@ This guide provides a clear, step-by-step walkthrough on how to create a dedicat
    - This could be a shared mailbox or distribution group.
 4. Create a **password**, then click **Next**.
 
+![](http://blog.beaugtech.com/assets/img/2020-06-15-AE-Registration/Google-Create-Account.png)
+
 ---
 
 ### 3. Verify Your Email Address
@@ -45,6 +47,8 @@ This guide provides a clear, step-by-step walkthrough on how to create a dedicat
 ### 5. Provide Personal Information
 1. Enter your **Phone Number**, **Birthday**, and **Gender**, then click **Next**.
 2. *Note:* The phone number will be used for **two-factor authentication (2FA)** for this account going forward.
+
+![](http://blog.beaugtech.com/assets/img/2020-06-15-AE-Registration/Google-MFA.png)
 
 ---
 
