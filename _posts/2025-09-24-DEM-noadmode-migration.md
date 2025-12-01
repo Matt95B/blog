@@ -2,7 +2,7 @@
 layout: post
 title: Migrating Omnissa DEM from AD mode to No-AD mode
 subtitle: A step-by-step guide for modernising your Dynamic Environment Manager (DEM) deployment
-tags: [Horion, DEM]
+tags: [Horizon, DEM]
 readtime: true
 comments: true
 author: Mathieu Beaugrand
