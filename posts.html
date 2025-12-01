@@ -11,50 +11,70 @@ title: Blog posts
   style="width: 100%; padding: 10px; margin-bottom: 20px; font-size: 16px;"
 >
 
-<!-- Tag Filter Section -->
-<h3>Filter by Tag</h3>
-<div id="tagContainer" style="margin-bottom: 20px;">
+<!-- Expandable Tag Filter Section -->
+<div style="margin-bottom: 20px;">
+  <h3
+    id="tagToggle"
+    style="
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    ">
+    <span id="tagToggleIcon">▶</span> Filter by Tag
+  </h3>
 
-  {% assign all_tags = site.tags | sort %}
-  {% for tag in all_tags %}
+  <div
+    id="tagContainer"
+    style="
+      margin-top: 10px;
+      margin-left: 15px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    ">
+
+    {% assign all_tags = site.tags | sort %}
+    {% for tag in all_tags %}
+      <button
+        class="tag-button"
+        data-tag="{{ tag[0] }}"
+        style="
+          padding: 6px 12px;
+          margin: 5px;
+          border: 1px solid #ccc;
+          background: #f5f5f5;
+          border-radius: 6px;
+          cursor: pointer;
+          transition: background 0.2s ease;
+        ">
+        {{ tag[0] }} ({{ tag[1].size }})
+      </button>
+    {% endfor %}
+
     <button
-      class="tag-button"
-      data-tag="{{ tag[0] }}"
+      id="clearTags"
       style="
         padding: 6px 12px;
         margin: 5px;
-        border: 1px solid #ccc;
-        background: #f5f5f5;
+        border: none;
+        background: #eee;
         border-radius: 6px;
         cursor: pointer;
-        transition: background 0.2s ease;
+        font-weight: bold;
       ">
-      {{ tag[0] }} ({{ tag[1].size }})
+      Clear Filter
     </button>
-  {% endfor %}
 
-  <button
-    id="clearTags"
-    style="
-      padding: 6px 12px;
-      margin: 5px;
-      border: none;
-      background: #eee;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-    ">
-    Clear Filter
-  </button>
-
+  </div>
 </div>
+
 
 <ul id="postList">
   {% for post in site.posts %}
-  <li class="post-item"
-      data-tags="{{ post.tags | join: ',' }}"
-      style="margin-bottom: 20px;">
-    
+  <li class="post-item" data-tags="{{ post.tags | join: ',' }}" style="margin-bottom: 20px;">
+
     <a href="{{ post.url | relative_url }}">
       <strong>{{ post.title }}</strong>
     </a>
@@ -82,14 +102,50 @@ title: Blog posts
   {% endfor %}
 </ul>
 
+
 <script>
   const searchInput = document.getElementById("searchInput");
   const posts = document.querySelectorAll(".post-item");
   const tagButtons = document.querySelectorAll(".tag-button");
   const clearTagsButton = document.getElementById("clearTags");
 
-  let activeTag = null;
+  const tagToggle = document.getElementById("tagToggle");
+  const tagContainer = document.getElementById("tagContainer");
+  const tagToggleIcon = document.getElementById("tagToggleIcon");
 
+  let activeTag = null;
+  let tagsExpanded = false;
+
+  // ----- Expand / Collapse Tag Filter -----
+  tagToggle.addEventListener("click", () => {
+    tagsExpanded = !tagsExpanded;
+
+    if (tagsExpanded) {
+      tagContainer.style.maxHeight = tagContainer.scrollHeight + "px";
+      tagToggleIcon.textContent = "▼";
+    } else {
+      tagContainer.style.maxHeight = "0";
+      tagToggleIcon.textContent = "▶";
+    }
+  });
+
+
+  // ----- Highlight Active Tag -----
+  function highlightActiveTag() {
+    tagButtons.forEach(btn => {
+      if (btn.dataset.tag === activeTag) {
+        btn.style.background = "#d0e6ff";
+        btn.style.borderColor = "#4a90e2";
+        btn.style.fontWeight = "bold";
+      } else {
+        btn.style.background = "#f5f5f5";
+        btn.style.borderColor = "#ccc";
+        btn.style.fontWeight = "normal";
+      }
+    });
+  }
+
+  // ----- Filtering Logic -----
   function applyFilters() {
     const search = searchInput.value.toLowerCase();
 
@@ -104,24 +160,10 @@ title: Blog posts
     });
   }
 
-  function highlightActiveTag() {
-    tagButtons.forEach(btn => {
-      if (btn.dataset.tag === activeTag) {
-        btn.style.background = "#d0e6ff";       // highlight color
-        btn.style.borderColor = "#4a90e2";
-        btn.style.fontWeight = "bold";
-      } else {
-        btn.style.background = "#f5f5f5";       // normal color
-        btn.style.borderColor = "#ccc";
-        btn.style.fontWeight = "normal";
-      }
-    });
-  }
-
-  // Search Filtering
+  // Search
   searchInput.addEventListener("keyup", applyFilters);
 
-  // Tag Click
+  // Tag click
   tagButtons.forEach(button => {
     button.addEventListener("click", () => {
       activeTag = button.dataset.tag;
@@ -130,7 +172,7 @@ title: Blog posts
     });
   });
 
-  // Clear Tag Filter
+  // Clear tag filter
   clearTagsButton.addEventListener("click", () => {
     activeTag = null;
     highlightActiveTag();
