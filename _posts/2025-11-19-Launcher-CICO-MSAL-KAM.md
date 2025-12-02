@@ -104,7 +104,9 @@ With this configuration in place, KSP ensures that KAM remains running at all ti
 ## 3. Knox Authentication Manager (KAM)
 [Knox Authentication Manager (KAM)](https://docs.samsungknox.com/admin/knox-authentication-manager/) is a managed, Android autofill service for shared, fully managed Samsung devices. Knox Authentication Manager offers multi-user facial biometrics to speed-up shared device sign-ins, eliminates authentication friction by saving and automatically filling user credentials for any productivity app that requires manual sign-in, and securely syncs users’ profiles across shared devices.
 
-Video overview: <https://youtu.be/zcw76H7qBl4>
+<div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zcw76H7qBl4?si=XY2zPJHX4SuL1b46" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 To create your KAM config, login to your Workspace ONE UEM console, go to **Resources > Native Apps > Public**. Locate the KAM app (or import it via Google Managed Play if needed), **Select** it and click **Assign**.
 
@@ -330,6 +332,7 @@ To create a Launcher profile, login to your Workspace ONE UEM console, go to **R
 | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Canvas.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Canvas.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-CanvasHidden.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-CanvasHidden.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Layout.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Layout.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Foryou.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Foryou.png) |
 
 ## User experience
+
 <div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ILR0jOKj6vU?si=EvZP5g3oJanv3jmZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
