@@ -2,7 +2,7 @@
 layout: post
 title: Workspace ONE Launcher with CICO, MSAL & KAM
 subtitle: Samsung shared device use case with CICO (Check-in, Check-out), MSAL (Microsoft Authentication Library) and Knox Authentication Manager (KAM)
-tags: [Workspace ONE, Android, Launcher, CICO, SSO, MSAL, Knox]
+tags: [Workspace ONE, Android, Launcher, Shared Device, SSO, MSAL, Knox]
 readtime: true
 comments: true
 author: Mathieu Beaugrand
@@ -328,3 +328,8 @@ To create a Launcher profile, login to your Workspace ONE UEM console, go to **R
 | Launcher canvas | Launcher hidden apps | Launcher layout | Launcher for you |
 |:-------------------:|:-------------------:|:-------------------:|:-------------------:|
 | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Canvas.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Canvas.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-CanvasHidden.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-CanvasHidden.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Layout.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Layout.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Foryou.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Foryou.png) |
+
+## User experience
+<div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ILR0jOKj6vU?si=EvZP5g3oJanv3jmZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
