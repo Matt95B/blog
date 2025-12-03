@@ -334,5 +334,5 @@ To create a Launcher profile, login to your Workspace ONE UEM console, go to **R
 ## User experience
 
 <div class="video-container">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ILR0jOKj6vU?si=EvZP5g3oJanv3jmZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bEPC7nJ1x4A?si=XKjlyJql0ld0Uw8V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
