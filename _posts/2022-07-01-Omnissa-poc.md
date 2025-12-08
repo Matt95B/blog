@@ -21,7 +21,7 @@ To help clients better understand how the Omnissa platform components interact, 
 
 | UEM | Horizon | UEM + Horizon 8 |
 |:-------------------:|:-------------------:|:-------------------:|
-| [![](https://github.com/Matt95B/workspaceone/blob/main/poc/logical%20diagram/UEM.png)](https://github.com/Matt95B/workspaceone/blob/main/poc/logical%20diagram/UEM.png) | [![](hhttps://github.com/Matt95B/workspaceone/blob/main/poc/logical%20diagram/Horizon.png)](https://github.com/Matt95B/workspaceone/blob/main/poc/logical%20diagram/Horizon.png) | [![](https://github.com/Matt95B/workspaceone/blob/main/poc/logical%20diagram/UEM%2BHorizon8.png)](https://github.com/Matt95B/workspaceone/blob/main/poc/logical%20diagram/UEM%2BHorizon8.png) |
+| ![](https://github.com/Matt95B/workspaceone/blob/main/poc/logical%20diagram/UEM.png) | ![](https://github.com/Matt95B/workspaceone/blob/main/poc/logical%20diagram/Horizon.png) | ![](https://github.com/Matt95B/workspaceone/blob/main/poc/logical%20diagram/UEM%2BHorizon8.png) |
 
 # Prerequisites workbook
 I’ve also created a comprehensive prerequisites spreadsheet that captures all technical requirements in one place. It allows customers to record key configuration details as they work through the checklist. Once complete, the same document can be used as an as-built record, reducing duplication and saving time.
