@@ -21,7 +21,7 @@ To help clients better understand how the Omnissa platform components interact, 
 
 | UEM | Horizon | UEM + Horizon 8 |
 |:-------------------:|:-------------------:|:-------------------:|
-| <img src="https://github.com/Matt95B/workspaceone/blob/f7441650241f69e8bc9e90805aa06550e6c134ac/poc/logical%20diagram/UEM.png"> | <img src="https://github.com/Matt95B/workspaceone/blob/f7441650241f69e8bc9e90805aa06550e6c134ac/poc/logical%20diagram/Horizon.png"> | <img src="https://github.com/Matt95B/workspaceone/blob/f7441650241f69e8bc9e90805aa06550e6c134ac/poc/logical%20diagram/UEM%2BHorizon8.png"> |
+| [![](http://blog.beaugtech.com/assets/img/2022-07-01-Omnissa-poc/UEM.png)](http://blog.beaugtech.com/assets/img/2022-07-01-Omnissa-poc/UEM.png) | [![](http://blog.beaugtech.com/assets/img/2022-07-01-Omnissa-poc/Horizon.png)](http://blog.beaugtech.com/assets/img/2022-07-01-Omnissa-poc/Horizon.png) | [![](http://blog.beaugtech.com/assets/img/2022-07-01-Omnissa-poc/UEM+Horizon8.png)](http://blog.beaugtech.com/assets/img/2022-07-01-Omnissa-poc/UEM+Horizon8.png) |
 
 # Prerequisites workbook
 I’ve also created a comprehensive prerequisites spreadsheet that captures all technical requirements in one place. It allows customers to record key configuration details as they work through the checklist. Once complete, the same document can be used as an as-built record, reducing duplication and saving time.
