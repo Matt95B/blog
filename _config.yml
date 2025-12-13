@@ -170,8 +170,6 @@ footer-hover-col: "#0085A1"
 
 # Fill in your Google Analytics tag ID (or "Measurement ID") to track your website usage
 gtag: "G-DP7WC78ZFJ"
-url: "http://blog.beaugtech.com" # the base hostname & protocol for your site
-baseurl: "" # the subpath of your site, e.g. /blog
 
 # Fill in your Cloudflare Analytics beacon token to track your website using Cloudflare Analytics
 #cloudflare_analytics: ""
