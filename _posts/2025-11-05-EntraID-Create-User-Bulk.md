@@ -52,7 +52,7 @@ foreach ($user in $users) {
     # Password profile from CSV
     $passwordProfile = @{
         ForceChangePasswordNextSignIn = $false
-        Password                     = $user.Password
+        Password = $user.Password
     }
 
     try {
