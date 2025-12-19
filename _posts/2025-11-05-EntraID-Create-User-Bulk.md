@@ -10,16 +10,18 @@ author: Mathieu Beaugrand
 Creating users in Entra ID (formerly Azure AD) is a common task during lab builds, trials, or Proof of Concept (POC) engagements. When dealing with multiple users, automating the process can save significant time and ensure consistency.
 
 This post walks through how to:
-- Create Entra ID users in bulk from a CSV file  
-- Assign licenses automatically  
-- Configure MFA using either **Mobile Phone** or **Temporary Access Pass (TAP)**  
-- Reset user passwords in bulk if required  
+- Create Entra ID users in bulk from a CSV file
+- Assign licenses automatically
+- Configure MFA using either **Mobile Phone** or **Temporary Access Pass (TAP)**
+- Reset user passwords in bulk if required
+
+--- 
 
 # Create a CSV file
 Start by creating a CSV file that contains the users you want to create. This file will act as the input source for the scripts below.
 Save the file locally on your machine.
 
-```csv
+```
 UserPrincipalName,FirstName,LastName,DisplayName,UsageLocation,Mail,MailNickname,Password,MobilePhone
 Testuser1@beaugtech.com,Test,User 1,Test User 1,AU,Testuser1@beaugtech.com,Testuser1,Password123!,+61 123456789
 Testuser2@beaugtech.com,Test,User 2,Test User 2,AU,Testuser2@beaugtech.com,Testuser2,Password123!,+61 123456789
@@ -27,6 +29,8 @@ Testuser2@beaugtech.com,Test,User 2,Test User 2,AU,Testuser2@beaugtech.com,Testu
 
 {: .box-note}
 **Warning:** For production use, avoid storing plaintext passwords in CSV files. Consider using Temporary Access Pass (TAP) or prompting users to set their own password.
+
+---
 
 # Bulk create users with mobile phone MFA
 The following script:
@@ -177,6 +181,8 @@ $tapResults | Export-Csv -Path $outputPath -NoTypeInformation -Force
 Write-Host "`nTAP export completed:" -ForegroundColor Cyan
 Write-Host $outputPath -ForegroundColor Yellow
 ```
+
+---
 
 # Bulk password reset
 From time to time, you may need to reset passwords for multiple users. The following script updates user passwords in bulk using the same CSV file.
