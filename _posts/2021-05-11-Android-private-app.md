@@ -7,7 +7,7 @@ readtime: true
 comments: true
 author: Mathieu Beaugrand
 ---
-# Why host your APK with Google:
+## Why host your APK with Google:
 1. Reliability and service
     1. High-uptime Google servers
     2. Automated device compatibility testing
@@ -23,9 +23,9 @@ author: Mathieu Beaugrand
     2. Malware security scanning.
     3. Alerts if we detect security vulnerabilities in versions of SDKs that you’re using, such as Heartbleed in OpenSSL.
 
-# How to:
+## How to:
 Manage Google Play private apps: <https://support.google.com/a/answer/2494992?hl=en>
 Publish private apps from the Play Console: <https://support.google.com/googleplay/android-developer/answer/6145139?hl=en>
 
-# Best practise and checklist:
+## Best practise and checklist:
 Google Launch checklist: <https://developer.android.com/distribute/best-practices/launch/launch-checklist>

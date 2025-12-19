@@ -17,7 +17,7 @@ This post walks through how to:
 
 --- 
 
-# Create a CSV file
+## Create a CSV file
 Start by creating a CSV file that contains the users you want to create. This file will act as the input source for the scripts below.
 Save the file locally on your machine.
 
@@ -32,7 +32,7 @@ Testuser2@beaugtech.com,Test,User 2,Test User 2,AU,Testuser2@beaugtech.com,Testu
 
 ---
 
-# Bulk create users with mobile phone MFA
+## Bulk create users with mobile phone MFA
 The following script:
 - Connects to Microsoft Graph
 - Creates users from the CSV
@@ -103,7 +103,7 @@ foreach ($user in $users) {
 }
 ```
 
-# Bulk create users with Temporary Access Pass (TAP)
+## Bulk create users with Temporary Access Pass (TAP)
 If you prefer using Temporary Access Pass (TAP) instead of mobile phone MFA, the script below creates users and generates a TAP for each one.
 The TAP values are exported to a CSV file for secure distribution.
 
@@ -184,7 +184,7 @@ Write-Host $outputPath -ForegroundColor Yellow
 
 ---
 
-# Bulk password reset
+## Bulk password reset
 From time to time, you may need to reset passwords for multiple users. The following script updates user passwords in bulk using the same CSV file.
 
 ```powershell

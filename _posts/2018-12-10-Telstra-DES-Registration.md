@@ -11,7 +11,7 @@ Telstra Device Enrolment Service (DES) portal keeps a record of all the compatib
 
 ![](http://blog.beaugtech.com/assets/img/2018-12-10-Telstra-DES-Registration/DES-Overview.png)
 
-# Request a Telstra DES account
+## Request a Telstra DES account
 Pre-Requisites:
 - Be a Telstra Business or Enterprise customer
 - Have an account with **at least one** device manufacturer (Apple DEP or Samsung KNOX)
@@ -20,14 +20,14 @@ To request a Telstra DES account, please complete this [form](https://telstra.au
 {: .box-note}
 **Note:** You will need to supply your Telstra Mobile account number (10 digits) and Customer ID from the device manufacturer (Apple DEP and/or Samsung KME).
 
-# Review and Submit
+## Review and Submit
 Review the information provided and submit your application by clicking Finish.
 
-# Wait for approval
+## Wait for approval
 After you submit your enrolment application, Telstra will review the information provided (processing takes approximately 48 hours). You’ll either be notified when verification is complete or contacted by Telstra if additional information is needed.
 
-# Add administrators
+## Add administrators
 You can add administrator accounts for individuals who are authorised by your business to access the portal. Log in to the [Telstra DES portal](https://des.telstra.com) and choose Customer Details from the menu bar. Choose Add Admin User and enter a name, an email address, and a contact number, if applicable, for your new administrator. You can create as many administrator accounts as you like.
 
-# Further details
+## Further details
 - <https://www.telstra.com.au/business-enterprise/services/managed-services/managed-mobility-services/device-management/device-enrolment>

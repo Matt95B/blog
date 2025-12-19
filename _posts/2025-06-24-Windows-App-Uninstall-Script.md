@@ -16,10 +16,10 @@ This post provides a PowerShell script that can:
 
 ---
 
-# Gathering the application list
+## Gathering the application list
 If you already know which applications you want to remove, you can skip this section. Otherwise, use the scripts below to identify installed applications on a Windows device.
 
-## List installed Win32 applications
+### List installed Win32 applications
 Run the following script to list all **Win32 (MSI / EXE)** applications installed on the device.
 ```powershell
 $RegistryPaths = @(
@@ -40,7 +40,7 @@ foreach ($Path in $RegistryPaths) {
 }
 ```
 
-## List installed AppX applications
+### List installed AppX applications
 To list all removable AppX applications installed for all users on a Windows device, run:
 
 ```powershell
@@ -53,12 +53,13 @@ Make a note of the applications you want to remove. These names (exact or partia
 
 ---
 
-# Uninstall script
+## Uninstall script
 The script below:
 - Accepts a list of application names (exact or partial match)
 - Detects Win32 and AppX applications
 - Uses silent uninstall methods where available
 - Safely exits if no matching applications are found
+- Must be run as 'SYSTEM'
 
 ```powershell
 # Define an array of app names (exact or partial match). For partial match use '*' symbol.
