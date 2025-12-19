@@ -59,7 +59,7 @@ The script below:
 - Detects Win32 and AppX applications
 - Uses silent uninstall methods where available
 - Safely exits if no matching applications are found
-- Must be run as 'SYSTEM'
+- Must be run as `SYSTEM`
 
 ```powershell
 # Define an array of app names (exact or partial match). For partial match use '*' symbol.
