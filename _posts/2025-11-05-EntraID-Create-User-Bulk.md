@@ -7,19 +7,18 @@ readtime: true
 comments: true
 author: Mathieu Beaugrand
 ---
-Creating users in Entra ID (formerly Azure AD) is a common task during lab builds, trials, or Proof of Concept (POC) engagements. When dealing with multiple users, automating the process can save significant time and ensure consistency.
+Creating users in Microsoft Entra ID (formerly Azure AD) is a common task for tenant onboarding, lab builds, trials, or Proof of Concept (POC) engagements. When dealing with multiple users, automating the process can save significant time and ensure consistency. This PowerShell approach gives you flexibility to automate the user creation, licenses assignment and setup the prefered MFA method directly via Microsoft Graph.
 
 This post walks through how to:
 - Create Entra ID users in bulk from a CSV file
-- Assign licenses automatically
-- Configure MFA using either **Mobile Phone** or **Temporary Access Pass (TAP)**
+- Assign Microsoft licenses automatically
+- Configure user's MFA method using either **Mobile Phone** or **Temporary Access Pass (TAP)**
 - Reset user passwords in bulk if required
 
 --- 
 
 ## Create a CSV file
-Start by creating a CSV file that contains the users you want to create. This file will act as the input source for the scripts below.
-Save the file locally on your machine.
+Start by creating a CSV file that contains the users you want to create. This file will act as the input source for the scripts below. Save the file locally on your machine.
 
 ```
 UserPrincipalName,FirstName,LastName,DisplayName,UsageLocation,Mail,MailNickname,Password,MobilePhone
@@ -28,11 +27,11 @@ Testuser2@beaugtech.com,Test,User 2,Test User 2,AU,Testuser2@beaugtech.com,Testu
 ```
 
 {: .box-note}
-**Warning:** For production use, avoid storing plaintext passwords in CSV files. Consider using Temporary Access Pass (TAP) or prompting users to set their own password.
+**Tip:** Ensure each column header exactly matches the script variable names. For production use, avoid storing plaintext passwords in CSV files. Consider using Temporary Access Pass (TAP) or prompting users to set their own password.
 
 ---
 
-## Bulk create users with mobile phone MFA
+## Bulk create users with mobile phone MFA - Option 1
 The following script:
 - Connects to Microsoft Graph
 - Creates users from the CSV
@@ -103,9 +102,8 @@ foreach ($user in $users) {
 }
 ```
 
-## Bulk create users with Temporary Access Pass (TAP)
-If you prefer using Temporary Access Pass (TAP) instead of mobile phone MFA, the script below creates users and generates a TAP for each one.
-The TAP values are exported to a CSV file for secure distribution.
+## Bulk create users with Temporary Access Pass (TAP) - Option 2
+If you prefer using Temporary Access Pass (TAP) instead of mobile phone MFA, the script below creates users and generates a TAP for each one. The TAP values are exported to a CSV file for secure distribution.
 
 ```powershell
 Connect-MgGraph -Scopes `
@@ -185,7 +183,7 @@ Write-Host $outputPath -ForegroundColor Yellow
 ---
 
 ## Bulk password reset
-From time to time, you may need to reset passwords for multiple users. The following script updates user passwords in bulk using the same CSV file.
+Occasionally, you may need to reset user passwords, the following script updates user passwords in bulk using the same CSV file.
 
 ```powershell
 # Connect to Microsoft Graph with required permissions
