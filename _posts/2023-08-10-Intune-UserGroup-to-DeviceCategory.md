@@ -31,12 +31,12 @@ Before running the script, collect the following information.
 ### 1. Entra ID User Group Object IDs
 Identify the **Object ID** of each user security group you want to map to a device category.
 
-![](http://blog.beaugtech.com/blog/assets/img/2023-08-10-Intune-UserGroup-to-DeviceCategory/EntraID-Group-ObjectID.png)
+![](http://blog.beaugtech.com/assets/img/2023-08-10-Intune-UserGroup-to-DeviceCategory/EntraID-Group-ObjectID.png)
 
 ### 2. Intune Device Category Names
 Identify the **exact display names** of the Intune device categories you want to assign.
 
-![](http://blog.beaugtech.com/blog/assets/img/2023-08-10-Intune-UserGroup-to-DeviceCategory/Intune-Device-Categories.png)
+![](http://blog.beaugtech.com/assets/img/2023-08-10-Intune-UserGroup-to-DeviceCategory/Intune-Device-Categories.png)
 
 {: .box-note}
 **Note:** The Entra ID user groups and Intune device categories must already exist before running the script.
@@ -192,4 +192,4 @@ The final step is to create an Entra ID **Security Group** configured as a **Dyn
 Use the following membership rule to automatically populate the group based on the assigned device category:
 `(device.deviceCategory -eq "Category1")`
 
-![](http://blog.beaugtech.com/blog/assets/img/2023-08-10-Intune-UserGroup-to-DeviceCategory/EntraID-Group-DeviceQuery.png)
+![](http://blog.beaugtech.com/assets/img/2023-08-10-Intune-UserGroup-to-DeviceCategory/EntraID-Group-DeviceQuery.png)
