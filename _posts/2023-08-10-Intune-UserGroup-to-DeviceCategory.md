@@ -186,6 +186,8 @@ foreach ($Mapping in $Mappings) {
 }
 ```
 
+---
+
 ## Dynamic device group
 The final step is to create an Entra ID **Security Group** configured as a **Dynamic Device** group.
 
