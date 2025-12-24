@@ -6,17 +6,29 @@ subtitle: List of events I attended and participated in over the years
 <style>
   .container {
     display: flex;
-    align-items: center;        /* vertical alignment */
+    align-items: left;        /* vertical alignment */
     justify-content: space-between;
     gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
   }
-  /* Responsive: stack on small screens */
+  .image {
+    flex: 1;
+    text-align: left;
+  }
+  .image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }  
+/* Responsive: stack on small screens */
   @media (max-width: 768px) {
     .container {
       flex-direction: column;
+      text-align: left;
+    }
+    .image {
       text-align: left;
     }
   }
@@ -36,14 +48,14 @@ Hosting platform: Brighttalk - <a href="https://www.brighttalk.com/webcast/19382
     City: Brisbane & Sydney, Australia<br>
     My role: Presenter<br>
 </p>
-<div class="container"></div>    
-    <div>
+<div class="row"> 
+    <div class="column">
     <img src="http://blog.beaugtech.com/assets/img/events/202511-knox1.jpeg" style="width: 250px;">
     </div>
-    <div>
+    <div class="column">
     <img src="http://blog.beaugtech.com/assets/img/events/202511-knox2.jpeg" style="width: 250px;">
     </div>
-
+</div>
 <hr>
 
 Date: <b>18 September 2025</b><br>
