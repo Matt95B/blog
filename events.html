@@ -31,7 +31,6 @@ subtitle: List of events I attended and participated in over the years
   }
 
   .event-item {
-    padding: 20px 0;
     border-bottom: 2px solid #e5e7eb; /* solid line */
   }
 
@@ -64,12 +63,9 @@ subtitle: List of events I attended and participated in over the years
           </time><br>
           {{ event.type }}<br>
           {% if event.city %}{{ event.city }}<br>{% endif %}
-          <strong>Role:</strong> {{ event.role }}
-        </p>
-
+          Role: <strong>{{ event.role }}</strong>
         {% if event.platform %}
-          <p>
-            <strong>Platform:</strong>
+            Platform:
             {% if event.platform_url %}
               <a href="{{ event.platform_url }}">{{ event.platform }}</a>
             {% else %}
