@@ -88,6 +88,14 @@ social-network-links:
 rss-description: Sharing practical insights on End User Computing (EUC) and modern workplace technologies.
 
 ###########################
+# --- Events collection --- #
+###########################
+collections:
+  events:
+    output: true
+    sort_by: date
+
+###########################
 # --- General options --- #
 ###########################
 

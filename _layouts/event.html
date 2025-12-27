@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<article class="event-page">
+  <h1>{{ page.name }}</h1>
+
+  <p class="event-meta">
+    <time datetime="{{ page.date | date: '%Y-%m-%d' }}">
+      {{ page.date | date: "%d %B %Y" }}
+    </time>
+    · {{ page.type }}
+    {% if page.city %} · {{ page.city }}{% endif %}
+  </p>
+
+  <p><strong>Role:</strong> {{ page.role }}</p>
+
+  {% if page.platform %}
+    <p>
+      <strong>Platform:</strong>
+      {% if page.platform_url %}
+        <a href="{{ page.platform_url }}">{{ page.platform }}</a>
+      {% else %}
+        {{ page.platform }}
+      {% endif %}
+    </p>
+  {% endif %}
+
+  {% if page.images %}
+  <div class="events-container">
+    {% for img in page.images %}
+      <div class="events-image">
+        <img
+          src="{{ img }}"
+          alt="{{ page.name }}"
+          loading="lazy">
+      </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+</article>

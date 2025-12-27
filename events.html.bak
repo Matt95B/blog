@@ -1,0 +1,239 @@
+---
+layout: page
+Name: Events
+subName: List of events I attended and participated in over the years
+---
+<style>
+  .events-container {
+    display: flex;
+    align-items: center;        /* vertical alignment */
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 100%;
+    margin: 0 0;
+  }
+  .events-image {
+    flex: 1;
+    text-align: right;
+    margin: 0 0;
+  }
+    .events-image img {
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Responsive: stack on small screens */
+  @media (max-width: 768px) {
+    .events-container {
+      flex-direction: column;
+      text-align: left;
+      margin: 0 0;
+    }
+
+    .events-image {
+      text-align: center;
+      margin: 0 0;
+    }
+  }
+</style>
+
+Date: <strong>27 November 2025</strong><br>
+Type: Webinar<br>
+Name: <strong>What's new with Horizon</strong><br>
+My role: Q&A panelist<br>
+Hosting platform: Brighttalk - <a href="https://www.brighttalk.com/webcast/19382/658744">https://www.brighttalk.com/webcast/19382/658744</a>
+
+<hr>
+
+<p> Date: <strong>20 & 26 November 2025</strong><br>
+    Type: Vendor event<br>
+    Name: <strong>Samsung Knox expert training</strong><br>
+    City: Brisbane & Sydney, Australia<br>
+    My role: Presenter
+</p>
+<div class="events-container"> 
+    <div class="events-image">
+        <img src="https://blog.beaugtech.com/assets/img/events/202511-knox1.jpeg">
+    </div>
+    <div class="events-image">
+        <img src="https://blog.beaugtech.com/assets/img/events/202511-knox2.jpeg">
+    </div>
+</div>
+
+<hr>
+
+Date: <strong>18 September 2025</strong><br>
+Type: Vendor event<br>
+Name: <strong>Omnissa User Group</strong><br>
+City: Sydney, Australia<br>
+My role: Host
+
+<hr>
+
+<div class="events-container">
+    <div>
+        <p> Date: <strong>26 June 2025</strong><br>
+            Type: Industry event<br>
+            Name: <strong>IDC CIO Summit</strong><br>
+            City: Sydney, Australia<br>
+            My role: Stand duty
+        </p>
+    </div>
+    <div class="events-image">
+        <img src="https://blog.beaugtech.com/assets/img/events/202506-idc.jpeg">
+    </div>
+</div>
+
+<hr>
+
+Date: <strong>15 May 2025</strong><br>
+Type: Vendor event<br>
+Name: <strong>Omnissa User Group</strong><br>
+City: Brisbane, Australia<br>
+My role: Host
+
+<hr>
+
+<div class="events-container">
+    <div>
+        <p> Date: <strong>19 March 2025</strong><br>
+            Type: Vendor event<br>
+            Name: <strong>Omnissa User Group</strong><br>
+            City: Sydney, Australia<br>
+            My role: Host
+        </p>
+    </div>
+    <div class="events-image">
+        <img src="https://blog.beaugtech.com/assets/img/events/202503-occ.jpg">
+    </div>
+</div>
+
+<hr>
+
+Date: <strong>28 November 2023</strong><br>
+Type: Webinar<br>
+Name: <strong>Tech Tuesday - Mobile Phishing Protection Deep Dive and Remediation</strong><br>
+My role: Host<br>
+Hosting platform: Youtube - <i>link no longer available due to Broadcom acquisition</i>
+
+<hr>
+
+<div class="events-container">
+    <div>
+        <p> Date: <strong>11 July 2023</strong><br>
+            Type: Vendor event<br>
+            Name: <strong>VMware User Group - Lunch and Learn</strong><br>
+            City: Brisbane, Australia<br>
+            My role: Presenter
+        </p>
+    </div>
+    <div class="events-image">
+        <img src="https://blog.beaugtech.com/assets/img/events/202307-vmug.jpeg">
+    </div>
+</div>
+
+<hr>
+
+<div class="events-container">
+    <div>
+        <p> Date: <strong>05 July 2023</strong><br>
+            Type: Vendor event<br>
+            Name: <strong>Ingram Experience</strong><br>
+            City: Brisbane, Australia<br>
+            My role: Stand duty
+        </p>
+    </div>
+    <div class="events-image">
+        <img src="https://blog.beaugtech.com/assets/img/events/202307-ingram.jpeg">
+    </div>
+</div>
+
+<hr>
+
+Date: <strong>07 March 2023</strong><br>
+Type: Webinar<br>
+Name: <strong>Tech Tuesday - Improving your mobile security with Mobile Threat Defence (MTD)</strong><br>
+My role: Host<br>
+Hosting platform: Youtube - <i>link no longer available due to Broadcom acquisition</i>
+
+<hr>
+
+Date: <strong>06 September 2022</strong><br>
+Type: Webinar<br>
+Name: <strong>Tech Tuesday - Workspace ONE Mobile Threat Defence (MTD) Overview</strong><br>
+My role: Host<br>
+Hosting platform: Youtube - <i>link no longer available due to Broadcom acquisition</i>
+
+<hr>
+
+<div class="events-container">
+    <div>
+        <p> Date: <strong>23 August 2022</strong><br>
+            Type: Vendor event<br>
+            Name: <strong>Dicker Data TechX</strong><br>
+            City: Brisbane, Australia<br>
+            My role: Stand duty
+        </p>
+    </div>
+    <div class="events-image">
+        <img src="https://blog.beaugtech.com/assets/img/events/202208-dicker.jpeg">
+    </div>
+</div>
+
+<hr>
+
+Date: <strong>09 August 2022</strong><br>
+Type: Vendor event<br>
+Name: <strong>Dicker Data TechX</strong><br>
+City: Perth, Australia<br>
+My role: Stand duty
+
+<hr>
+
+<div class="events-container">
+    <div>
+        <p> Date: <strong>20-21 September 2017</strong><br>
+            Type: Vendor event<br>
+            Name: <strong>Telstra Vantage</strong><br>
+            City: Melbourne, Australia<br>
+            My role: Stand duty
+        </p>
+    </div>
+    <div class="events-image">
+        <img src="https://blog.beaugtech.com/assets/img/events/201709-vantage.jpeg">
+    </div>
+</div>
+
+<hr>
+
+<div class="events-container">
+    <div>
+        <p> Date: <strong>15 June 2017</strong><br>
+            Type: Vendor event<br>
+            Name: <strong>Telstra Connected WA</strong><br>
+            City: Perth, Australia<br>
+            My role: Stand duty
+        </p>
+    </div>
+    <div class="events-image">
+        <img src="https://blog.beaugtech.com/assets/img/events/201706-connected-wa.jpeg">
+    </div>
+</div>
+
+<hr>
+
+<div class="events-container">
+    <div>
+        <p> Date: <strong>21-22 September 2016</strong><br>
+            Type: Vendor event<br>
+            Name: <strong>Telstra Vantage</strong><br>
+            City: Melbourne, Australia<br>
+            My role: Stand duty
+        </p>
+    </div>
+    <div class="events-image">
+        <img src="https://blog.beaugtech.com/assets/img/events/201609-vantage.jpeg">
+    </div>
+</div>
