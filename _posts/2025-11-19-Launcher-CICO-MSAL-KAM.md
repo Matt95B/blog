@@ -50,7 +50,7 @@ To create your KME profile, login to the [Samsung Knox Admin portal](http://sams
 
 | KME Profile | EMM info | DPC extra |
 |:-------------------:|:-------------------:|:-------------------:|
-| [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/KME-Profile.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/KME-Profile.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/KME-EMM.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/KME-EMM.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/KME-DPC.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/KME-DPC.png) |
+| [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/KME-Profile.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/KME-Profile.png) | [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/KME-EMM.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/KME-EMM.png) | [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/KME-DPC.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/KME-DPC.png) |
 
 Additional flags used in the KME profile:
 ```json
@@ -91,11 +91,11 @@ To create your KSP config, login to your Workspace ONE UEM console, go to **Reso
 
 | App Assign | Distribution | Restrictions |
 |:-------------------:|:-------------------:|:-------------------:|
-| [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-Assign.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-Assign.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-Distribution.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-Distribution.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-Restrictions.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-Restrictions.png) |
+| [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-Assign.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-Assign.png) | [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-Distribution.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-Distribution.png) | [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-Restrictions.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-Restrictions.png) |
 
 | AppConfig | Device Policy | Permission controls |
 |:-------------------:|:-------------------:|:-------------------:|
-| [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-AppConfig.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-AppConfig.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-AppConfig-1.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-AppConfig-1.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-AppConfig-2.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-AppConfig-2.png) |
+| [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-AppConfig.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-AppConfig.png) | [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-AppConfig-1.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-AppConfig-1.png) | [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-AppConfig-2.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-AppConfig-2.png) |
 
 With this configuration in place, KSP ensures that KAM remains running at all times and that its app data is preserved during the check-in (log-off) process. It also prevents essential system applications from being put to sleep by Android’s battery optimisation features, maintaining a consistent and reliable user experience. Finally, it pre-configures required app permissions, reducing unnecessary notification prompts during device staging and speeding up the overall provisioning workflow.
 
@@ -142,11 +142,11 @@ To create your KAM config, login to your Workspace ONE UEM console, go to **Reso
 
 | App Assign | Distribution | Restrictions |
 |:-------------------:|:-------------------:|:-------------------:|
-| [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-Assign.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-Assign.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-Distribution.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-Distribution.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-Restrictions.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-Restrictions.png) |
+| [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-Assign.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-Assign.png) | [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-Distribution.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-Distribution.png) | [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-Restrictions.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-Restrictions.png) |
 
 | AppConfig | Configure | Sync controls |
 |:-------------------:|:-------------------:|:-------------------:|
-| [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-AppConfig.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-AppConfig.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-AppConfig-1.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-AppConfig-1.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-AppConfig-2.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-AppConfig-2.png) |
+| [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-AppConfig.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-AppConfig.png) | [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-AppConfig-1.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-AppConfig-1.png) | [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-AppConfig-2.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-AppConfig-2.png) |
 
 ---
 
@@ -176,7 +176,7 @@ To configure Microsoft SSO, login to your Workspace ONE UEM console, go to **Gro
 
 | EntraID integration | Compliance integration |
 |:-------------------:|:-------------------:|
-| [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Directory1.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Directory1.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Directory2.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Directory2.png) |
+| [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Directory1.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Directory1.png) | [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Directory2.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Directory2.png) |
 
 
 #### 4.1.1 Additional steps for hybrid setup
@@ -192,7 +192,7 @@ Then login to **Microsoft Entra admin center**, go to **Enterprise Applications*
     - Source: **Attribute**
     - Source attribute: `user.onpremisesimmutableid`
 
-![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/Entra-MSAL-SSO-Claim.png)
+![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/Entra-MSAL-SSO-Claim.png)
 
 Next, you’ll need to create a signing key to securely issue the custom claim (Immutable ID). This signing key is made up of three components, a public key file, a private key file, and the password used to decrypt that private key. To generate the certificate, download the PowerShell script provided by Omnissa called: [Set Custom Signing Key - Microsoft SSO](https://customerconnect.omnissa.com/downloads/details?downloadGroup=WS1-UEM-SS&productId=1589&rPId=118923).
 
@@ -222,7 +222,7 @@ To create your MS Authenticator shared device mode config, login to your Workspa
     - Shared Device Mode Registration token: `{SharedDeviceRegistrationToken}`
     - Suppress camera consent for QR code: **Enable**
 
-![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-MSA-AppConfig.png)
+![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-MSA-AppConfig.png)
 
 {: .box-note}
 **Tip:** If you are using an Android Restrictions profile, ensure the setting **Allow adding/deleting accounts** is set to **Enable**.
@@ -234,7 +234,7 @@ Login to your Workspace ONE UEM console, go to **Groups & Settings > All Setting
 - Register as Shared Device with Azure for Conditional Access: **Enabled**
 - Global sign-in/sign-out using MSAL: **Enabled**
 
-![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Hub-MSAL.png)
+![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Hub-MSAL.png)
 
 ---
 
@@ -249,7 +249,7 @@ Also you need to make sure that your Google integration is set to:
 
 | EMM Registration | Enrollment |
 |:-------------------:|:-------------------:|
-| [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-EMMRegistration.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-EMMRegistration.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Enrollment.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Enrollment.png) |
+| [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-EMMRegistration.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-EMMRegistration.png) | [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Enrollment.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Enrollment.png) |
 
 ### 5.2 Multi-user staging account
 Workspace ONE UEM supports several staging workflows. In this setup, I’ve configured a multi-user staging account so that each device only needs to be staged once. Thereafter, frontline workers simply sign in at the start of their shift and sign out when they finish. At logoff, user specific data is cleared and the device returns to its clean, staged state, ready for the next worker.
@@ -264,14 +264,14 @@ To configure a mutli-user staging account, login to your Workspace ONE UEM conso
     - Multi User Devices: **Enabled**
     - Android Shared Device Mode: **Launcher**
 
-![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Accounts-Staging.png)
+![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Accounts-Staging.png)
 
 ### 5.3 Shared device settings
 Next you need to ensure that the shared device settings in Workspace ONE UEM are configured to align with your use case. In this setup I've configured the shared device settings as per below.
 
 | Grouping | Logout |
 |:-------------------:|:-------------------:|
-| [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Shared1.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Shared1.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Shared2.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Shared2.png) |
+| [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Shared1.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Shared1.png) | [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Shared2.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Shared2.png) |
 
 ### 5.4 Intelligent Hub SDK
 If you want to enhance the user experience and remove the welcome and privacy sreens when signing into Hub or any Workspace ONE SDK enabled apps, I recommend using the below custom SDK settings.
@@ -293,7 +293,7 @@ Login to your Workspace ONE UEM console, go to **Groups & Settings > All Setting
 {: .box-note}
 **Tip:** Only use `mtdSettings` and `CaptureDexData` if you are licensed for those add-ons.
 
-![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-SDK.png)
+![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-SDK.png)
 
 ### 5.5 Workspace ONE Launcher
 Now onto the last piece of the puzzle, configuring Workspace ONE Launcher to customise the device layout.
@@ -321,15 +321,15 @@ To create a Launcher profile, login to your Workspace ONE UEM console, go to **R
 
 | Launcher config 1 | Launcher config 2 | Launcher config 3 | Launcher config 4 |
 |:-------------------:|:-------------------:|:-------------------:|:-------------------:|
-| [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher1.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher1.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher2.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher2.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher3.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher3.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher4.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher4.png) |
+| [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher1.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher1.png) | [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher2.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher2.png) | [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher3.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher3.png) | [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher4.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher4.png) |
 
 | Launcher config 5 | Launcher config 6 | Launcher config 7 | Launcher config 8 |
 |:-------------------:|:-------------------:|:-------------------:|:-------------------:|
-| [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher5.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher5.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher6.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher6.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher7.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher7.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher8.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher8.png) |
+| [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher5.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher5.png) | [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher6.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher6.png) | [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher7.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher7.png) | [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher8.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher8.png) |
 
 | Launcher canvas | Launcher hidden apps | Launcher layout | Launcher for you |
 |:-------------------:|:-------------------:|:-------------------:|:-------------------:|
-| [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Canvas.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Canvas.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-CanvasHidden.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-CanvasHidden.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Layout.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Layout.png) | [![](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Foryou.png)](http://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Foryou.png) |
+| [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Canvas.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Canvas.png) | [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-CanvasHidden.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-CanvasHidden.png) | [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Layout.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Layout.png) | [![](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Foryou.png)](https://blog.beaugtech.com/assets/img/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Foryou.png) |
 
 ## User experience
 

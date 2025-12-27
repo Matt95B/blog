@@ -20,7 +20,7 @@ author: Mathieu Beaugrand
 ###############################################
 
 navbar-links:
-  Home: "http://blog.beaugtech.com"
+  Home: "https://blog.beaugtech.com"
   Blog posts: "posts"
   Events: "events"
   About Me: "aboutme"
