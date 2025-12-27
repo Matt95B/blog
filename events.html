@@ -37,6 +37,7 @@ subtitle: List of events I attended and participated in over the years
     margin-bottom: 20px;
     margin-top: 20px;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .events-gallery img {
@@ -55,14 +56,24 @@ subtitle: List of events I attended and participated in over the years
   }
 
   @media (max-width: 768px) {
-    .events-container {
-      flex-direction: column;
-      text-align: left;
-    }
+  .events-container {
+    flex-direction: column;
+    align-items: flex-start; /* keep text left */
+  }
 
-    .events-image {
-      text-align: center;
-    }
+  .events-text {
+    text-align: left;        /* force left text */
+    width: 100%;
+  }
+
+  .events-image {
+    width: 100%;
+    justify-content: center; /* images centered */
+  }
+
+  .events-gallery {
+    justify-content: center; /* gallery centered */
+  }
   }
 </style>
 
