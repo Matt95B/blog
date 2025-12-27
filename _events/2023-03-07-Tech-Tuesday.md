@@ -4,5 +4,5 @@ name: Tech Tuesday – Improving your mobile security with Mobile Threat Defence
 date: 2023-03-07
 type: Webinar
 role: Host
-platform: YouTube
+platform: YouTube - link no longer available due to Broadcom acquisition
 ---
