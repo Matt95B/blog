@@ -10,6 +10,7 @@ subtitle: List of events I attended and participated in over the years
     gap: 20px;
     align-items: center;
     margin-bottom: 20px;
+    margin-top: 20px;
   }
 
   .events-text {
@@ -63,7 +64,7 @@ subtitle: List of events I attended and participated in over the years
           </time><br>
           {{ event.type }}<br>
           {% if event.city %}{{ event.city }}<br>{% endif %}
-          Role: <strong>{{ event.role }}</strong>
+          Role: <strong>{{ event.role }}</strong><br>
         {% if event.platform %}
             Platform:
             {% if event.platform_url %}
