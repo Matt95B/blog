@@ -17,8 +17,10 @@ subtitle: List of events I attended and participated in over the years
   }
 
   .events-image {
-    flex: 1;
-    text-align: right;
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
   }
 
   .events-image img {
@@ -26,6 +28,15 @@ subtitle: List of events I attended and participated in over the years
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+  }
+
+  .event-item {
+    padding: 40px 0;
+    border-bottom: 2px solid #e5e7eb; /* solid line */
+  }
+
+  .event-item:last-child {
+    border-bottom: none;
   }
 
   @media (max-width: 768px) {
@@ -43,37 +54,41 @@ subtitle: List of events I attended and participated in over the years
 {% assign events = site.events | sort: "date" | reverse %}
 
 {% for event in events %}
-  <section class="events-container">
-    <div class="events-text">
-      <h3>{{ event.name }}</h3>
-      <p>
-        <time datetime="{{ event.date | date: '%Y-%m-%d' }}">
-          {{ event.date | date: "%d %B %Y" }}
-        </time><br>
-        {{ event.type }}<br>
-        {% if event.city %}{{ event.city }}<br>{% endif %}
-        <strong>Role:</strong> {{ event.role }}
-      </p>
-
-      {% if event.platform %}
+  <section class="event-item">
+    <div class="events-container">
+      <div class="events-text">
+        <h3>{{ event.name }}</h3>
         <p>
-          <strong>Platform:</strong>
-          {% if event.platform_url %}
-            <a href="{{ event.platform_url }}">{{ event.platform }}</a>
-          {% else %}
-            {{ event.platform }}
-          {% endif %}
+          <time datetime="{{ event.date | date: '%Y-%m-%d' }}">
+            {{ event.date | date: "%d %B %Y" }}
+          </time><br>
+          {{ event.type }}<br>
+          {% if event.city %}{{ event.city }}<br>{% endif %}
+          <strong>Role:</strong> {{ event.role }}
         </p>
+
+        {% if event.platform %}
+          <p>
+            <strong>Platform:</strong>
+            {% if event.platform_url %}
+              <a href="{{ event.platform_url }}">{{ event.platform }}</a>
+            {% else %}
+              {{ event.platform }}
+            {% endif %}
+          </p>
+        {% endif %}
+      </div>
+
+      {% if event.images %}
+      <div class="events-image">
+        {% for img in event.images %}
+          <img
+            src="{{ img }}"
+            alt="{{ event.name }}"
+            loading="lazy">
+        {% endfor %}
+      </div>
       {% endif %}
     </div>
-
-    {% if event.images %}
-    <div class="events-image">
-      <img
-        src="{{ event.images[0] }}"
-        alt="{{ event.name }}"
-        loading="lazy">
-    </div>
-    {% endif %}
   </section>
 {% endfor %}
