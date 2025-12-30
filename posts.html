@@ -72,6 +72,7 @@ title: Blog posts
 
 
 <ul class="posts-list list-unstyled" role="list">
+  {% for post in site.posts %}
   <li class="post-preview">
     <article>
       <a href="{{ post.url | absolute_url }}">
@@ -79,7 +80,7 @@ title: Blog posts
 
         {% if post.subtitle %}
           <h3 class="post-subtitle">
-          {{ post.subtitle | strip_html }}
+            {{ post.subtitle | strip_html }}
           </h3>
         {% endif %}
       </a>
@@ -87,6 +88,7 @@ title: Blog posts
       {% if post.author %}
         <span>By <strong>{{ post.author | strip_html }}</strong></span>
       {% endif %}
+
       <p class="post-meta">
         {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
         Posted on {{ post.date | date: date_format }}
@@ -95,19 +97,18 @@ title: Blog posts
       {% if site.feed_show_tags != false and post.tags.size > 0 %}
       <div class="blog-tags">
         <span>Tags:</span>
-        <!-- role="list" needed so that `list-style: none` in Safari doesn't remove the list semantics -->
         <ul class="d-inline list-inline" role="list">
           {% for tag in post.tags %}
           <li class="list-inline-item">
-            <a href="{{ '/tags' | absolute_url }}#{{- tag -}}">{{- tag -}}</a>
+            <a href="{{ '/tags' | absolute_url }}#{{ tag }}">{{ tag }}</a>
           </li>
           {% endfor %}
         </ul>
       </div>
       {% endif %}
-
     </article>
   </li>
+  {% endfor %}
 </ul>
 
 
