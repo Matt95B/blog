@@ -40,7 +40,6 @@ round-avatar: true
 # then specify the following parameter
 title-img: "/assets/img/beaugtech_banner_small.png"
 
-
 #####################################
 # --- Footer social media links --- #
 #####################################
@@ -86,6 +85,15 @@ social-network-links:
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
 rss-description: Sharing practical insights on End User Computing (EUC) and modern workplace technologies.
+
+###########################
+# --- Posts & Events collection --- #
+###########################
+ collections:
+  posts:
+    output: true
+  events:
+    output: true
 
 ###########################
 # --- General options --- #
@@ -239,7 +247,7 @@ giscus:
   repository-id: R_kgDOQbmNcg # ID of your repository, retrieve this info from https://giscus.app
   category: Announcements # Category name of your GitHub Discussion posts
   category-id: DIC_kwDOQbmNcs4CyIA4 # ID of your category, retrieve this info from https://giscus.app
-  mapping: title
+  mapping: pathname
   reactions-enabled: 1
   emit-metadata: 0
   theme: light
