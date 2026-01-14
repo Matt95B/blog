@@ -2,7 +2,7 @@
 layout: post
 title: Deploy private app via Android Enterprise
 subtitle: How to deploy a private app (.apk) on Android Enterprise (AE) devices via the Play Store
-tags: [Android, Android Enterprise, Play Store, App]
+tags: [Android, Play Store, App]
 readtime: true
 comments: true
 author: Mathieu Beaugrand

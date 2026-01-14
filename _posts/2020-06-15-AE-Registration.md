@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Android Enterprise – Google account registration guide
+title: Android Enterprise - Google account registration guide
 subtitle: Step-by-step instructions for creating a Google account for Android Enterprise
-tags: [Android, Android Enterprise]
+tags: [Android]
 readtime: true
 comments: true
 author: Mathieu Beaugrand
