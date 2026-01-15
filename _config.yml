@@ -90,8 +90,6 @@ rss-description: Sharing practical insights on End User Computing (EUC) and mode
 # --- Posts & Events collection --- #
 ###########################
 collections:
-#  posts:
-#    output: true
   events:
     output: true
 
@@ -135,7 +133,7 @@ edit_page_button: false
 navbar-var-length: false
 
 # The keywords to associate with your website, for SEO purposes
-keywords: "EUC,Digital Workspace,Omnissa,Workspace ONE,Horizon,Intune,Modern Management,Endpoint,Device"
+keywords: "EUC,Digital Workspace,Modern Management,Endpoint,Device,Laptop,Desktop,Mobile,UEM,MDM,VDI,Omnissa,Workspace ONE,Horizon,Intune"
 
 ######################################
 # --- Colours / background image --- #

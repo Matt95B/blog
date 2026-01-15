@@ -2,7 +2,7 @@
 layout: post
 title: Disable Microsoft Office macros
 subtitle: A step-by-step guide for disabling Microsoft Office macros 
-tags: [Workspace ONE, Office, Macros, Windows, macOS, Script]
+tags: [Workspace ONE, Office, Macros, Windows, macOS, Script, Essential 8]
 readtime: true
 comments: true
 author: Mathieu Beaugrand
