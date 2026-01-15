@@ -90,6 +90,8 @@ rss-description: Sharing practical insights on End User Computing (EUC) and mode
 # --- Posts & Events collection --- #
 ###########################
 collections:
+  posts:
+    output: true
   events:
     output: true
 

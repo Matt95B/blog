@@ -193,7 +193,7 @@ Chrome Enterprise Premium comes with a lot of advanced configuration capabilitie
     - Repeat the process for the following policies:        
         - Download content analysis
         - Bulk text content analysis
-            - Minimum character count: 1
+            - Minimum character count: 30
         - Print content analysis
         - Real time URL check
 - Go to **Security > Access and data control > Data protection**
