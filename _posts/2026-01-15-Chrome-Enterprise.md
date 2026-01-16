@@ -2,7 +2,7 @@
 layout: post
 title: Enhance your Google Chrome security with Chrome Enterprise
 subtitle: A practical guide to configuring Google Chrome Enterprise using the Google Admin Console, whether devices are managed or BYOD
-tags: [Chrome, EntraID, Workspace ONE, Essential 8]
+tags: [Browser, EntraID, Workspace ONE, Essential 8]
 readtime: true
 comments: true
 author: Mathieu Beaugrand
@@ -52,7 +52,7 @@ At a minimum, add:
 For advanced security capabilities, add:
 - **Chrome Enterprise Upgrade** (Paid)
 
-Some vendors bundle Chrome Enterprise Premium into their offerings. For example, [Omnissa Secure Access Suite](https://www.omnissa.com/insights/blog/omnissa-one-2025-amsterdam-google-chrome-enterprise-premium-secure-browser) includes Chrome Enterprise Premium as part of the solution.
+Some vendors bundle Chrome Enterprise Premium into their offerings. For example, [Omnissa Secure Access Suite](https://www.omnissa.com/insights/blog/omnissa-one-2025-amsterdam-google-chrome-enterprise-premium-secure-browser) includes Chrome Enterprise Premium as part of the solution, so reach out to your Omnissa representative if you prefer to procure it that way.
 
 ![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-Licenses.png)
 
@@ -74,7 +74,7 @@ Google supports multiple user provisioning methods. In this guide, we’ll use *
 
 {: .box-note}
 **Note:** At the time of writing, this integration is in *beta*.
-Alternatively, you can use the **Google Cloud / G Suite Connector by Microsoft** app from the Entra ID app gallery: <https://learn.microsoft.com/en-us/entra/identity/saas-apps/g-suite-provisioning-tutorial>
+Alternatively, you can use the [Google Cloud / G Suite Connector by Microsoft](https://learn.microsoft.com/en-us/entra/identity/saas-apps/g-suite-provisioning-tutorial) app from the Entra ID app gallery.
 
 ### 2.1 SCIM configuration
 - Login to your [Google Admin Console](https://admin.google.com)
@@ -93,9 +93,9 @@ Alternatively, you can use the **Google Cloud / G Suite Connector by Microsoft**
 - Under the **User sync** section, click **Set up user sync**
     - User Scope
         - Use a user based EntraID security group
+            - Nested groups do not seem to work in this scenario
         - Copy the name of your EntraID group and paste it into the field
-        - Click Verify
-        - Note that nested groups are supported
+        - Click **Verify**
     - Organizational unit (OU) selection
         - Select **Place users in a specific OU**
         - Click on **Select organizational unit**
@@ -124,7 +124,7 @@ Alternatively, you can use the **Google Cloud / G Suite Connector by Microsoft**
     - Group scope
         - Select **Sync selected groups**
         - Copy the name of your EntraID group and paste it into the field
-        - Click Verify
+        - Click **Verify**
         - Note that for a group to sync, the group must be a mail-enabled security group (see required group attributes below)
     - Required attributes
         - Leave the default values
@@ -158,7 +158,7 @@ If using another IdP:
 ## 4. Google Chrome configuration
 
 ### 4.1 Chrome Enterprise Core
-Now let's configure the foundation of your Chrome configuration.
+Now let's look at the foundation of your Chrome configuration.
 
 #### 4.1.1 Reporting
 - Go to **Chrome browsers > Settings**
@@ -191,17 +191,17 @@ Extension management is critical to browser security.
 - Select the appropriate OU or Group for assignment
 - Add and configure the Chrome extensions as per your requirements, for example:
     - Endpoint Verification extension
-        - Click the **+** icon and select **Add Chrome app or extension by ID**
+        - Click the "**+**" icon and select **Add Chrome app or extension by ID**
         - Extension ID: **callobklhcbilhphinckomhgkigmfocg**
         - Installation policy: **Force install + pin to browser toolbar** 
     - Secure Enterprise Browser extension:
-        - Click the **+** icon and select **Add Chrome app or extension by ID**
+        - Click the "**+**" icon and select **Add Chrome app or extension by ID**
         - Extension ID: **ekajlcmdfcigmdbphhifahdfjbkciflj**
         - Installation policy: **Force install + pin to browser toolbar** 
 
 ![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-Extension1.png)
 
-Once you gain visibility and understand better which extensions are being used in your environment, it is probably a good idea to then decide how you want to manage them moving forward, by either managing a blocklist or allowlist. For example:
+Once you gain visibility and understand better which extensions are being used in your environment, it is probably a good idea to then decide how you want to manage them moving forward, by either managing a blocklist or allowlist via the below settings:
 
 - Go to **Chrome browsers > Apps & extensions**
 - Under the **Settings** tab
@@ -228,7 +228,7 @@ Chrome Enterprise Premium comes with a lot of advanced configuration capabilitie
         - Password protected files: **Allow**
         - Files larger than 50MB: **Allow**
 
-Repeat the above process for the following policies:        
+Repeat the above process for the following connector policies:        
 - Download content analysis
 - Bulk text content analysis
     - Minimum character count: 30
@@ -245,15 +245,11 @@ Enable advanced data protection features:
 ## 5. Deployment models
 Chrome supports two management modes:
 
-**Managed browser**
-- Device-level management
-- Ideal for corporate-managed devices
-- Policies apply even without user sign-in
-
-**Managed profile**
-- User-based management
-- Ideal for BYOD and contractors
-- Activated when the user signs in to Chrome
+| Managed browser | Managed profile |
+|:-------------------:|:-------------------:|
+| Device-level management | User-based management |
+| Ideal for corporate-managed devices | Ideal for BYOD and contractors |
+| Policies apply even without user sign-in | Activated when the user signs in to Chrome |
 
 More information:
 <https://support.google.com/chrome/a/answer/15591684>
