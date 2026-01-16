@@ -229,12 +229,13 @@ Chrome Enterprise Premium comes with a lot of advanced configuration capabilitie
         - Files larger than 50MB: **Allow**
 
 Repeat the above process for the following policies:        
-    - Download content analysis
-    - Bulk text content analysis
-        - Minimum character count: 30
-    - Print content analysis
-    - Real time URL check
+- Download content analysis
+- Bulk text content analysis
+    - Minimum character count: 30
+- Print content analysis
+- Real time URL check
 
+Enable advanced data protection features:
 - Go to **Security > Access and data control > Data protection**
 - Under the **Data protection settings** section
     - Data insights scanning and report: **On**
@@ -304,7 +305,7 @@ Deploy the enrolment token using your PCLM/UEM solution. In this instance I am l
         ```
 
     - Save and Publish
-    - The custom settings details are documented [here](https://support.google.com/chrome/a/answer/9793780)
+    - Custom settings details are documented [here](https://support.google.com/chrome/a/answer/9793780)
 
 ![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/WS1-Profile.png)
 
