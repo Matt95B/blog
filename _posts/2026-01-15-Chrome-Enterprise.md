@@ -276,25 +276,33 @@ Deploy the enrolment token using your PCLM/UEM solution. In this instance I am l
 - Click **ADD** then **Add Profile**
 - Select **Windows** then **Device Profile**
 - Select the **Custom Settings** payload
-    - Target: Workspace ONE Intelligent Hub
+    - Target: **Workspace ONE Intelligent Hub**
     - Install Settings:
-> <wap-provisioningdoc id="1164DF07-F217-449B-95F8-FB85A34D3CA5" name="customprofile">/
-> <characteristic type="com.airwatch.winrt.registryoperation" uuid="4fa91319-eac0-4a16-9d10-093ba845b698">
->  <parm RegistryPath="HKLM\SOFTWARE\Policies\Google\Chrome" Action="Replace">
->    <Value Name="CloudManagementEnrollmentToken" Data="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" Type="String" />
->    <Value Name="CloudManagementEnrollmentMandatory" Data="1" Type="DWORD" />
->  </parm>
-> </characteristic>
-> </wap-provisioningdoc>
+
+```
+<wap-provisioningdoc id="1164DF07-F217-449B-95F8-FB85A34D3CA5" name="customprofile">/
+<characteristic type="com.airwatch.winrt.registryoperation" uuid="4fa91319-eac0-4a16-9d10-093ba845b698">
+ <parm RegistryPath="HKLM\SOFTWARE\Policies\Google\Chrome" Action="Replace">
+   <Value Name="CloudManagementEnrollmentToken" Data="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" Type="String" />
+   <Value Name="CloudManagementEnrollmentMandatory" Data="1" Type="DWORD" />
+ </parm>
+</characteristic>
+</wap-provisioningdoc>
+```
+
     - Remove Settings:
-> <wap-provisioningdoc id="1164DF07-F217-449B-95F8-FB85A34D3CA6" name="customprofile">/
-> <characteristic type="com.airwatch.winrt.registryoperation" uuid="4fa91319-eac0-4a16-9d10-093ba845b698">
->  <parm RegistryPath="HKLM\SOFTWARE\Policies\Google\Chrome" Action="Remove">
->    <Value Name="CloudManagementEnrollmentToken" Data="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" Type="String" />
->    <Value Name="CloudManagementEnrollmentMandatory" Data="1" Type="DWORD"/>
->  </parm>
-> </characteristic>
-> </wap-provisioningdoc>
+
+```
+<wap-provisioningdoc id="1164DF07-F217-449B-95F8-FB85A34D3CA6" name="customprofile">/
+<characteristic type="com.airwatch.winrt.registryoperation" uuid="4fa91319-eac0-4a16-9d10-093ba845b698">
+ <parm RegistryPath="HKLM\SOFTWARE\Policies\Google\Chrome" Action="Remove">
+   <Value Name="CloudManagementEnrollmentToken" Data="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" Type="String" />
+   <Value Name="CloudManagementEnrollmentMandatory" Data="1" Type="DWORD"/>
+ </parm>
+</characteristic>
+</wap-provisioningdoc>
+```
+
     - Save and Publish
     - The custom settings details are documented [here](https://support.google.com/chrome/a/answer/9793780)
 
