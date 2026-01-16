@@ -9,9 +9,9 @@ author: Mathieu Beaugrand
 ---
 Today, the majority of enterprise applications are accessed through a web browser rather than a thick client. As a result, **the browser has effectively become the new endpoint**, making browser security more critical than ever.
 
-In parallel, we’ve seen a growing adoption of **Enterprise Browsers**, driven by the need for improved visibility, control, and data protection—especially in hybrid and BYOD environments.
+In parallel, we’ve seen a growing adoption of **Enterprise Browsers**, driven by the need for improved visibility, control, and data protection, especially in hybrid and BYOD environments.
 
-In this article, I’ll walk through how to configure **Google Chrome Enterprise**, the most widely used browser globally, to provide enterprise-grade security and management. Importantly, this approach works **regardless of whether the device itself is managed** or personally owned.
+In this article, I’ll walk through how to configure **Google Chrome Enterprise**, the most widely used browser globally, to provide enterprise-grade security and management. Importantly, this approach works regardless of whether the device itself is managed or personally owned.
 
 The good news is that you don’t need to be a full Google Workspace customer to get started. **Chrome Enterprise Core** is completely free and provides strong foundational controls. For organisations requiring advanced security features such as **malware scanning**, **Data Loss Prevention (DLP)**, and **real-time URL protection**, **Chrome Enterprise Premium** is available as an upgrade.
 
@@ -26,8 +26,7 @@ If your organisation already uses Google services, access to the **Google Admin 
 If your organisation is new to Google services, you’ll need to create a new Google Admin account.  
 It’s strongly recommended to use a **shared mailbox or alias** (ie. `google.admin@yourdomain.com`) rather than an individual account.
 
-To register, visit the Chrome Enterprise sign-up page:
-<https://enterprise.google.com/signup/chrome-browser/email>
+To register, visit the Chrome Enterprise sign-up page: <https://enterprise.google.com/signup/chrome-browser/email>
 
 ### 1.2 Domain verification
 Domain verification ensures no one else can register services using your organisation’s domain.
@@ -53,8 +52,7 @@ At a minimum, add:
 For advanced security capabilities, add:
 - **Chrome Enterprise Upgrade** (Paid)
 
-Some vendors bundle Chrome Enterprise Premium into their offerings. For example, [Omnissa Secure Access Suite](https://www.omnissa.com/insights/blog/omnissa-one-2025-amsterdam-google-chrome-enterprise-premium-secure-browser) includes Chrome Enterprise Premium as part of the solution:
-<>
+Some vendors bundle Chrome Enterprise Premium into their offerings. For example, [Omnissa Secure Access Suite](https://www.omnissa.com/insights/blog/omnissa-one-2025-amsterdam-google-chrome-enterprise-premium-secure-browser) includes Chrome Enterprise Premium as part of the solution.
 
 ![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-Licenses.png)
 
@@ -79,6 +77,7 @@ Google supports multiple user provisioning methods. In this guide, we’ll use *
 Alternatively, you can use the **Google Cloud / G Suite Connector by Microsoft** app from the Entra ID app gallery: <https://learn.microsoft.com/en-us/entra/identity/saas-apps/g-suite-provisioning-tutorial>
 
 ### 2.1 SCIM configuration
+- Login to your [Google Admin Console](https://admin.google.com)
 - Go to **Directory > Directory sync**
 - Click **Add Azure Active Directory**
 - Give it a name then click **Authorise and Save**
@@ -90,7 +89,7 @@ Alternatively, you can use the **Google Cloud / G Suite Connector by Microsoft**
 |:-------------------:|:-------------------:|
 | [![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-Add.png)](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-Add.png) | [![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-Authorise.png)](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-Authorise.png) |
 
-### 2.1 User sync
+### 2.2 User sync
 - Under the **User sync** section, click **Set up user sync**
     - User Scope
         - Use a user based EntraID security group
@@ -119,7 +118,7 @@ Alternatively, you can use the **Google Cloud / G Suite Connector by Microsoft**
 |:-------------------:|:-------------------:|:-------------------:|
 | [![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-UserActivation.png)](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-UserActivation.png) | [![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-UserDecom.png)](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-UserDecom.png) | [![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-UserSafeguard.png)](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-UserSafeguard.png) |
 
-### 2.2 Group sync
+### 2.3 Group sync
 - Under the **Group sync** section, click **Set up group sync**
     - Synchronising groups will allow you to assign different Chrome policies based on user groups (ie. Executives vs Staff)
     - Group scope
@@ -202,7 +201,7 @@ Extension management is critical to browser security.
 
 ![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-Extension1.png)
 
-Once you have visibility and understand better which extensions are being used in your environment, it is probably a good idea to then decide how you want to manage them moving forward, by either managing a blocklist or allowlist. For example:
+Once you gain visibility and understand better which extensions are being used in your environment, it is probably a good idea to then decide how you want to manage them moving forward, by either managing a blocklist or allowlist. For example:
 
 - Go to **Chrome browsers > Apps & extensions**
 - Under the **Settings** tab
@@ -228,12 +227,14 @@ Chrome Enterprise Premium comes with a lot of advanced configuration capabilitie
             - User justifications to bypass: **Disable**
         - Password protected files: **Allow**
         - Files larger than 50MB: **Allow**
-    - Repeat the process for the following policies:        
-        - Download content analysis
-        - Bulk text content analysis
-            - Minimum character count: 30
-        - Print content analysis
-        - Real time URL check
+
+Repeat the above process for the following policies:        
+    - Download content analysis
+    - Bulk text content analysis
+        - Minimum character count: 30
+    - Print content analysis
+    - Real time URL check
+
 - Go to **Security > Access and data control > Data protection**
 - Under the **Data protection settings** section
     - Data insights scanning and report: **On**
@@ -276,7 +277,9 @@ Deploy the enrolment token using your PCLM/UEM solution. In this instance I am l
 - Select **Windows** then **Device Profile**
 - Select the **Custom Settings** payload
     - Target: Workspace ONE Intelligent Hub
-    - Install Settings: ```<wap-provisioningdoc id="1164DF07-F217-449B-95F8-FB85A34D3CA5" name="customprofile">/
+    - Install Settings:
+```xml
+<wap-provisioningdoc id="1164DF07-F217-449B-95F8-FB85A34D3CA5" name="customprofile">/
 
 <characteristic type="com.airwatch.winrt.registryoperation" uuid="4fa91319-eac0-4a16-9d10-093ba845b698">
 
@@ -290,8 +293,11 @@ Deploy the enrolment token using your PCLM/UEM solution. In this instance I am l
 
 </characteristic>
 
-</wap-provisioningdoc>```
-    - Remove Settings: ```<wap-provisioningdoc id="1164DF07-F217-449B-95F8-FB85A34D3CA6" name="customprofile">/
+</wap-provisioningdoc>
+```
+    - Remove Settings:
+```xml
+<wap-provisioningdoc id="1164DF07-F217-449B-95F8-FB85A34D3CA6" name="customprofile">/
 
 <characteristic type="com.airwatch.winrt.registryoperation" uuid="4fa91319-eac0-4a16-9d10-093ba845b698">
 
@@ -305,15 +311,15 @@ Deploy the enrolment token using your PCLM/UEM solution. In this instance I am l
 
 </characteristic>
 
-</wap-provisioningdoc>```
+</wap-provisioningdoc>
+```
     - Save and Publish
-    - The custom settings details are also documented [here](https://support.google.com/chrome/a/answer/9793780)
+    - The custom settings details are documented [here](https://support.google.com/chrome/a/answer/9793780)
 
 ![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/WS1-Profile.png)
 
 ### 5.2 Managed profile
-No additional configuration required.  
-Users simply:
+No additional configuration required, users simply:
 - Create a Chrome profile
 - Sign in with their managed Google account
 
