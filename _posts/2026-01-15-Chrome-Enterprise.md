@@ -297,7 +297,9 @@ Deploy the enrolment token using your PCLM/UEM solution. In this instance I am l
 </wap-provisioningdoc>
 ```
 
+
     - Remove Settings:
+
 
 ```xml
 <wap-provisioningdoc id="1164DF07-F217-449B-95F8-FB85A34D3CA6" name="customprofile">/
@@ -316,6 +318,7 @@ Deploy the enrolment token using your PCLM/UEM solution. In this instance I am l
 
 </wap-provisioningdoc>
 ```
+
 
     - Save and Publish
     - The custom settings details are documented [here](https://support.google.com/chrome/a/answer/9793780)
