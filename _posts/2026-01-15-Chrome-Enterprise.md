@@ -316,7 +316,7 @@ No additional configuration required, users simply:
 
 ![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Chrome-Profile.png)
 
-### 5.3 Verify the enrolment
+### 5.3 Confirm enrolment
 
 On your test device restart Chrome to initiate the synchronisation. Confirm the enrolment in the Google Admin console under **Chrome browser > Managed browsers** and/or **Chrome browser > Managed profile**. Additionally, on your test device, to check if the policy is applied you can open a new browser tab and type `chrome://policy` in the URL section.
 
