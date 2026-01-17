@@ -81,9 +81,9 @@ Alternatively, you can use the [Google Cloud / G Suite Connector by Microsoft](h
 - Go to **Directory > Directory sync**
 - Click **Add Azure Active Directory**
 - Give it a name then click **Authorise and Save**
-- You will get redirected to EntraID for authentication
+- You will get redirected to Entra ID for authentication
     - Note that you will require to authenticate with a Global Admin account in order to authorise the integration
-- Accept the **Google Directory Sync** app creation in EntraID
+- Accept the **Google Directory Sync** app creation in Entra ID
 
 | SCIM Add | SCIM Authorise |
 |:-------------------:|:-------------------:|
@@ -92,9 +92,9 @@ Alternatively, you can use the [Google Cloud / G Suite Connector by Microsoft](h
 ### 2.2 User sync
 - Under the **User sync** section, click **Set up user sync**
     - User Scope
-        - Use a user based EntraID security group
+        - Use a user based Entra ID security group
             - Nested groups do not seem to work in this scenario
-        - Copy the name of your EntraID group and paste it into the field
+        - Copy the name of your Entra ID group and paste it into the field
         - Click **Verify**
     - Organizational unit (OU) selection
         - Select **Place users in a specific OU**
@@ -123,7 +123,7 @@ Alternatively, you can use the [Google Cloud / G Suite Connector by Microsoft](h
     - Synchronising groups will allow you to assign different Chrome policies based on user groups (ie. Executives vs Staff)
     - Group scope
         - Select **Sync selected groups**
-        - Copy the name of your EntraID group and paste it into the field
+        - Copy the name of your Entra ID group and paste it into the field
         - Click **Verify**
         - Note that for a group to sync, the group must be a mail-enabled security group (see required group attributes below)
     - Required attributes
