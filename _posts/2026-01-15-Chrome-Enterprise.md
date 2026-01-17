@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Enhance your Google Chrome security with Chrome Enterprise
-subtitle: A practical guide to configuring Google Chrome Enterprise using the Google Admin Console, whether devices are managed or BYOD
+subtitle: A practical guide to configuring Google Chrome Enterprise using the Google Admin Console, whether devices are managed or unmanaged
 tags: [Browser, EntraID, Workspace ONE, Essential 8]
 readtime: true
 comments: true
@@ -11,7 +11,7 @@ Today, the majority of enterprise applications are accessed through a web browse
 
 In parallel, we’ve seen a growing adoption of **Enterprise Browsers**, driven by the need for improved visibility, control, and data protection, especially in hybrid and BYOD environments.
 
-In this article, I’ll walk through how to configure **Google Chrome Enterprise**, the most widely used browser globally, to provide enterprise-grade security and management. Importantly, this approach works regardless of whether the device itself is managed or personally owned.
+In this article, I’ll walk through how to configure **Google Chrome Enterprise**, the most widely used browser globally, to provide enterprise-grade security and management. Importantly, this approach works regardless of whether the device itself is corporate managed or personally owned.
 
 The good news is that you don’t need to be a full Google Workspace customer to get started. **Chrome Enterprise Core** is completely free and provides strong foundational controls. For organisations requiring advanced security features such as **malware scanning**, **Data Loss Prevention (DLP)**, and **real-time URL protection**, **Chrome Enterprise Premium** is available as an upgrade.
 
@@ -57,10 +57,10 @@ Some vendors bundle Chrome Enterprise Premium into their offerings. For example,
 ![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-Licenses.png)
 
 ### 1.4 Services review
-Before synchronising users, review which Google services should be enabled or disabled.
+Before synchronising users, assess and restrict Google services to align with your security and governance requirements.
 
 Navigate to:
-- **Apps > Google Workspace > Service status**
+- **Apps > Google Workspace > Service status**, and
 - **Apps > Additional Google services**
 
 Disable unnecessary services to reduce exposure and complexity.
@@ -70,7 +70,7 @@ Disable unnecessary services to reduce exposure and complexity.
 ---
 
 ## 2. User synchronisation
-Google supports multiple user provisioning methods. In this guide, we’ll use **SCIM provisioning from Microsoft Entra ID**, leveraging the native integration in the Google Admin Console.
+Google Workspace supports several ways to synchronise users, and the right approach depends on your identity provider. In this case, I’ll use **SCIM provisioning** from Entra ID to Google Workspace via the native integration in the Google Admin Console.
 
 {: .box-note}
 **Note:** At the time of writing, this integration is in *beta*.
@@ -140,11 +140,8 @@ Alternatively, you can use the [Google Cloud / G Suite Connector by Microsoft](h
 ---
 
 ## 3. Single Sign-On (SSO) and federation
-With Google accounts created, the next step is authentication.
-
-Google Workspace supports federation using **OIDC or SAML**, allowing users to authenticate using your existing Identity Provider (IdP).
-
-If your IdP is **Microsoft Entra ID**, federation is enabled by default using OIDC.
+Now that Google accounts are in place, the next consideration is user authentication. Fortunately, Google Workspace supports federation with most Identity Providers (IdP) using **SAML or OIDC**, allowing users to sign in using **SSO** rather than remembering another password.
+If you’re using **Microsoft Entra ID** as your primary IdP, this is even easier, as Google Workspace is natively federated with Entra ID via the pre-built OIDC profile.
 
 If using another IdP:
 - Navigate to **Security > Authentication > SSO with third-party IdP**
@@ -184,7 +181,7 @@ Now let's look at the foundation of your Chrome configuration.
 ![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-Settings2.png)
 
 ### 4.2 Chrome extensions
-Extension management is critical to browser security.
+Managing browser extensions effectively is essential to maintaining a secure browser environment, as extensions can introduce significant security and data exposure risks if left unmanaged.
 
 - Go to **Chrome browsers > Apps & extensions**
 - Under the **Users & browsers** tab
@@ -201,7 +198,7 @@ Extension management is critical to browser security.
 
 ![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-Extension1.png)
 
-Once you gain visibility and understand better which extensions are being used in your environment, it is probably a good idea to then decide how you want to manage them moving forward, by either managing a blocklist or allowlist via the below settings:
+Once you have visibility into which extensions are being used across your environment, you can make an informed decision on how to manage them moving forward—typically by enforcing either an **allowlist** or **blocklist** using the settings below.
 
 - Go to **Chrome browsers > Apps & extensions**
 - Under the **Settings** tab
@@ -211,7 +208,7 @@ Once you gain visibility and understand better which extensions are being used i
     - Chrome Web Store: **Block all apps, admin manages allowlist, users may request extensions**
 
 ### 4.3 Chrome Enterprise Premium
-Chrome Enterprise Premium comes with a lot of advanced configuration capabilities, so in this section I am just going to focus on setting up a handful of policies as a foundation, but feel free to explore the 500+ policies that are available.
+Chrome Enterprise Premium provides a wide range of advanced configuration capabilities. In this section, I’ll focus on establishing a small set of foundational policies, but you’re encouraged to explore the 500+ additional policies available to further tailor the solution to your requirements.
 
 - Go to **Chrome browsers > Settings**
 - Select the appropriate OU or Group for assignment
@@ -248,7 +245,7 @@ Chrome supports two management modes:
 | Managed browser | Managed profile |
 |:-------------------:|:-------------------:|
 | Device-level management | User-based management |
-| Ideal for corporate-managed devices | Ideal for BYOD and contractors |
+| Ideal for corporate managed devices | Ideal for unmanaged devices and contractors |
 | Policies apply even without user sign-in | Activated when the user signs in to Chrome |
 
 More information:
@@ -306,7 +303,7 @@ Deploy the enrolment token using your PCLM/UEM solution. In this instance I am l
 ![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/WS1-Profile.png)
 
 ### 5.2 Managed profile
-No additional configuration required, users simply:
+No additional configuration is required for Chrome managed profiles, as management is automatically enabled when users create a Chrome profile and sign in with their managed Google account. Users simply need to:
 - Create a Chrome profile
 - Sign in with their managed Google account
 
@@ -314,7 +311,8 @@ No additional configuration required, users simply:
 
 ### 5.3 Confirm enrolment
 
-On your test device restart Chrome to initiate the synchronisation. Confirm the enrolment in the Google Admin console under **Chrome browser > Managed browsers** and/or **Chrome browser > Managed profile**. Additionally, on your test device, to check if the policy is applied you can open a new browser tab and type `chrome://policy` in the URL section.
+On your test device, restart the Chrome browser to trigger synchronisation. You can confirm successful enrolment in the Google Admin Console under **Chrome browsers > Managed browsers** and/or **Chrome browsers > Managed profiles**.
+To verify that policies are applied on the device, open a new Chrome tab and navigate to chrome://policy.
 
 ---
 
