@@ -75,12 +75,94 @@ subtitle: List of events I attended and participated in over the years
     justify-content: center; /* gallery centered */
   }
   }
+
+.events-filter-wrapper {
+  margin: 20px 0 30px 0;
+}
+
+.filter-toggle {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#filterIcon {
+  transition: transform 0.2s ease;
+}
+
+.events-filter {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+  overflow: hidden;
+  transition: max-height 0.25s ease, opacity 0.2s ease;
+}
+
+.events-filter.collapsed {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.events-filter:not(.collapsed) {
+  max-height: 200px;
+  opacity: 1;
+}
+
+.events-filter label {
+  font-weight: 600;
+}
+
+.events-filter select {
+  margin-left: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+}
 </style>
+
+<div class="events-filter-wrapper">
+  <h3 id="filterToggle" class="filter-toggle">
+    <span id="filterIcon">▶</span> Filter events
+  </h3>
+
+  <div id="filterContent" class="events-filter collapsed">
+    <label>
+      Year:
+      <select id="yearFilter">
+        <option value="all">All</option>
+        {% assign years = site.events | map: "date" | map: "year" | uniq | sort | reverse %}
+        {% for y in years %}
+          <option value="{{ y }}">{{ y }}</option>
+        {% endfor %}
+      </select>
+    </label>
+
+    <label>
+      Type:
+      <select id="typeFilter">
+        <option value="all">All</option>
+        {% assign types = site.events | map: "type" | uniq | sort %}
+        {% for t in types %}
+          <option value="{{ t | downcase | replace: ' ', '-' }}">
+            {{ t }}
+          </option>
+        {% endfor %}
+      </select>
+    </label>
+  </div>
+</div>
 
 {% assign events = site.events | sort: "date" | reverse %}
 
 {% for event in events %}
-<section class="event-item">
+<section
+  class="event-item"
+  data-year="{{ event.date | date: '%Y' }}"
+  data-type="{{ event.type | downcase | replace: ' ', '-' }}">
 
   {% assign image_count = event.images | size %}
 
@@ -174,3 +256,38 @@ subtitle: List of events I attended and participated in over the years
 
 </section>
 {% endfor %}
+
+<script>
+  const toggle = document.getElementById("filterToggle");
+  const content = document.getElementById("filterContent");
+  const icon = document.getElementById("filterIcon");
+  const yearFilter = document.getElementById("yearFilter");
+  const typeFilter = document.getElementById("typeFilter");
+  const events = document.querySelectorAll(".event-item");
+
+  toggle.addEventListener("click", () => {
+    content.classList.toggle("collapsed");
+    icon.textContent = content.classList.contains("collapsed") ? "▶" : "▼";
+  });
+
+  function applyFilters() {
+    const selectedYear = yearFilter.value;
+    const selectedType = typeFilter.value;
+
+    events.forEach(event => {
+      const eventYear = event.dataset.year;
+      const eventType = event.dataset.type;
+
+      const yearMatch =
+        selectedYear === "all" || selectedYear === eventYear;
+
+      const typeMatch =
+        selectedType === "all" || selectedType === eventType;
+
+      event.style.display = yearMatch && typeMatch ? "" : "none";
+    });
+  }
+
+  yearFilter.addEventListener("change", applyFilters);
+  typeFilter.addEventListener("change", applyFilters);
+</script>
