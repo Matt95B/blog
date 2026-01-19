@@ -22,8 +22,8 @@ title: Blog posts
   }
 
   #filterIcon {
-    font-style: normal;
     font-size: 0.85rem;
+    font-style: normal;
   }
 </style>
 
@@ -38,7 +38,7 @@ title: Blog posts
 <!-- Expandable Tag Filter Section -->
 <div style="margin-bottom: 20px;">
   <h3 id="tagToggle" class="filter-toggle">
-    <span id="tagToggleIcon">▶</span> Filter by Tag
+    <span id="filterIcon">▶</span> Filter by Tag
   </h3>
 
   <div
@@ -136,7 +136,7 @@ title: Blog posts
 
   const tagToggle = document.getElementById("tagToggle");
   const tagContainer = document.getElementById("tagContainer");
-  const tagToggleIcon = document.getElementById("tagToggleIcon");
+  const filterIcon = document.getElementById("filterIcon");
 
   let activeTag = null;
   let tagsExpanded = false;
@@ -147,10 +147,10 @@ title: Blog posts
 
     if (tagsExpanded) {
       tagContainer.style.maxHeight = tagContainer.scrollHeight + "px";
-      tagToggleIcon.textContent = "▼";
+      filterIcon.textContent = "▼";
     } else {
       tagContainer.style.maxHeight = "0";
-      tagToggleIcon.textContent = "▶";
+      filterIcon.textContent = "▶";
     }
   });
 
