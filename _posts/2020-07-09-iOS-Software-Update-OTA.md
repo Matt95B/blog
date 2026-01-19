@@ -2,7 +2,7 @@
 layout: post
 title: Apple iOS software update OTA
 subtitle: Overview on how software OTA (Over The Air) works on iOS devices
-tags: [iOS, OS Update]
+tags: [Apple, iOS, OS Update]
 readtime: true
 comments: true
 author: Mathieu Beaugrand
