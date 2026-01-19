@@ -134,7 +134,16 @@ subtitle: List of events I attended and participated in over the years
       Year:
       <select id="yearFilter">
         <option value="all">All</option>
-        {% assign years = site.events | map: "date" | map: "year" | uniq | sort | reverse %}
+
+        {% assign years = "" | split: "," %}
+        {% for event in site.events %}
+          {% assign year = event.date | date: "%Y" %}
+          {% unless years contains year %}
+            {% assign years = years | push: year %}
+          {% endunless %}
+        {% endfor %}
+
+        {% assign years = years | sort | reverse %}
         {% for y in years %}
           <option value="{{ y }}">{{ y }}</option>
         {% endfor %}
