@@ -180,6 +180,9 @@ Now let's look at the foundation of your Chrome configuration.
 
 ![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-Settings2.png)
 
+#### 4.1.3 Third party connector (optional)
+*coming soon*
+
 ### 4.2 Chrome extensions
 Managing browser extensions effectively is essential to maintaining a secure browser environment, as extensions can introduce significant security and data exposure risks if left unmanaged.
 
@@ -203,7 +206,7 @@ Once you have visibility into which extensions are being used across your enviro
 - Go to **Chrome browsers > Apps & extensions**
 - Under the **Settings** tab
 - Select the appropriate OU or Group for assignment
-- Click Allow/block mode
+- Click on the **Allow/block mode** policy
     - Play store: **Block all apps, admin manages allowlist**
     - Chrome Web Store: **Block all apps, admin manages allowlist, users may request extensions**
 
