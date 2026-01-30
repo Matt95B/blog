@@ -180,8 +180,50 @@ Now let's look at the foundation of your Chrome configuration.
 
 ![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-Settings2.png)
 
-#### 4.1.3 Third party connector (optional)
-*coming soon*
+#### 4.1.3 Third party device trust connector (optional)
+If your Identity Provider (IdP) supports device trust signals, you can integrate Google Chrome Enterprise to enable context-aware access decisions based on browser trust. Chrome can send device signals, such as whether the browser is managed or whether a managed profile is in use, to your IdP, which can then enforce conditional access policies accordingly.
+
+In this example, I’ll walk through the integration using Omnissa Access as the IdP. Google Chrome Enterprise also supports integrations with other identity providers that offer device trust capabilities.
+- Login to your Omnissa Access tenant
+- Go to **Integrations > Authentication Methods**
+- Click on **Google Chrome Enterprise Device Signals** adapter
+- Enable the authentication method
+- Copy the **URLs matcher** & **IDP service account**
+    - You will need those details later on in the Google Admin console
+- Configure the device signals as per your requirements
+
+| Auth Methods | Chrome adapter |
+|:-------------------:|:-------------------:|
+| [![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Access-AuthMethod.png)](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Access-AuthMethod.png) | [![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Access-ChromeAdapter.png)](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Access-ChromeAdapter.png) |
+
+Configure the device trust connector in the Google Admin console:
+- Login to your [Google Admin Console](https://admin.google.com)
+- Go to **Chrome browser > Connectors**
+- Click **+ New provider configuration**
+- Find your IdP, then click **Set up**
+- Paste the **URLs matcher** and **service account** details copied from Omnissa Access
+- Click **Add configuration**
+- Assign the connector configuration to the appropriate OU
+
+| Connector | Config | Assign |
+|:-------------------:|:-------------------:|:-------------------:|
+| [![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-Connector.png)](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-Connector.png) | [![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-ConnectorConfig.png)](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-ConnectorConfig.png) | [![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-ConnectorAssign.png)](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-ConnectorAssign.png) |
+
+Configure your conditional access policy:
+- Login to your Omnissa Access tenant
+- Go to **Resources > Policies**
+- Create a new policy or edit an existing one
+- Configure the policy based on your access requirements
+    - Add **Google Chrome Enterprise Device Signals** as a second authentication method
+
+![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Access-Policy.png)
+
+With this configuration in place, Chrome will continuously send device trust signals to Omnissa Access during authentication. These signals can then be evaluated in real time to enforce access controls.
+
+For example, you could:
+- Allow access to your CRM or SaaS applications only from Chrome browsers that are managed
+- Block access from unmanaged browsers, even if the user credentials are valid
+- Combine browser trust with other signals such as user, network, or risk level
 
 ### 4.2 Chrome extensions
 Managing browser extensions effectively is essential to maintaining a secure browser environment, as extensions can introduce significant security and data exposure risks if left unmanaged.
