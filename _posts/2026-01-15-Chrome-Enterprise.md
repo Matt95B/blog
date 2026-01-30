@@ -221,7 +221,7 @@ Configure your conditional access policy:
 With this configuration in place, Chrome will continuously send device trust signals to Omnissa Access during authentication. These signals can then be evaluated in real time to enforce access controls.
 
 For example, you could:
-- Allow access to your CRM or SaaS applications only from Chrome browsers that are managed
+- Allow access to your CRM or SaaS applications only from managed Chrome browsers (managed browser & managed profile)
 - Block access from unmanaged browsers, even if the user credentials are valid
 - Combine browser trust with other signals such as user, network, or risk level
 
