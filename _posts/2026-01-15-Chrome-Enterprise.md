@@ -181,7 +181,7 @@ Now let's look at the foundation of your Chrome configuration.
 ![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-Settings2.png)
 
 #### 4.1.3 Third party device trust connector (optional)
-If your Identity Provider (IdP) supports device trust signals, you can integrate Google Chrome Enterprise to enable context-aware access decisions based on browser trust. Chrome can send device signals, such as whether the browser is managed or whether a managed profile is in use, to your IdP, which can then enforce conditional access policies accordingly.
+If your Identity Provider (IdP) supports device trust signals, integrating Google Chrome Enterprise enables context-aware access decisions based on browser trust. Chrome provides device signals such as managed browser status and disk encryption posture, allowing your IdP to enforce conditional access policies accordingly.
 
 In this example, I’ll walk through the integration using Omnissa Access as the IdP. Google Chrome Enterprise also supports integrations with other identity providers that offer device trust capabilities.
 - Login to your Omnissa Access tenant
