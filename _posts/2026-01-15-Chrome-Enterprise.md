@@ -196,13 +196,13 @@ In this example, I’ll walk through the integration using Omnissa Access as the
 - Configure the device signals as per your requirements
 
 <div class="box-note">
+<p><strong>Note:</strong> Device signals that can be collected via <strong>Managed browser</strong> or <strong>Managed profile</strong> include:</p>
 
-**Note:** Device signals that can be collected via **Managed browser** or **Managed profile** include:
-
-- **Disk Encryption:** This signal checks whether the device's hard drive or SSD is encrypted. Only devices with an active main disk encryption will be granted access.
-- **Firewall Status:** This signal checks whether the device firewall is enabled. Devices will not be granted access if their firewall is in a disabled state.
-- **Screen Lock Secured:** This signal checks whether the device's screen lock is secured. Only devices with an enabled screen lock will be granted access.
-
+<ul>
+  <li><strong>Disk Encryption:</strong> This signal checks whether the device's hard drive or SSD is encrypted. Only devices with an active main disk encryption will be granted access.</li>
+  <li><strong>Firewall Status:</strong> This signal checks whether the device firewall is enabled. Devices will not be granted access if their firewall is in a disabled state.</li>
+  <li><strong>Screen Lock Secured:</strong> This signal checks whether the device's screen lock is secured. Only devices with an enabled screen lock will be granted access.</li>
+</ul>
 </div>
 
 | Auth Methods | Chrome adapter |
