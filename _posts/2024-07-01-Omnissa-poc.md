@@ -21,7 +21,14 @@ To help clients better understand how the Omnissa platform components interact, 
 
 | UEM | Horizon | UEM + Horizon 8 |
 |:-------------------:|:-------------------:|:-------------------:|
-| [![](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/UEM.png)](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/UEM.png) | [![](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/Horizon.png)](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/Horizon.png) | [![](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/UEM+Horizon8.png)](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/UEM+Horizon8.png) |
+| [![](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/Logical-Diagrams/UEM.png)](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/Logical-Diagrams/UEM.png) | [![](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/Logical-Diagrams/Horizon.png)](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/Logical-Diagrams/Horizon.png) | [![](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/Logical-Diagrams/UEM+Horizon8.png)](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/Logical-Diagrams/UEM+Horizon8.png) |
+
+## Network diagrams
+During a Proof of Concept, network diagrams help bridge the gap between design assumptions and real-world implementation. The following diagrams illustrate the high-level architecture, key integration points, and data flows involved in the Omnissa platform. They are intended to validate design decisions, highlight dependencies, and serve as a reference during testing and issue resolution.
+
+| UEM |
+|:-------------------:|
+| [![](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/Network-Diagrams/UEM-ACC-Connector-UAG-PowerShell.drawio.png)](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/Network-Diagrams/UEM-ACC-Connector-UAG-PowerShell.drawio.png) |
 
 ## Prerequisites workbook
 I’ve also created a comprehensive prerequisites spreadsheet that captures all technical requirements in one place. It allows customers to record key configuration details as they work through the checklist. Once complete, the same document can be used as an as-built record, reducing duplication and saving time.
