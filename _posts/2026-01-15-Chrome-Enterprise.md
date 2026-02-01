@@ -195,11 +195,15 @@ In this example, I’ll walk through the integration using Omnissa Access as the
     - You will need those details later on in the Google Admin console
 - Configure the device signals as per your requirements
 
-> {: .box-note}
-> **Note:** Device signals that can be collected via Managed browser or Managed profile include:
-> - **Disk Encryption:** This signal checks whether the device's hard drive or SSD is encrypted. Only devices with an active main disk encryption will be granted access.
-> - **Firewall Status:** This signal checks whether the device firewall is enabled. Devices will not be granted access if their firewall is in a disabled state.
-> - **Screen Lock Secured:** This signal checks whether the device's screen lock is secured. Only devices with an enabled screen lock will be granted access.
+<div class="box-note">
+
+**Note:** Device signals that can be collected via **Managed browser** or **Managed profile** include:
+
+- **Disk Encryption:** This signal checks whether the device's hard drive or SSD is encrypted. Only devices with an active main disk encryption will be granted access.
+- **Firewall Status:** This signal checks whether the device firewall is enabled. Devices will not be granted access if their firewall is in a disabled state.
+- **Screen Lock Secured:** This signal checks whether the device's screen lock is secured. Only devices with an enabled screen lock will be granted access.
+
+</div>
 
 | Auth Methods | Chrome adapter |
 |:-------------------:|:-------------------:|
