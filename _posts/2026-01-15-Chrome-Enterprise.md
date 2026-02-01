@@ -183,6 +183,9 @@ Now let's look at the foundation of your Chrome configuration.
 #### 4.1.3 Third party device trust connector (optional)
 If your Identity Provider (IdP) supports device trust signals, integrating Google Chrome Enterprise enables context-aware access decisions based on browser trust. Chrome provides device signals such as managed browser status and disk encryption posture, allowing your IdP to enforce conditional access policies accordingly.
 
+{: .box-note}
+**Note:** The Chrome Enterprise Device Trust integration enables security posture verification for **ChromeOS**, **Windows**, and **macOS** devices.
+
 In this example, I’ll walk through the integration using Omnissa Access as the IdP. Google Chrome Enterprise also supports integrations with other identity providers that offer device trust capabilities.
 - Login to your Omnissa Access tenant
 - Go to **Integrations > Authentication Methods**
@@ -191,6 +194,12 @@ In this example, I’ll walk through the integration using Omnissa Access as the
 - Copy the **URLs matcher** & **IDP service account**
     - You will need those details later on in the Google Admin console
 - Configure the device signals as per your requirements
+
+{: .box-note}
+**Note:** Device signals that can be collected via Managed browser or Managed profile include:
+- **Disk Encryption:** This signal checks whether the device's hard drive or SSD is encrypted. Only devices with an active main disk encryption will be granted access.
+- **Firewall Status:** This signal checks whether the device firewall is enabled. Devices will not be granted access if their firewall is in a disabled state.
+- **Screen Lock Secured:** This signal checks whether the device's screen lock is secured. Only devices with an enabled screen lock will be granted access.
 
 | Auth Methods | Chrome adapter |
 |:-------------------:|:-------------------:|
@@ -214,6 +223,7 @@ Configure your conditional access policy:
 - Go to **Resources > Policies**
 - Create a new policy or edit an existing one
 - Configure the policy based on your access requirements
+    - Device type: **Windows 10+** or **macOS** or **Chrome OS**
     - Add **Google Chrome Enterprise Device Signals** as a second authentication method
 
 ![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Access-Policy.png)
