@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0">
   <diagram name="Page-1" id="rh_cSDjejH2wCxoEKIQF">
-    <mxGraphModel dx="1074" dy="1133" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="599" dy="850" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -220,7 +220,7 @@
         <mxCell id="DQisUU3nNZkd6pYiWnFy-77" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;autosize=1;resizable=0;fontSize=17;" value="Intelligence" vertex="1">
           <mxGeometry height="30" width="110" x="1362" y="455" as="geometry" />
         </mxCell>
-        <mxCell id="DQisUU3nNZkd6pYiWnFy-80" edge="1" parent="1" source="DQisUU3nNZkd6pYiWnFy-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.065;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;strokeWidth=2;" target="DQisUU3nNZkd6pYiWnFy-4">
+        <mxCell id="DQisUU3nNZkd6pYiWnFy-80" edge="1" parent="1" source="DQisUU3nNZkd6pYiWnFy-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.08;entryY=1.005;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;strokeWidth=2;" target="DQisUU3nNZkd6pYiWnFy-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
