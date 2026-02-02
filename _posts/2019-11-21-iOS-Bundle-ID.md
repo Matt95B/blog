@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Find iOS app bundle ID
-subtitle: Step-by-step guide on how to find an iOS app bundle ID
+subtitle: Step by step guide on how to find an iOS app bundle ID
 tags: [Apple, iOS, App]
 readtime: true
 comments: true
