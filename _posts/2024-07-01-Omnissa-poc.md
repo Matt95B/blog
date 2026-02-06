@@ -15,6 +15,7 @@ To streamline this process, I began developing my own templates and tools to hel
 Success criteria are often overlooked or left until later in a project, yet they are critical for defining what a successful trial or POC looks like. Many customers find it difficult to start from a blank page, so I created a template to make this easier and guide the discussion from day one.
 
 [Omnissa-success-criteria.xlsx](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/Omnissa-success-criteria.xlsx)
+![](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/Omnissa-success-criteria.png)
 
 ## Logical diagrams
 To help clients better understand how the Omnissa platform components interact, I created a set of simple, easy-to-consume logical diagrams. These diagrams provide a clear overview of the architecture and help support planning and stakeholder discussions.
@@ -34,3 +35,4 @@ During a Proof of Concept, network diagrams help bridge the gap between design a
 I’ve also created a comprehensive prerequisites spreadsheet that captures all technical requirements in one place. It allows customers to record key configuration details as they work through the checklist. Once complete, the same document can be used as an as-built record, reducing duplication and saving time.
 
 [Omnissa-prerequisites.xlsx](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/Omnissa-prerequisites.xlsx)
+![](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/Omnissa-prerequisites.png)
