@@ -23,6 +23,7 @@ To help clients better understand how the Omnissa platform components interact, 
 | UEM | Horizon | UEM + Horizon 8 |
 |:-------------------:|:-------------------:|:-------------------:|
 | [![](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/Logical-Diagrams/UEM.drawio.png)](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/Logical-Diagrams/UEM.drawio.png) | [![](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/Logical-Diagrams/Horizon.drawio.png)](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/Logical-Diagrams/Horizon.drawio.png) | [![](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/Logical-Diagrams/UEM+Horizon8.drawio.png)](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/Logical-Diagrams/UEM+Horizon8.drawio.png) |
+| [UEM.drawio](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/Logical-Diagrams/UEM.drawio) | [Horizon.drawio](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/Logical-Diagrams/Horizon.drawio) | [UEM+Horizon8.drawio](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/Logical-Diagrams/UEM+Horizon8.drawio) |
 
 ## Network diagrams
 During a Proof of Concept, network diagrams help bridge the gap between design assumptions and real-world implementation. The following diagrams illustrate the high-level architecture, key integration points, and data flows involved in the Omnissa platform. They are intended to validate design decisions, highlight dependencies, and serve as a reference during testing and issue resolution.
@@ -30,6 +31,7 @@ During a Proof of Concept, network diagrams help bridge the gap between design a
 | UEM |
 |:-------------------:|
 | [![](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/Network-Diagrams/UEM-ACC-Connector-UAG-PowerShell.drawio.png)](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/Network-Diagrams/UEM-ACC-Connector-UAG-PowerShell.drawio.png) |
+| [UEM-ACC-Connector-UAG-PowerShell.drawio](https://blog.beaugtech.com/assets/img/2024-07-01-Omnissa-poc/Network-Diagrams/UEM-ACC-Connector-UAG-PowerShell.drawio) |
 
 ## Prerequisites workbook
 I’ve also created a comprehensive prerequisites spreadsheet that captures all technical requirements in one place. It allows customers to record key configuration details as they work through the checklist. Once complete, the same document can be used as an as-built record, reducing duplication and saving time.
