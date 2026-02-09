@@ -26,7 +26,7 @@ If your organisation already uses Google services, access to the **Google Admin 
 If your organisation is new to Google services, you’ll need to create a new Google Admin account.  
 It’s strongly recommended to use a **shared mailbox or alias** (ie. `google.admin@yourdomain.com`) rather than an individual account.
 
-To register, visit the Chrome Enterprise sign-up page: <https://enterprise.google.com/signup/chrome-browser/email>
+To register, visit the Chrome Enterprise sign-up page: <https://enterprise.google.com/signup/chromeos/email?origin=ceutrial>
 
 ### 1.2 Domain verification
 Domain verification ensures no one else can register services using your organisation’s domain.
