@@ -374,6 +374,12 @@ On your test device, restart the Chrome browser to trigger synchronisation. You 
 To verify that policies are applied on the device, open a new Chrome tab and navigate to chrome://policy.
 
 ---
+## 6. User experience
+<div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/e68Yihp3tE8?si=jQBDdKHzOS6m1V-B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
-## 6. Additional resources
+---
+
+## 7. Additional resources
 - Chrome Enterprise training: <https://edu.exceedlms.com/student/collection/1771555>
