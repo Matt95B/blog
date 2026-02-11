@@ -18,3 +18,7 @@ There is currently no way to look up app bundle IDs in the Apple iOS App Store d
 4.	Download the file to your computer
 5.	Open the file downloaded and search for “bundleId”
     1.	For Pages: com.apple.Pages
+
+{: .box-note}
+Found this great tool to speed up the process: <https://offcornerdev.com/bundleid.html>
+Apple has also documented their bundle ID here: <https://support.apple.com/en-au/guide/deployment/depece748c41/web>
