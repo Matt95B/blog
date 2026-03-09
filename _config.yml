@@ -133,7 +133,7 @@ edit_page_button: false
 navbar-var-length: false
 
 # The keywords to associate with your website, for SEO purposes
-keywords: "EUC,Digital Workspace,Modern Management,Endpoint,Device,Laptop,Desktop,Mobile,UEM,MDM,VDI,Omnissa,Workspace ONE,Horizon,Intune"
+#keywords: "EUC,Digital Workspace,Modern Management,Endpoint,Device,Laptop,Desktop,Mobile,UEM,MDM,VDI,Omnissa,Workspace ONE,Horizon,Intune"
 
 ######################################
 # --- Colours / background image --- #
