@@ -2,14 +2,11 @@
 layout: post
 title: Azure Lab Services retirement - Choosing the right EUC platform for what comes next
 subtitle: Don’t just replace a service, elevate your EUC platform. Discover why Omnissa Horizon Cloud succeeds where AVD + Nerdio falls short.
-tags: [Azure, Horizon]
+tags: [Azure, Horizon, App, DEM]
 readtime: true
 author: Mathieu Beaugrand
 ---
-The retirement of Azure Lab Services isn’t just another platform change. Azure Lab Services didn’t just provide infrastructure, it removed complexity. Its retirement doesn’t just remove a service. It puts that complexity back on you. A forcing function to rethink how organisations deliver:
-- Training environments
-- Proof-of-concept platforms
-- Secure, repeatable desktop experiences
+The retirement of Azure Lab Services isn’t just another platform change. Azure Lab Services didn’t just provide infrastructure, it removed complexity. Its retirement doesn’t just remove a service. It puts that complexity back on you. It’s a forcing function to rethink how organisations deliver training environments, proof-of-concept platforms, and secure, repeatable desktop experiences.
 
 For years, Azure Lab Services provided something rare in the cloud world: **Simplicity with control**.
 
@@ -30,29 +27,15 @@ Azure Lab Services abstracted complexity:
 - Lifecycle was controlled
 - Environments were repeatable
 
-In contrast, the recommended AVD + Nerdio approach is not a single solution. It’s a composition of services:
-- Azure infrastructure
-- AVD control plane
-- Nerdio management layer
-- Additional third party tools for profiles, apps, and policies
+In contrast, the recommended AVD + Nerdio approach is not a single solution. It’s a composition of Azure infrastructure, the AVD control plane, and a management layer like Nerdio, each solving part of the problem, but none owning the full experience.
 
-The shift is subtle but significant: you move from **consuming a platform** to **managing an ecosystem**.
-
-This is where **Omnissa Horizon Cloud** differentiates itself, not as an add-on, but as a **complete platform**.
+The shift is subtle but significant: you move from **consuming a platform** to **managing an ecosystem**. This is where **Omnissa Horizon Cloud** differentiates itself, not as an add-on, but as a **complete platform**.
 
 ---
 
 ## 1. Application lifecycle: App packaging vs image sprawl
 
-In AVD environments, application delivery typically relies on:
-- App loaded in the golden images
-- MSIX app attach (with limitations)
-- Packaging and update pipelines
-
-Even with Nerdio, this often leads to:
-- Image sprawl
-- Complex update cycles
-- Increased testing overhead
+In AVD environments, application delivery typically relies on golden images, MSIX app attach (Low app compatibilty), and packaging pipelines, often resulting in image sprawl and complex update cycles.
 
 With Horizon Cloud, **App Volumes** fundamentally changes the model. What App Volumes enables:
 - Real-time app attachment at app launch
@@ -97,26 +80,13 @@ Before performance even matters, users need a simple, consistent way to access t
 - Multiple authentication entry points
 - Azure-native conditional access layers
 
-While functional, this often leads to:
-- Fragmented access experiences
-- Multiple user journeys
-- Increased login friction
-
-With Horizon Cloud, **Omnissa Access** provides a unified digital front door. What this delivers:
+While functional, this often leads to fragmented access experiences, multiple user journeys and increased login friction. With Horizon Cloud, **Omnissa Access** provides a unified digital front door, delivering:
 - A single portal for all apps and desktops
 - Consistent experience across browser, mobile, and desktop
 - Integrated authentication (including MFA and conditional access)
 - Unified access to SaaS, web, and virtual applications
 
-Why this matters
-- For users:
-    - One place to go for everything
-	- Fewer prompts and context switches
-	- A consistent experience regardless of device, location and whether workloads are running in the cloud or on-prem
-- For IT:
-	- Centralised access policy control
-	- Simplified identity architecture
-	- Reduced support overhead from access-related issues
+This provides a unique user experience, offering one place to go for everything, fewer prompts and context switches and a consistent experience regardless of device, location and whether workloads are running in the cloud or on-prem.
 
 **Users don’t need to know where their apps live. They just know where to go.**
 
@@ -194,18 +164,9 @@ Much closer to the original Lab Services experience, without sacrificing enterpr
 
 ## 6. Future-proofing your EUC strategy: Hybrid by design, not by exception
 
-One of the most overlooked questions is: **What happens when your requirements move beyond Azure?** Because they will. AVD is, by design Azure-only. Even with Nerdio, your environment is tightly coupled to:
-- Azure infrastructure
-- Azure-native services
-- Azure’s control plane
+One of the most overlooked questions is: **What happens when your requirements move beyond Azure?** Because they will. AVD is inherently Azure-centric. If requirements evolve, whether due to data sovereignty, mergers, or edge use cases, organisations are often forced into redesign rather than extension.
 
-If requirements shift, such as:
-- Data sovereignty
-- Multi-cloud strategies
-- On-premises repatriation
-- Edge use cases
-
-You’re facing a **redesign, not an evolution**. For example, a University may run training labs in Azure today, but require on-prem deployment for research environments with sensitive data tomorrow.
+For example, a University may run training labs in Azure today, but require on-prem deployment for research environments with sensitive data tomorrow.
 
 ### 6.1. Horizon Cloud: Built for hybrid from day one
 
@@ -215,11 +176,7 @@ You’re facing a **redesign, not an evolution**. For example, a University may 
 - Expand into other cloud providers
 - Maintain consistency across all environments
 
-What this enables:
-- **Flexibility Without Replatforming**: Run workloads where they make sense, without changing platforms.
-- **Consistent architecture everywhere**: Same control plane, same policies, same experience, across cloud and on-prem.
-- **Reduced vendor lock-in**: Your EUC platform is not tied to a single hyperscaler.
-- **Seamless future expansion**: Support edge, GPU-heavy workloads, or isolated environments without redesign.
+This approach enables true flexibility, allowing workloads to run where they make the most sense, whether in Azure, on-premises, or across multiple clouds, while maintaining a consistent architecture and reducing dependency on a single provider.
 
 ### 6.2 The bottom line
 Microsoft’s recommendation of AVD + Nerdio is logical from an ecosystem perspective. But it optimises for Azure alignment, not necessarily best-in-class EUC capability.
