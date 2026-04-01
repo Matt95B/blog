@@ -66,16 +66,12 @@ With Horizon Cloud, **App Volumes** fundamentally changes the model. What App Vo
 
 ## 2. User profiles: DEM vs profile containers
 
-User state is one of the hardest problems in EUC, and one of the most visible when it goes wrong.
-
-Typical AVD approaches include:
+User state is one of the hardest problems in EUC, and one of the most visible when it goes wrong. Typical AVD approaches include:
 - FSLogix profile containers
 - Policies and scripting
 - Intune-based configuration
 
-These provide persistence, but limited control.
-
-With Horizon Cloud, **Dynamic Environment Manager (DEM)** delivers:
+These provide persistence, but limited control. With Horizon Cloud, **Dynamic Environment Manager (DEM)** delivers:
 - Policy-driven user environment management
 - Context-aware configuration (device, location, role)
 - Granular application settings
@@ -150,7 +146,7 @@ By combining a digital front door with a high-performance protocol, Horizon Clou
 - Optimise how applications perform
 - Deliver a consistent experience across any environment
 
-**The result is not just a working session. It’s a consistent, low-friction digital workspace experience**
+**The result is not just a working session. It’s a consistent, low-friction digital workspace experience.**
 
 ---
 
@@ -221,7 +217,7 @@ You’re facing a **redesign, not an evolution**. For example, a University may 
 
 What this enables:
 - **Flexibility Without Replatforming**: Run workloads where they make sense, without changing platforms.
-- **Consistent architecture everywhere**: Same control plane, same policies, same experience—across cloud and on-prem.
+- **Consistent architecture everywhere**: Same control plane, same policies, same experience, across cloud and on-prem.
 - **Reduced vendor lock-in**: Your EUC platform is not tied to a single hyperscaler.
 - **Seamless future expansion**: Support edge, GPU-heavy workloads, or isolated environments without redesign.
 
@@ -247,7 +243,7 @@ Rebuilding that with AVD + Nerdio is possible, but it comes at the cost of:
 - Fragmentation
 - Operational overhead
 
-This is a moment to do more than replace. It’s a moment to rethink. Because the real decision isn’t “What replaces Azure Lab Services?”. It’s **“What EUC platform do we want to standardise on for the next 5 years?**”
+This is a moment to do more than replace. It’s a moment to rethink. Because the real decision isn’t “What replaces Azure Lab Services?” It’s **“What EUC platform do we want to standardise on for the next 5 years?**”
 
 If you optimise for short-term alignment, AVD + Nerdio will get you there.
 
