@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Azure Lab Services Retirement: Why AVD + Nerdio still falls short for modern EUC
+title: Azure Lab Services Retirement - Why AVD + Nerdio still falls short for modern EUC
 subtitle: Understand why AVD + Nerdio falls short and why Horizon Cloud is a superior alternative
 tags: [Azure, Horizon]
 readtime: true
