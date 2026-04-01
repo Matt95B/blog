@@ -6,16 +6,14 @@ tags: [Azure, Horizon]
 readtime: true
 author: Mathieu Beaugrand
 ---
-The retirement of Azure Lab Services isn’t just another platform change.
-
-It’s a forcing function.
+The retirement of Azure Lab Services isn’t just another platform change. It’s a forcing function.
 
 A forcing function to rethink how organisations deliver:
 - Training environments
 - Proof-of-concept platforms
 - Secure, repeatable desktop experiences
 
-For years, Azure Lab Services provided something rare in the cloud world: **Simplicity with control**
+For years, Azure Lab Services provided something rare in the cloud world: **Simplicity with control**.
 
 Now, with its [retirement scheduled for June 2027](https://learn.microsoft.com/en-us/azure/lab-services/retirement-guide), that simplicity is gone, and organisations are being pushed toward new architectures.
 
@@ -157,7 +155,7 @@ One of the most overlooked questions is: **What happens when your requirements m
 - Azure-native services
 - Azure’s control plane
 
-If requirements shift—such as:
+If requirements shift, such as:
 - Data sovereignty
 - Multi-cloud strategies
 - On-premises repatriation
@@ -165,7 +163,7 @@ If requirements shift—such as:
 
 You’re facing a **redesign, not an evolution**.
 
-## 7. Horizon Cloud: Built for hybrid from day one
+### 6.1. Horizon Cloud: Built for hybrid from day one
 
 **Omnissa Horizon Cloud** takes a different approach. It is inherently hybrid, allowing you to:
 - Deploy in Azure today
@@ -179,8 +177,7 @@ What this enables:
 - **Reduced vendor lock-in**: Your EUC platform is not tied to a single hyperscaler.
 - **Seamless future expansion**: Support edge, GPU-heavy workloads, or isolated environments without redesign.
 
-## 8. The bottom line
-
+### 6.2 The bottom line
 Microsoft’s recommendation of AVD + Nerdio is logical from an ecosystem perspective. But it optimises for Azure alignment, not necessarily best-in-class EUC capability.
 
 AVD + Nerdio:
@@ -190,7 +187,7 @@ AVD + Nerdio:
 
 **Omnissa Horizon Cloud delivers those capabilities natively, within a single platform.**
 
-## 9. Final thought
+## 7. Final thought
 
 Azure Lab Services didn’t just provide infrastructure. It delivered:
 - Simplicity
