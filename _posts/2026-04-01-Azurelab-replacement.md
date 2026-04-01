@@ -6,9 +6,7 @@ tags: [Azure, Horizon]
 readtime: true
 author: Mathieu Beaugrand
 ---
-The retirement of Azure Lab Services isn’t just another platform change. It’s a forcing function.
-
-Azure Lab Services didn’t just provide infrastructure, it removed complexity. Its retirement doesn’t just remove a service. It puts that complexity back on you. A forcing function to rethink how organisations deliver:
+The retirement of Azure Lab Services isn’t just another platform change. Azure Lab Services didn’t just provide infrastructure, it removed complexity. Its retirement doesn’t just remove a service. It puts that complexity back on you. A forcing function to rethink how organisations deliver:
 - Training environments
 - Proof-of-concept platforms
 - Secure, repeatable desktop experiences
@@ -44,7 +42,7 @@ This is where **Omnissa Horizon Cloud** differentiates itself, not as an add-on,
 
 ---
 
-## 1. Application lifecycle: Native app packaging vs image sprawl
+## 1. Application lifecycle: App packaging vs image sprawl
 
 In AVD environments, application delivery typically relies on:
 - App loaded in the golden images
@@ -161,9 +159,9 @@ If requirements shift, such as:
 - On-premises repatriation
 - Edge use cases
 
-For example, a University may run training labs in Azure today, but require on-prem deployment for research environments with sensitive data tomorrow.
-
 You’re facing a **redesign, not an evolution**.
+
+For example, a University may run training labs in Azure today, but require on-prem deployment for research environments with sensitive data tomorrow.
 
 ### 6.1. Horizon Cloud: Built for hybrid from day one
 
