@@ -36,7 +36,7 @@ In contrast, the recommended AVD + Nerdio approach is not a single solution. It�
 - Nerdio management layer
 - Additional third party tools for profiles, apps, and policies
 
-And while this works, it introduces a shift: **From consuming a platform to assembling one**
+And while this works, it introduces a shift: **From consuming a platform to assembling one**.
 
 This is where **Omnissa Horizon Cloud** differentiates itself, not as an add-on, but as a **complete platform**.
 
@@ -55,7 +55,7 @@ Even with Nerdio, this often leads to:
 - Increased testing overhead
 
 With Horizon, **App Volumes** fundamentally changes the model. What App Volumes enables:
-- Real-time app attachment at login
+- Real-time app attachment at app launch
 - Separation of apps from the golden image
 - Instant updates without recomposing desktops
 - Minimal golden image footprint (often 1–2 images)
@@ -81,7 +81,7 @@ With Horizon, **Dynamic Environment Manager (DEM)** delivers:
 - Granular application settings
 - Fast, consistent logon/logoff experiences
 
-**FSLogix stores profiles, DEM controls the user experience**
+**FSLogix stores profiles, DEM controls the user experience.**
 
 ---
 
@@ -96,10 +96,10 @@ Most platforms focus on one. A mature EUC platform delivers both. This is where 
 ### 3.1 The access layer: A true digital front door
 
 Before performance even matters, users need a simple, consistent way to access their workspace. In AVD environments, access is typically spread across:
-	•	Remote Desktop clients
-	•	Web portals
-	•	Multiple authentication entry points
-	•	Azure-native conditional access layers
+- Remote Desktop clients
+- Web portals
+- Multiple authentication entry points
+- Azure-native conditional access layers
 
 While functional, this often leads to:
 - Fragmented access experiences
@@ -115,9 +115,8 @@ With Horizon, **Omnissa Access** provides a unified digital front door. What thi
 Why this matters
 - For users:
     - One place to go for everything
-        - The experience remains consistent whether workloads are running in the cloud or on-prem
 	- Fewer prompts and context switches
-	- A consistent experience regardless of device or location
+	- A consistent experience regardless of device, location and whether workloads are running in the cloud or on-prem
 - For IT:
 	- Centralised access policy control
 	- Simplified identity architecture
@@ -164,9 +163,7 @@ With AVD + Nerdio, you are combining multiple layers:
 - FSLogix
 - Additional third party tooling for apps and policies
 
-Each solves part of the problem. None own the full experience.
-
-With Horizon, everything is built-in:
+Each solves part of the problem. None own the full experience. With Horizon, everything is built-in:
 - App lifecycle (App Volumes)
 - User environment (DEM)
 - Protocol (Blast)
@@ -212,9 +209,7 @@ If requirements shift, such as:
 - On-premises repatriation
 - Edge use cases
 
-You’re facing a **redesign, not an evolution**.
-
-For example, a University may run training labs in Azure today, but require on-prem deployment for research environments with sensitive data tomorrow.
+You’re facing a **redesign, not an evolution**. For example, a University may run training labs in Azure today, but require on-prem deployment for research environments with sensitive data tomorrow.
 
 ### 6.1. Horizon Cloud: Built for hybrid from day one
 
