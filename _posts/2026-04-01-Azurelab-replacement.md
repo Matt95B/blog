@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Azure Lab Services Retirement - Why AVD + Nerdio isn't a "Like-for-Like" strategy
-subtitle: Don't just replace a service, elevate your EUC platform. Discover why Omnissa Horizon Cloud succeeds where AVD + Nerdio falls short.
+title: Azure Lab Services retirement: Choosing the right EUC platform for what comes next
+subtitle: Don’t just replace a service, elevate your EUC platform. Discover why Omnissa Horizon Cloud succeeds where AVD + Nerdio falls short.
 tags: [Azure, Horizon]
 readtime: true
 author: Mathieu Beaugrand
