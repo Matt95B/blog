@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Azure Lab Services retirement - Why AVD + Nerdio still falls short for modern EUC
-subtitle: Understand why AVD + Nerdio falls short and why Horizon Cloud is a superior alternative
+title: Azure Lab Services Retirement - Why AVD + Nerdio isn't a "Like-for-Like" strategy
+subtitle: Don't just replace a service, elevate your EUC platform. Discover why Omnissa Horizon Cloud succeeds where AVD + Nerdio falls short.
 tags: [Azure, Horizon]
 readtime: true
 author: Mathieu Beaugrand
@@ -36,7 +36,7 @@ In contrast, the recommended AVD + Nerdio approach is not a single solution. It�
 - Nerdio management layer
 - Additional third party tools for profiles, apps, and policies
 
-And while this works, it introduces a shift: **From consuming a platform to assembling one**.
+The shift is subtle but significant: you move from **consuming a platform** to **managing an ecosystem**.
 
 This is where **Omnissa Horizon Cloud** differentiates itself, not as an add-on, but as a **complete platform**.
 
@@ -54,7 +54,7 @@ Even with Nerdio, this often leads to:
 - Complex update cycles
 - Increased testing overhead
 
-With Horizon, **App Volumes** fundamentally changes the model. What App Volumes enables:
+With Horizon Cloud, **App Volumes** fundamentally changes the model. What App Volumes enables:
 - Real-time app attachment at app launch
 - Separation of apps from the golden image
 - Instant updates without recomposing desktops
@@ -75,7 +75,7 @@ Typical AVD approaches include:
 
 These provide persistence, but limited control.
 
-With Horizon, **Dynamic Environment Manager (DEM)** delivers:
+With Horizon Cloud, **Dynamic Environment Manager (DEM)** delivers:
 - Policy-driven user environment management
 - Context-aware configuration (device, location, role)
 - Granular application settings
@@ -91,7 +91,7 @@ User experience isn’t just about performance, it’s about how users connect, 
 1.	How users access their applications
 2.	How those applications perform once connected
 
-Most platforms focus on one. A mature EUC platform delivers both. This is where **Omnissa Horizon** differentiates itself.
+Most platforms focus on one. A mature EUC platform delivers both. This is where **Omnissa Horizon Cloud** differentiates itself.
 
 ### 3.1 The access layer: A true digital front door
 
@@ -106,7 +106,7 @@ While functional, this often leads to:
 - Multiple user journeys
 - Increased login friction
 
-With Horizon, **Omnissa Access** provides a unified digital front door. What this delivers:
+With Horizon Cloud, **Omnissa Access** provides a unified digital front door. What this delivers:
 - A single portal for all apps and desktops
 - Consistent experience across browser, mobile, and desktop
 - Integrated authentication (including MFA and conditional access)
@@ -133,7 +133,7 @@ Once connected, performance becomes the defining factor of user experience. AVD 
 - Limited optimisation for multimedia and graphics workloads
 - Reduced control over protocol behaviour
 
-Horizon introduces **Blast Extreme**, a purpose-built display protocol designed for modern workloads. Key advantages:
+Horizon Cloud introduces **Blast Extreme**, a purpose-built display protocol designed for modern workloads. Key advantages:
 - Adaptive transport (intelligent UDP/TCP switching)
 - Strong performance in high-latency or low-bandwidth conditions
 - Optimised for video, audio, and GPU-intensive workloads
@@ -141,11 +141,11 @@ Horizon introduces **Blast Extreme**, a purpose-built display protocol designed 
 
 ### 3.3 Bringing it together: End-to-End user experience
 
-Most solutions treat access and performance as separate concerns. Horizon integrates both into a single experience:
+Most solutions treat access and performance as separate concerns. Horizon Cloud integrates both into a single experience:
 - Omnissa Access → how users connect
 - Blast Extreme → how applications perform
 
-By combining a digital front door with a high-performance protocol, Horizon helps:
+By combining a digital front door with a high-performance protocol, Horizon Cloud helps:
 - Simplify how users connect
 - Optimise how applications perform
 - Deliver a consistent experience across any environment
@@ -163,7 +163,7 @@ With AVD + Nerdio, you are combining multiple layers:
 - FSLogix
 - Additional third party tooling for apps and policies
 
-Each solves part of the problem. None own the full experience. With Horizon, everything is built-in:
+Each solves part of the problem. None own the full experience. With Horizon Cloud, everything is built-in:
 - App lifecycle (App Volumes)
 - User environment (DEM)
 - Protocol (Blast)
@@ -186,7 +186,7 @@ Recreating this with AVD requires:
 - Multiple tools
 - Ongoing operational effort
 
-Horizon enables:
+Horizon Cloud enables:
 - Rapid provisioning from clean images
 - Stateless or semi-persistent desktops
 - Consistent environments across sessions
@@ -253,4 +253,4 @@ If you optimise for short-term alignment, AVD + Nerdio will get you there.
 
 If you optimise for capability, consistency, and future flexibility, **Horizon Cloud** isn’t just an alternative. It’s the stronger long-term strategy.
 
-So in short, if AVD + Nerdio is a solution you assemble, Horizon is a platform you standardise on.
+So in short, if AVD + Nerdio is a solution you assemble, Horizon Cloud is a platform you standardise on.
