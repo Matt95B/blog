@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Azure Lab Services Retirement - Why AVD + Nerdio still falls short for modern EUC
+title: Azure Lab Services retirement - Why AVD + Nerdio still falls short for modern EUC
 subtitle: Understand why AVD + Nerdio falls short and why Horizon Cloud is a superior alternative
 tags: [Azure, Horizon]
 readtime: true
@@ -8,14 +8,14 @@ author: Mathieu Beaugrand
 ---
 The retirement of Azure Lab Services isn’t just another platform change. It’s a forcing function.
 
-A forcing function to rethink how organisations deliver:
+Azure Lab Services didn’t just provide infrastructure, it removed complexity. Its retirement doesn’t just remove a service. It puts that complexity back on you. A forcing function to rethink how organisations deliver:
 - Training environments
 - Proof-of-concept platforms
 - Secure, repeatable desktop experiences
 
 For years, Azure Lab Services provided something rare in the cloud world: **Simplicity with control**.
 
-Now, with its [retirement scheduled for June 2027](https://learn.microsoft.com/en-us/azure/lab-services/retirement-guide), that simplicity is gone, and organisations are being pushed toward new architectures.
+Now, with its [retirement scheduled for June 2027](https://learn.microsoft.com/en-us/azure/lab-services/retirement-guide), that simplicity is gone, and organisations are being pushed toward new architectures and Microsoft acknowledges there is no like-for-like replacement.
 
 Microsoft’s guidance is clear:
 - Move to Azure Virtual Desktop (AVD)
@@ -161,6 +161,8 @@ If requirements shift, such as:
 - On-premises repatriation
 - Edge use cases
 
+For example, a University may run training labs in Azure today, but require on-prem deployment for research environments with sensitive data tomorrow.
+
 You’re facing a **redesign, not an evolution**.
 
 ### 6.1. Horizon Cloud: Built for hybrid from day one
@@ -204,3 +206,5 @@ This is a moment to do more than replace. It’s a moment to rethink. Because th
 If you optimise for short-term alignment, AVD + Nerdio will get you there.
 
 If you optimise for capability, consistency, and future flexibility, **Horizon Cloud** isn’t just an alternative. It’s the stronger long-term strategy.
+
+So in short, if AVD + Nerdio is a solution you assemble, Horizon is a platform you standardise on.
