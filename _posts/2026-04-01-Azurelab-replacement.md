@@ -85,20 +85,73 @@ With Horizon, **Dynamic Environment Manager (DEM)** delivers:
 
 ---
 
-## 3. User experience: Blast Extreme vs traditional protocols
+## 3. User experience: Performance + Access, not one or the other
 
-AVD primarily relies on Remote Desktop Protocol (RDP). While improved, it still has constraints:
-- Limited adaptability in poor network conditions
-- Less optimisation for multimedia and graphics
+User experience isn’t just about performance, it’s about how users connect, authenticate, and interact with their digital workspace. It’s defined by two equally important factors:
+1.	How users access their applications
+2.	How those applications perform once connected
+
+Most platforms focus on one. A mature EUC platform delivers both. This is where **Omnissa Horizon** differentiates itself.
+
+### 3.1 The access layer: A true digital front door
+
+Before performance even matters, users need a simple, consistent way to access their workspace. In AVD environments, access is typically spread across:
+	•	Remote Desktop clients
+	•	Web portals
+	•	Multiple authentication entry points
+	•	Azure-native conditional access layers
+
+While functional, this often leads to:
+- Fragmented access experiences
+- Multiple user journeys
+- Increased login friction
+
+With Horizon, **Omnissa Access** provides a unified digital front door. What this delivers:
+- A single portal for all apps and desktops
+- Consistent experience across browser, mobile, and desktop
+- Integrated authentication (including MFA and conditional access)
+- Unified access to SaaS, web, and virtual applications
+
+Why this matters
+- For users:
+    - One place to go for everything
+        - The experience remains consistent whether workloads are running in the cloud or on-prem
+	- Fewer prompts and context switches
+	- A consistent experience regardless of device or location
+- For IT:
+	- Centralised access policy control
+	- Simplified identity architecture
+	- Reduced support overhead from access-related issues
+
+**Users don’t need to know where their apps live. They just know where to go.**
+
+![](https://blog.beaugtech.com/assets/img/2026-04-01-Azurelab-replacement/Access-hub.png)
+
+### 3.2 The performance layer: Blast Extreme
+
+Once connected, performance becomes the defining factor of user experience. AVD relies primarily on Remote Desktop Protocol (RDP). While it has improved, it still presents limitations:
+- Less adaptability in variable network conditions
+- Limited optimisation for multimedia and graphics workloads
 - Reduced control over protocol behaviour
 
-Horizon introduces **Blast Extreme**, a purpose-built display protocol. Key advantages:
-- Adaptive transport (UDP/TCP switching)
-- Better performance on high-latency networks
-- Optimised for video, audio, and GPU workloads
-- Fine-grained tuning for bandwidth vs quality
+Horizon introduces **Blast Extreme**, a purpose-built display protocol designed for modern workloads. Key advantages:
+- Adaptive transport (intelligent UDP/TCP switching)
+- Strong performance in high-latency or low-bandwidth conditions
+- Optimised for video, audio, and GPU-intensive workloads
+- Fine-grained tuning for bandwidth, quality, and responsiveness
 
-This is a noticeable, real-world difference, not just a spec sheet improvement.
+### 3.3 Bringing it together: End-to-End user experience
+
+Most solutions treat access and performance as separate concerns. Horizon integrates both into a single experience:
+- Omnissa Access → how users connect
+- Blast Extreme → how applications perform
+
+By combining a digital front door with a high-performance protocol, Horizon helps:
+- Simplify how users connect
+- Optimise how applications perform
+- Deliver a consistent experience across any environment
+
+**The result is not just a working session. It’s a consistent, low-friction digital workspace experience**
 
 ---
 
