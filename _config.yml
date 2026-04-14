@@ -75,7 +75,6 @@ defaults:
 
 include:
   - _pages
-  - _events
 
 # Tags
 tag_page_dir:         tag
@@ -85,3 +84,9 @@ tag_permalink_style:  /:title
 sass:
   sass_dir: _sass
   style: compressed
+
+# Adding events collection
+collections:
+  events:
+    output: false
+    sort_by: date

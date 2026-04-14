@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About me
+permalink: /about
 ---
 
 My name is Mathieu Beaugrand, and I am a Senior Solution Architect at Omnissa.
