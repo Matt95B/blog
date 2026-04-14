@@ -99,7 +99,7 @@ permalink: /events
 
   /* Mobile */
   @media (max-width: 640px) {
-    .event__inner--with-image {
+    .event__inner.event__inner--with-image {
       display: block;
     }
     .event__image-single {
