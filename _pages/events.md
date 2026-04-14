@@ -49,21 +49,20 @@ permalink: /events
     box-sizing: border-box;
   }
 
-  /* Single image layout — CSS grid, text left, image right */
-  .event__inner--with-image {
+  /* No image — just full width text */
+  .event__inner {
+    display: block;
+    width: 100%;
+  }
+  
+  /* Single image — must override display:block from above */
+  .event__inner.event__inner--with-image {
     display: grid;
     grid-template-columns: 1fr 250px;
     gap: 1.5rem;
     width: 100%;
     box-sizing: border-box;
   }
-
-  /* No image — just full width text */
-  .event__inner {
-    display: block;
-    width: 100%;
-  }
-
   .event__body {
     min-width: 0;
     text-align: left;
