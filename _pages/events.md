@@ -42,30 +42,32 @@ permalink: /events
     border-color: var(--brand-color);
   }
 
-  /* Single image — right side */
+  /* Event layout */
   .event__inner {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
   .event__inner--with-image {
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1.5rem;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.5rem;
   }
   .event__body {
-    flex: 1;
+    flex: 1 1 auto;
+    min-width: 0;
   }
+
+  /* Single image — fixed to far right */
   .event__image-single {
-  flex-shrink: 0;
-  width: 220px;
-  margin-left: auto;
+    flex: 0 0 220px;
+    width: 220px;
   }
-  ..event__image-single img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  display: block;
+  .event__image-single img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
   }
 
   /* Multiple images — below, centred */
@@ -88,7 +90,8 @@ permalink: /events
     .event__inner--with-image {
       flex-direction: column;
     }
-    .event__inner-single {
+    .event__image-single {
+      flex: 0 0 auto;
       width: 100%;
     }
   }
@@ -132,7 +135,7 @@ permalink: /events
     </div>
   </div>
 
-<!-- Events list -->
+  <!-- Events list -->
   <div class="row" id="events-container">
     <div class="col col-12">
       {% for event in sorted_events %}
@@ -144,38 +147,38 @@ permalink: /events
             <div class="article__content">
 
               <div class="event__inner {% if img_count == 1 %}event__inner--with-image{% endif %}">
-  <div class="event__body">
-    <h2 class="article__title">{{ event.name }}</h2>
-    <p>
-      <time class="article__date" datetime="{{ event.date | date: '%Y-%m-%d' }}">{{ event.date | date: "%d %B %Y" }}</time><br>
-      {{ event.type }}<br>
-      {% if event.city %}{{ event.city }}<br>{% endif %}
-      Role: <strong>{{ event.role }}</strong><br>
-      {% if event.platform %}
-        Platform:
-        {% if event.platform_url %}
-          <a href="{{ event.platform_url }}" target="_blank" rel="noopener">{{ event.platform }}</a>
-        {% else %}
-          {{ event.platform }}
-        {% endif %}
-      {% endif %}
-    </p>
-  </div>
+                <div class="event__body">
+                  <h2 class="article__title">{{ event.name }}</h2>
+                  <p>
+                    <time class="article__date" datetime="{{ event.date | date: '%Y-%m-%d' }}">{{ event.date | date: "%d %B %Y" }}</time><br>
+                    {{ event.type }}<br>
+                    {% if event.city %}{{ event.city }}<br>{% endif %}
+                    Role: <strong>{{ event.role }}</strong><br>
+                    {% if event.platform %}
+                      Platform:
+                      {% if event.platform_url %}
+                        <a href="{{ event.platform_url }}" target="_blank" rel="noopener">{{ event.platform }}</a>
+                      {% else %}
+                        {{ event.platform }}
+                      {% endif %}
+                    {% endif %}
+                  </p>
+                </div>
 
-  {% if img_count == 1 %}
-    <div class="event__image-single">
-      <img src="{{ event.images[0] }}" alt="{{ event.name }}" loading="lazy">
-    </div>
-  {% endif %}
-</div>
+                {% if img_count == 1 %}
+                  <div class="event__image-single">
+                    <img src="{{ event.images[0] }}" alt="{{ event.name }}" loading="lazy">
+                  </div>
+                {% endif %}
+              </div>
 
-{% if img_count > 1 %}
-  <div class="event__images-multi">
-    {% for img in event.images %}
-      <img src="{{ img }}" alt="{{ event.name }}" loading="lazy">
-    {% endfor %}
-  </div>
-{% endif %}
+              {% if img_count > 1 %}
+                <div class="event__images-multi">
+                  {% for img in event.images %}
+                    <img src="{{ img }}" alt="{{ event.name }}" loading="lazy">
+                  {% endfor %}
+                </div>
+              {% endif %}
 
             </div>
           </div>
@@ -184,13 +187,13 @@ permalink: /events
     </div>
   </div>
 
+</div>
+
 <script>
   function filterEvents(btn, group) {
-    // Update active button in this group
     document.querySelectorAll(group).forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
 
-    // Read current active filters
     const activeYear = document.querySelector('.filter-year.active').dataset.year;
     const activeType = document.querySelector('.filter-type.active').dataset.type;
 
