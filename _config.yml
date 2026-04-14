@@ -75,6 +75,7 @@ defaults:
 
 include:
   - _pages
+  - _events
 
 # Tags
 tag_page_dir:         tag
