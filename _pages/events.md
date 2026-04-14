@@ -62,7 +62,6 @@ permalink: /events
     gap: 1.5rem;
     width: 100%;
     box-sizing: border-box;
-    align-items: center;
   }
   .event__body {
     min-width: 0;
@@ -72,7 +71,7 @@ permalink: /events
   /* Single image — right column, top aligned */
   .event__image-single {
     width: 250px;
-    align-self: start;
+    align-items: center;
   }
   .event__image-single img {
     width: 100%;
