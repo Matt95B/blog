@@ -4,47 +4,6 @@ title: Events
 description: List of events I attended and participated in over the years
 ---
 
-<div class="events-filter-wrapper">
-  <h3 id="filterToggle" class="filter-toggle">
-    <span id="filterIcon">▶</span> Filter events
-  </h3>
-
-  <div id="filterContent" class="events-filter collapsed">
-    <label>
-      Year:
-      <select id="yearFilter">
-        <option value="all">All</option>
-
-        {% assign years = "" | split: "," %}
-        {% for event in site.events %}
-          {% assign year = event.date | date: "%Y" %}
-          {% unless years contains year %}
-            {% assign years = years | push: year %}
-          {% endunless %}
-        {% endfor %}
-
-        {% assign years = years | sort | reverse %}
-        {% for y in years %}
-          <option value="{{ y }}">{{ y }}</option>
-        {% endfor %}
-      </select>
-    </label>
-
-    <label>
-      Type:
-      <select id="typeFilter">
-        <option value="all">All</option>
-        {% assign types = site.events | map: "type" | uniq | sort %}
-        {% for t in types %}
-          <option value="{{ t | downcase | replace: ' ', '-' }}">
-            {{ t }}
-          </option>
-        {% endfor %}
-      </select>
-    </label>
-  </div>
-</div>
-
 {% assign events = site.events | sort: "date" | reverse %}
 
 {% for event in events %}
