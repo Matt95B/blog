@@ -62,7 +62,7 @@ permalink: /events
     gap: 1.5rem;
     width: 100%;
     box-sizing: border-box;
-    align-items: center
+    align-items: center;
   }
   .event__body {
     min-width: 0;
