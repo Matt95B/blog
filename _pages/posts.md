@@ -56,14 +56,14 @@ permalink: /posts
           <p class="article__excerpt">{{ post.description | default: post.excerpt | strip_html | truncatewords: 30 }}</p>
           <div class="article__bottom">
             <div class="article__meta">
-              <a href="/about/" class="article__author-image">
-                <img class="lazy" alt="{{ site.author }}" src="{{ site.baseurl }}/images/me_headshot.png">
-              </a>
-              <div class="article__info">
-                <a href="/about/" class="article__author-link">{{ site.author }}</a>
-                <time class="article__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b %Y" }}</time>
-              </div>
+                <a href="/about/" class="article__author-image">
+                    <img class="lazy" alt="{{ site.author.name }}" src="{{ site.author.image }}">
+                </a>
+                <div class="article__info">
+                    <a href="/about/" class="article__author-link">{{ site.author.name }}</a>
+                    <time class="article__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b %Y" }}</time>
             </div>
+</div>
             <div class="article-tags__box">
               {% for tag in post.tags %}
                 <a href="{{ site.baseurl }}/tag/{{ tag }}" class="article__tag">{{ tag }}</a>
