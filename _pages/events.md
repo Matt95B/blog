@@ -41,7 +41,60 @@ permalink: /events
     color: #fff;
     border-color: var(--brand-color);
   }
+  
+/* Event layout */
+  .event__inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .event__inner--with-image {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .event__body {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
 
+  /* Single image — fixed to far right */
+  .event__image-single {
+    flex: 0 0 220px;
+    width: 220px;
+  }
+  .event__image-single img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+  }
+
+  /* Multiple images — below, centred */
+  .event__images-multi {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 1rem;
+  }
+  .event__images-multi img {
+    height: 180px;
+    width: auto;
+    border-radius: 6px;
+    object-fit: cover;
+  }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    .event__inner--with-image {
+      flex-direction: column;
+    }
+    .event__image-single {
+      flex: 0 0 auto;
+      width: 100%;
+    }
+  }
 </style>
 
 {% include author.html %}
