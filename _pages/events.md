@@ -42,26 +42,37 @@ permalink: /events
     border-color: var(--brand-color);
   }
 
-/* Event layout */
-  .event__inner {
-    display: flex;
-    flex-direction: column;
+  /* Force article__content to fill full width for event cards */
+  .article[data-year] .article__content {
+    display: block;
     width: 100%;
-  }
-  .event__inner--with-image {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 1.5rem;
-  }
-  .event__body {
-    flex: 1 1 auto;
-    min-width: 0;
+    box-sizing: border-box;
   }
 
-  /* Single image — fixed to far right */
+  /* Single image layout — CSS grid, text left, image right */
+  .event__inner--with-image {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* No image — just full width text */
+  .event__inner {
+    display: block;
+    width: 100%;
+  }
+
+  .event__body {
+    min-width: 0;
+    text-align: left;
+  }
+
+  /* Single image — right column, top aligned */
   .event__image-single {
-    flex: 0 0 250px;
     width: 250px;
+    align-self: start;
   }
   .event__image-single img {
     width: 100%;
@@ -70,17 +81,19 @@ permalink: /events
     display: block;
   }
 
-  /* Multiple images — below, centred */
+  /* Multiple images — full width below text, centred */
   .event__images-multi {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 12px;
     margin-top: 1rem;
+    width: 100%;
+    box-sizing: border-box;
   }
   .event__images-multi img {
-    height: auto;
     width: 250px;
+    height: auto;
     border-radius: 6px;
     object-fit: cover;
   }
@@ -88,11 +101,11 @@ permalink: /events
   /* Mobile */
   @media (max-width: 640px) {
     .event__inner--with-image {
-      flex-direction: column;
+      display: block;
     }
     .event__image-single {
-      flex: 0 0 auto;
       width: 100%;
+      margin-top: 1rem;
     }
   }
 </style>
