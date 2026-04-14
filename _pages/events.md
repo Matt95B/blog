@@ -71,13 +71,13 @@ permalink: /events
   /* Single image — right column, top aligned */
   .event__image-single {
     width: 250px;
-    align-items: center;
   }
   .event__image-single img {
     width: 100%;
     height: auto;
     border-radius: 6px;
     display: block;
+    align-items: center;
   }
 
   /* Multiple images — full width below text, centred */
