@@ -41,7 +41,7 @@ permalink: /events
     color: #fff;
     border-color: var(--brand-color);
   }
-  
+
 /* Event layout */
   .event__inner {
     display: flex;
@@ -60,8 +60,8 @@ permalink: /events
 
   /* Single image — fixed to far right */
   .event__image-single {
-    flex: 0 0 220px;
-    width: 220px;
+    flex: 0 0 250px;
+    width: 250px;
   }
   .event__image-single img {
     width: 100%;
@@ -79,8 +79,8 @@ permalink: /events
     margin-top: 1rem;
   }
   .event__images-multi img {
-    height: 180px;
-    width: auto;
+    height: auto;
+    width: 250px;
     border-radius: 6px;
     object-fit: cover;
   }
