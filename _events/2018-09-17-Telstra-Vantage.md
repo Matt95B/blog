@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: default
 name: Telstra Vantage
 date: 2018-09-17
 type: Vendor event

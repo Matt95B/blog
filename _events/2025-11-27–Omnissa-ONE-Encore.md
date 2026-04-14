@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: default
 name: What's new with Horizon
 date: 2025-11-27
 type: Webinar

@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: default
 name: Dicker Data TechX
 date: 2022-08-23
 type: Vendor event

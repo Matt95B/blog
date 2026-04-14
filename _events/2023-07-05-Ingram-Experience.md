@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: default
 name: Ingram Experience
 date: 2023-07-05
 type: Vendor event

@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: default
 name: Samsung Knox expert training
 date: 2025-11-20
 type: Vendor event

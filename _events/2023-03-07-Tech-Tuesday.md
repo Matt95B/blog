@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: default
 name: Tech Tuesday – Improving your mobile security with Mobile Threat Defence (MTD)
 date: 2023-03-07
 type: Webinar

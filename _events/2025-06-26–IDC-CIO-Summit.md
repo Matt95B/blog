@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: default
 name: IDC CIO Summit
 date: 2025-06-26
 type: Industry event

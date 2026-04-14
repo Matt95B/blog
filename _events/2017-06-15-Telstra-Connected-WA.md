@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: default
 name: Telstra Connected WA
 date: 2017-06-15
 type: Vendor event
