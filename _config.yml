@@ -1,27 +1,25 @@
 #-------------------------------
 # General Site Settings
-title: Bracia
+title: Mathieu Beaugrand's Blog
 logo: # You can add own logo. For example '/images/logo.png'.
-description: Bracia is a simple personal blog theme for Jekyll.
+description: Sharing practical insights on End User Computing (EUC) and modern workplace technologies.
 baseurl: "" # The subpath of your site, e.g. /blog
-url: "" # The base hostname & protocol for your site, e.g. http://example.com
+url: "https://blog.beaugtech.com" # The base hostname & protocol for your site, e.g. http://example.com
 
 #-------------------------------
 # Author Settings
 author:
-  name: Steve Kolinsky
-  title: Hey, I’m Steve Kolinsky!
-  description: I am a Senior Software Engineer. My passion lies in Full stack enterprise application development which I approach with an entrepreneurial mindset.
-  image: '/images/01.jpg'
-  avatar: '/images/01-1.jpg'
+  name: Mathieu Beaugrand
+  title: Senior Solution Architect specialised in EUC technologies.
+  description: The views and opinions expressed here are my own and do not necessarily reflect the official policies or positions of my current or past employers. I strive to keep all information accurate and up to date, but as with any technical content, there's always room for improvement. Feedback, suggestions, and corrections are always welcome!
+  image: '/images/me_headshot.png'
+  avatar: '/images/me_headshot.png'
 
 social:
-- {icon: "ion-logo-twitter", label: Twitter, link: "https://twitter.com"}
-- {icon: "ion-logo-facebook", label: Facebook, link: "https://facebook.com"}
-- {icon: "ion-logo-pinterest", label: Pinterest, link: "https://pinterest.com"}
-- {icon: "ion-logo-dribbble", label: Dribbble, link: "https://dribbble.com"}
-- {icon: "ion-logo-instagram", label: Instagram, link: "https://instagram.com"}
-- {icon: "ion-logo-github", label: Github, link: "https://github.com"}
+- {icon: "ion-logo-linkedin", label: LinkedIn, link: "https://www.linkedin.com/in/matt95b/"}
+- {icon: "ion-logo-youtube", label: YouTube, link: "https://www.youtube.com/@beaugtech"}
+- {icon: "ion-logo-github", label: GitHub, link: "https://github.com/Matt95B"}
+- {icon: "ion-logo-reddit", label: Reddit, link: "https://www.reddit.com/user/Matt95B/"}
 
 # Example of adding a new link to the author section - {icon: "ion-logo-vimeo", label: Vimeo, link: "https://vimeo.com"}
 # Other icons can be found at https://ionicons.com/v4/
@@ -29,7 +27,7 @@ social:
 
 #-------------------------------
 # Newsletter (_includes/footer-widgets/widget-subscribe.html)
-mailchimp: true # To enable the mailchimp form, use the value 'true'. To disable the form, use the value 'false' or leave the field blank.
+mailchimp: false # To enable the mailchimp form, use the value 'true'. To disable the form, use the value 'false' or leave the field blank.
 mailchimp__title: Get interesting news # Add your Title
 mailchimp__text: Subscribe to our newsletter and we’ll send you the emails of latest posts. # Add your description.
 mailchimp__identifier: # Add your MailChimp form identifier. For example - blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e
@@ -39,8 +37,8 @@ mailchimp__button__text: Join # Add your button text
 #-------------------------------
 # Contact Settings
 contact:
-  email: your@email.com # Add your email for contact form
-  description: Bracia comes with a built-in contact form, that you can use with Formspree service to handle up to 50 submissions per month for free. You could also easily switch to another contact form service if you want. # Add a description of your form
+  email: info@beaugtech.com # Add your email for contact form
+  description: Get in touch!. # Add a description of your form
 
 # NOTE
 # Bracia comes with a built-in contact form, that you can use with Formspree service to handle up to 50 submissions per month for free. You could also easily switch to another contact form service if you want.
@@ -48,7 +46,7 @@ contact:
 
 #-------------------------------
 # Comment Section (Disqus)
-disqus-identifier: anvodstudio-demo # Add your shortname for Disqus Comment. For example anvodstudio-demo
+disqus-identifier:  # Add your shortname for Disqus Comment. For example anvodstudio-demo
 
 
 #-------------------------------
@@ -59,7 +57,7 @@ google-analytics: # Add your identifier. For example UA-99631805-1.
 #-------------------------------
 # Build Settings
 markdown: kramdown
-permalink: /:title
+permalink: /:year-:month-:day-:title
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
