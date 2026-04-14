@@ -4,13 +4,13 @@ title: Mathieu Beaugrand's Blog
 logo: # You can add own logo. For example '/images/logo.png'.
 description: Sharing practical insights on End User Computing (EUC) and modern workplace technologies.
 baseurl: "" # The subpath of your site, e.g. /blog
-url: "https://blog.beaugtech.com" # The base hostname & protocol for your site, e.g. http://example.com
+url: "https://blog2.beaugtech.com" # The base hostname & protocol for your site, e.g. http://example.com
 
 #-------------------------------
 # Author Settings
 author:
   name: Mathieu Beaugrand
-  title: Senior Solution Architect specialised in EUC technologies.
+  title: Senior Solution Architect
   description: The views and opinions expressed here are my own and do not necessarily reflect the official policies or positions of my current or past employers. I strive to keep all information accurate and up to date, but as with any technical content, there's always room for improvement. Feedback, suggestions, and corrections are always welcome!
   image: '/images/me_headshot.png'
   avatar: '/images/me_headshot.png'
