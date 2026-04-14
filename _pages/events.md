@@ -62,13 +62,14 @@ permalink: /events
     gap: 1.5rem;
     width: 100%;
     box-sizing: border-box;
+    align-items: center;
   }
   .event__body {
     min-width: 0;
     text-align: left;
   }
 
-  /* Single image — right column, top aligned */
+  /* Single image — right column */
   .event__image-single {
     width: 250px;
   }
