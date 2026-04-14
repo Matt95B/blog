@@ -9,6 +9,7 @@ permalink: /posts
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 2rem;
+    padding: 0 16px;
   }
   .tag-btn {
     padding: 6px 16px;
@@ -38,42 +39,25 @@ permalink: /posts
 {% endfor %}
 {% assign all_tags = all_tags | sort %}
 
-<div class="tag-filter">
-  <button class="tag-btn active" data-tag="all" onclick="filterTag('all', this)">All</button>
-  {% for tag in all_tags %}
-    <button class="tag-btn" data-tag="{{ tag }}" onclick="filterTag('{{ tag }}', this)">{{ tag }}</button>
-  {% endfor %}
-</div>
+{% include author.html %}
 
-<div class="articles" id="posts-container">
-  {% for post in site.posts %}
-    <div class="article col col-12 animate post-card" data-tags="{{ post.tags | join: '|' }}">
-      <div class="article__inner">
-        <div class="article__content">
-          <h2 class="article__title">
-            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          </h2>
-          <p class="article__excerpt">{{ post.description | default: post.excerpt | strip_html | truncatewords: 30 }}</p>
-          <div class="article__bottom">
-            <div class="article__meta">
-                <a href="/about/" class="article__author-image">
-                    <img class="lazy" alt="{{ site.author.name }}" src="{{ site.author.image }}">
-                </a>
-                <div class="article__info">
-                    <a href="/about/" class="article__author-link">{{ site.author.name }}</a>
-                    <time class="article__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b %Y" }}</time>
-            </div>
-</div>
-            <div class="article-tags__box">
-              {% for tag in post.tags %}
-                <a href="{{ site.baseurl }}/tag/{{ tag }}" class="article__tag">{{ tag }}</a>
-              {% endfor %}
-            </div>
-          </div>
+<div class="container">
+  <div class="tag-filter">
+    <button class="tag-btn active" data-tag="all" onclick="filterTag('all', this)">All</button>
+    {% for tag in all_tags %}
+      <button class="tag-btn" data-tag="{{ tag }}" onclick="filterTag('{{ tag }}', this)">{{ tag }}</button>
+    {% endfor %}
+  </div>
+
+  <div class="row" id="posts-container">
+    <div class="col col-12">
+      {% for post in site.posts %}
+        <div class="post-card animate" data-tags="{{ post.tags | join: '|' }}">
+          {% include article-content.html %}
         </div>
-      </div>
+      {% endfor %}
     </div>
-  {% endfor %}
+  </div>
 </div>
 
 <script>
