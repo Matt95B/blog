@@ -2,13 +2,31 @@
 layout: page
 title: Blog posts
 ---
+<style>
+.blog-filters {
+    padding: 20px 0 10px;
+}
 
-<section class="blog-hero">
-  <div class="container text-center">
-    <h1>All Posts</h1>
-    <p>Browse everything or filter by topic</p>
-  </div>
-</section>
+.filter-btn {
+    border: none;
+    background: #f1f3f5;
+    padding: 8px 16px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+    background: #e0e0e0;
+}
+
+.filter-btn.active {
+    background: #007bff;
+    color: white;
+}
+</style>   
 
 <section class="blog-filters">
   <div class="container text-center">
