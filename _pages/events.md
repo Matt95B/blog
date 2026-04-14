@@ -77,7 +77,6 @@ permalink: /events
     height: auto;
     border-radius: 6px;
     display: block;
-    align-items: center;
   }
 
   /* Multiple images — full width below text, centred */
