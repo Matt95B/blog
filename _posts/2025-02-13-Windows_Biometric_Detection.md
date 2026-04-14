@@ -1,10 +1,8 @@
 ---
 layout: post
 title: List biometric devices on Windows via PowerShell
-subtitle: Report on available biometric devices present on Windows via a PowerShell script.
+description: Report on available biometric devices present on Windows via a PowerShell script.
 tags: [Windows, Script]
-readtime: true
-comments: true
 author: Mathieu Beaugrand
 ---
 

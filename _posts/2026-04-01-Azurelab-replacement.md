@@ -1,9 +1,8 @@
 ---
 layout: post
 title: Azure Lab Services retirement - Choosing the right EUC platform for what comes next
-subtitle: Don’t just replace a service, elevate your EUC platform. Discover why Omnissa Horizon Cloud succeeds where AVD + Nerdio falls short.
+description: Don’t just replace a service, elevate your EUC platform. Discover why Omnissa Horizon Cloud succeeds where AVD + Nerdio falls short.
 tags: [Azure, Horizon, App, DEM]
-readtime: true
 author: Mathieu Beaugrand
 ---
 The retirement of Azure Lab Services isn’t just another platform change. Azure Lab Services didn’t just provide infrastructure, it removed complexity. Its retirement doesn’t just remove a service. It puts that complexity back on you. It’s a forcing function to rethink how organisations deliver training environments, proof-of-concept platforms, and secure, repeatable desktop experiences.

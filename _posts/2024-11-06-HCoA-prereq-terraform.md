@@ -1,10 +1,8 @@
 ---
 layout: post
 title: Terraform scripts to build Azure prerequisites for HCoA
-subtitle: Terraform scripts to build Azure prerequisites for Horizon Cloud on Azure (HCoA)
+description: Terraform scripts to build Azure prerequisites for Horizon Cloud on Azure (HCoA)
 tags: [Horizon, HCoA, Terraform, Azure, Script]
-readtime: true
-comments: true
 author: Mathieu Beaugrand
 ---
 

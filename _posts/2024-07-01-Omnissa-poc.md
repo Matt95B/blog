@@ -1,10 +1,8 @@
 ---
 layout: post
 title: Omnissa POC templates
-subtitle: Repository of templates to assist with planning for a Omnissa platform Proof of Concept (POC)
+description: Repository of templates to assist with planning for a Omnissa platform Proof of Concept (POC)
 tags: [Workspace ONE, Horizon, POC]
-readtime: true
-comments: true
 author: Mathieu Beaugrand
 ---
 Over the years, I’ve helped customers deploy a wide range of EUC solutions, whether as paid projects, trials, or full Proof of Concept (POC). One of the most common challenges I see is getting started with the prerequisites. Vendor documentation is often extensive, scattered, and sometimes confusing, which can make the initial setup harder than it needs to be.

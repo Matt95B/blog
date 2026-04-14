@@ -1,10 +1,8 @@
 ---
 layout: post
 title: Find iOS app bundle ID
-subtitle: Step by step guide on how to find an iOS app bundle ID
+description: Step by step guide on how to find an iOS app bundle ID
 tags: [Apple, iOS, App]
-readtime: true
-comments: true
 author: Mathieu Beaugrand
 ---
 There is currently no way to look up app bundle IDs in the Apple iOS App Store directly. To find the identifier, you will need to look at a file inside the app.

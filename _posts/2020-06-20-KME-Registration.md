@@ -1,10 +1,8 @@
 ---
 layout: post
 title: Register for Knox Mobile Enrollment (KME)
-subtitle: Step-by-step guide for creating or activating a Samsung Knox account for KME
+description: Step-by-step guide for creating or activating a Samsung Knox account for KME
 tags: [Samsung, Knox, KME, Android]
-readtime: true
-comments: true
 author: Mathieu Beaugrand
 ---
 This guide outlines the steps required to register for **Samsung Knox Mobile Enrollment (KME)**, whether you already have an existing Knox web portal account or need to create one.

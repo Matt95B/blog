@@ -1,10 +1,8 @@
 ---
 layout: post
 title: Register for a Telstra DES account
-subtitle: Step-by-step guide on how to register for Telstra DES (Device Enrolment Service) account
+description: Step-by-step guide on how to register for Telstra DES (Device Enrolment Service) account
 tags: [Telstra, DES]
-readtime: true
-comments: true
 author: Mathieu Beaugrand
 ---
 Telstra Device Enrolment Service (DES) portal keeps a record of all the compatible devices you have purchased from Telstra and allows you to add or remove these devices into the device manufacturer’s programs.

@@ -1,10 +1,8 @@
 ---
 layout: post
 title: Deploy private app via Android Enterprise
-subtitle: How to deploy a private app (.apk) on Android Enterprise (AE) devices via the Play Store
+description: How to deploy a private app (.apk) on Android Enterprise (AE) devices via the Play Store
 tags: [Android, Play Store, App]
-readtime: true
-comments: true
 author: Mathieu Beaugrand
 ---
 ## Why host your APK with Google:

@@ -1,10 +1,8 @@
 ---
 layout: post
 title: Intune notification templates
-subtitle: Collection of templates to be used as Intune notifications
+description: Collection of templates to be used as Intune notifications
 tags: [Intune]
-readtime: true
-comments: true
 author: Mathieu Beaugrand
 ---
 

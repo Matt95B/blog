@@ -1,10 +1,8 @@
 ---
 layout: post
 title: Apple iOS software update OTA
-subtitle: Overview on how software OTA (Over The Air) works on iOS devices
+description: Overview on how software OTA (Over The Air) works on iOS devices
 tags: [Apple, iOS, OS Update]
-readtime: true
-comments: true
 author: Mathieu Beaugrand
 ---
 I often get asked by clients or colleagues if they can update their iPhones or iPads with the latest Apple software released over cellular instead of requiring a WiFi connection. The answer is yes, it is possible, and this article will explain why not all users are getting the update over cellular at the same time.

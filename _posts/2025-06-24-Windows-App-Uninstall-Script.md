@@ -1,10 +1,8 @@
 ---
 layout: post
 title: Uninstall Windows applications silently with PowerShell
-subtitle: PowerShell script to uninstall Windows applications silently (where supported)
+description: PowerShell script to uninstall Windows applications silently (where supported)
 tags: [Windows, App, Script]
-readtime: true
-comments: true
 author: Mathieu Beaugrand
 ---
 When deploying Windows devices using **Autopilot**, unwanted **Win32** or **AppX** apps can clutter user experience or cause security risk. Below is a PowerShell script you can run in SYSTEM context to silently uninstall these apps as part of the **Out-of-Box Experience (OOBE)**.

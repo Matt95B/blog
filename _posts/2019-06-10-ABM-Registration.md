@@ -1,10 +1,8 @@
 ---
 layout: post
 title: Register for an ABM account
-subtitle: Step-by-step guide on how to register for an Apple Business Manager (ABM) account
+description: Step-by-step guide on how to register for an Apple Business Manager (ABM) account
 tags: [Apple, ABM, ASM]
-readtime: true
-comments: true
 author: Mathieu Beaugrand
 ---
 This guide outlines the step-by-step process for enrolling your organisation in Apple Business Manager (ABM). Apple Business Manager centralises device deployment, app distribution, and identity management, making it an essential component of any Apple device strategy in the enterprise.
