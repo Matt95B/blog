@@ -6,5 +6,5 @@ type: Vendor event
 city: Melbourne, Australia
 role: Stand duty
 images:
-  - /assets/img/events/201609-vantage.jpeg
+  - /images/events/201609-vantage.jpeg
 ---
