@@ -6,5 +6,5 @@ type: Vendor event
 city: Brisbane, Australia
 role: Stand duty
 images:
-  - /assets/img/events/202208-dicker.jpeg
+  - /images/events/202208-dicker.jpeg
 ---

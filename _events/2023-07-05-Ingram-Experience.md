@@ -6,5 +6,5 @@ type: Vendor event
 city: Brisbane, Australia
 role: Stand duty & Presenter
 images:
-  - /assets/img/events/202307-ingram.jpeg
+  - /images/events/202307-ingram.jpeg
 ---
