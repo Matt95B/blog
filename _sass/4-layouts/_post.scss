@@ -202,8 +202,11 @@
 
 .post__content,
 .page__content {
-  max-width: 720px;
+/*  max-width: 720px; */
   margin: 0 auto;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
 
   em {
     a {
