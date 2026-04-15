@@ -179,8 +179,9 @@
 .article-tags__box {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   flex-wrap: wrap;
+  margin-left: auto;
+  justify-content: flex-end;
 
   @media only screen and (max-width: $mobile) {
     display: none;
