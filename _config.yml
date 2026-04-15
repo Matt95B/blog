@@ -77,15 +77,15 @@ include:
   - _pages
 
 # Tags
-tag_page_dir:         tag
-tag_page_layout:      tag_page
-tag_permalink_style:  /:title
+#tag_page_dir:         tag
+#tag_page_layout:      tag_page
+#tag_permalink_style:  /:title
 
 sass:
   sass_dir: _sass
   style: compressed
 
-# Adding events collection
+# Adding Events collection
 collections:
   events:
     output: false
