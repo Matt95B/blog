@@ -61,16 +61,47 @@ permalink: /posts
 </div>
 
 <script>
-  function filterTag(tag, btn) {
-    document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    document.querySelectorAll('.post-card').forEach(card => {
-      if (tag === 'all') {
-        card.style.display = '';
+  const buttons = document.querySelectorAll('.tag-btn');
+  const posts = document.querySelectorAll('.post-card');
+
+  function filterPosts(tag) {
+    posts.forEach(post => {
+      const tags = post.getAttribute('data-tags');
+
+      if (tag === 'all' || tags.includes(tag)) {
+        post.style.display = 'block';
       } else {
-        const tags = card.dataset.tags.split('|');
-        card.style.display = tags.includes(tag) ? '' : 'none';
+        post.style.display = 'none';
+      }
+    });
+
+    buttons.forEach(btn => {
+      btn.classList.remove('active');
+      if (btn.getAttribute('data-tag') === tag) {
+        btn.classList.add('active');
       }
     });
   }
+
+  // 👇 READ URL PARAM
+  const params = new URLSearchParams(window.location.search);
+  const tagFromUrl = params.get('tag');
+
+  if (tagFromUrl) {
+    filterPosts(tagFromUrl);
+  }
+
+  // 👇 BUTTON CLICK HANDLING
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const tag = button.getAttribute('data-tag');
+
+      // update URL without reload
+      const url = new URL(window.location);
+      url.searchParams.set('tag', tag);
+      window.history.pushState({}, '', url);
+
+      filterPosts(tag);
+    });
+  });
 </script>
