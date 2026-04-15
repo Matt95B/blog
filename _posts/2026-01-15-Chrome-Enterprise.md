@@ -189,15 +189,13 @@ In this example, I’ll walk through the integration using Omnissa Access as the
     - You will need those details later on in the Google Admin console
 - Configure the device signals as per your requirements
 
-<div class="blockquote">
-<p><strong>Note:</strong> Device signals that can be collected via <strong>Managed browser</strong> or <strong>Managed profile</strong> include:</p>
-
-<ul>
-  <li><strong>Disk Encryption:</strong> This signal checks whether the device's hard drive or SSD is encrypted. Only devices with an active main disk encryption will be granted access.</li>
-  <li><strong>Firewall Status:</strong> This signal checks whether the device firewall is enabled. Devices will not be granted access if their firewall is in a disabled state.</li>
-  <li><strong>Screen Lock Secured:</strong> This signal checks whether the device's screen lock is secured. Only devices with an enabled screen lock will be granted access.</li>
-</ul>
-</div>
+> <p><strong>Note:</strong> Device signals that can be collected via <strong>Managed browser</strong> or <strong>Managed profile</strong> include:</p>
+> 
+> <ul>
+>   <li><strong>Disk Encryption:</strong> This signal checks whether the device's hard drive or SSD is encrypted. Only devices with an active main disk encryption will be granted access.</li>
+>   <li><strong>Firewall Status:</strong> This signal checks whether the device firewall is enabled. Devices will not be granted access if their firewall is in a disabled state.</li>
+>   <li><strong>Screen Lock Secured:</strong> This signal checks whether the device's screen lock is secured. Only devices with an enabled screen lock will be granted access.</li>
+> </ul>
 
 Configure the device trust connector in the Google Admin console:
 - Login to your [Google Admin Console](https://admin.google.com)
