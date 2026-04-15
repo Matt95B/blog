@@ -70,7 +70,6 @@ Disable unnecessary services to reduce exposure and complexity.
 ## 2. User synchronisation
 Google Workspace supports several ways to synchronise users, and the right approach depends on your identity provider. In this case, I’ll use **SCIM provisioning** from Entra ID to Google Workspace via the native integration in the Google Admin Console.
 
-> [!NOTE]
 > **Note:** At the time of writing, this integration is in *beta*.
 > Alternatively, you can use the [Google Cloud / G Suite Connector by Microsoft](https://learn.microsoft.com/en-us/entra/identity/saas-apps/g-suite-provisioning-tutorial) app from the Entra ID app gallery.
 
@@ -177,7 +176,6 @@ Now let's look at the foundation of your Chrome configuration.
 #### 4.1.3 Third party device trust connector (optional)
 If your Identity Provider (IdP) supports device trust signals, integrating Google Chrome Enterprise enables context-aware access decisions based on browser trust. Chrome provides device signals such as managed browser status and disk encryption posture, allowing your IdP to enforce conditional access policies accordingly.
 
-> [!NOTE]
 > **Note:** The Chrome Enterprise Device Trust integration enables security posture verification for **ChromeOS**, **Windows**, and **macOS** devices.
 
 In this example, I’ll walk through the integration using Omnissa Access as the IdP. Google Chrome Enterprise also supports integrations with other identity providers that offer device trust capabilities.
@@ -191,7 +189,7 @@ In this example, I’ll walk through the integration using Omnissa Access as the
     - You will need those details later on in the Google Admin console
 - Configure the device signals as per your requirements
 
-<div class="note">
+<div class="blockquote">
 <p><strong>Note:</strong> Device signals that can be collected via <strong>Managed browser</strong> or <strong>Managed profile</strong> include:</p>
 
 <ul>
