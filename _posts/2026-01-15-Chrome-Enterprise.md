@@ -70,8 +70,9 @@ Disable unnecessary services to reduce exposure and complexity.
 ## 2. User synchronisation
 Google Workspace supports several ways to synchronise users, and the right approach depends on your identity provider. In this case, I’ll use **SCIM provisioning** from Entra ID to Google Workspace via the native integration in the Google Admin Console.
 
-> **Note:** At the time of writing, this integration is in *beta*.
-> Alternatively, you can use the [Google Cloud / G Suite Connector by Microsoft](https://learn.microsoft.com/en-us/entra/identity/saas-apps/g-suite-provisioning-tutorial) app from the Entra ID app gallery.
+{: .box-note}
+**Note:** At the time of writing, this integration is in *beta*.
+Alternatively, you can use the [Google Cloud / G Suite Connector by Microsoft](https://learn.microsoft.com/en-us/entra/identity/saas-apps/g-suite-provisioning-tutorial) app from the Entra ID app gallery.
 
 ### 2.1 SCIM configuration
 - Login to your [Google Admin Console](https://admin.google.com)
@@ -176,7 +177,8 @@ Now let's look at the foundation of your Chrome configuration.
 #### 4.1.3 Third party device trust connector (optional)
 If your Identity Provider (IdP) supports device trust signals, integrating Google Chrome Enterprise enables context-aware access decisions based on browser trust. Chrome provides device signals such as managed browser status and disk encryption posture, allowing your IdP to enforce conditional access policies accordingly.
 
-> **Note:** The Chrome Enterprise Device Trust integration enables security posture verification for **ChromeOS**, **Windows**, and **macOS** devices.
+{: .box-note}
+**Note:** The Chrome Enterprise Device Trust integration enables security posture verification for **ChromeOS**, **Windows**, and **macOS** devices.
 
 In this example, I’ll walk through the integration using Omnissa Access as the IdP. Google Chrome Enterprise also supports integrations with other identity providers that offer device trust capabilities.
 - Login to your Omnissa Access tenant
@@ -189,13 +191,15 @@ In this example, I’ll walk through the integration using Omnissa Access as the
     - You will need those details later on in the Google Admin console
 - Configure the device signals as per your requirements
 
-> <p><strong>Note:</strong> Device signals that can be collected via <strong>Managed browser</strong> or <strong>Managed profile</strong> include:</p>
-> 
-> <ul>
->   <li><strong>Disk Encryption:</strong> This signal checks whether the device's hard drive or SSD is encrypted. Only devices with an active main disk encryption will be granted access.</li>
->   <li><strong>Firewall Status:</strong> This signal checks whether the device firewall is enabled. Devices will not be granted access if their firewall is in a disabled state.</li>
->   <li><strong>Screen Lock Secured:</strong> This signal checks whether the device's screen lock is secured. Only devices with an enabled screen lock will be granted access.</li>
-> </ul>
+<div class="box-note">
+<p><strong>Note:</strong> Device signals that can be collected via <strong>Managed browser</strong> or <strong>Managed profile</strong> include:</p>
+
+<ul>
+  <li><strong>Disk Encryption:</strong> This signal checks whether the device's hard drive or SSD is encrypted. Only devices with an active main disk encryption will be granted access.</li>
+  <li><strong>Firewall Status:</strong> This signal checks whether the device firewall is enabled. Devices will not be granted access if their firewall is in a disabled state.</li>
+  <li><strong>Screen Lock Secured:</strong> This signal checks whether the device's screen lock is secured. Only devices with an enabled screen lock will be granted access.</li>
+</ul>
+</div>
 
 Configure the device trust connector in the Google Admin console:
 - Login to your [Google Admin Console](https://admin.google.com)
