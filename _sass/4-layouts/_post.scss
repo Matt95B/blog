@@ -173,7 +173,6 @@
   height: 590px;
   margin-bottom: 32px;
   border-radius: 22px;
-  object-position: center;
   overflow: hidden;
   background-color: var(--background-color);
 
@@ -229,6 +228,7 @@
   img, .js-reframe {
     border-radius: 8px;
     overflow: hidden;
+    object-position: center;
 
     &.lightense-open {
       border-radius: 0;
