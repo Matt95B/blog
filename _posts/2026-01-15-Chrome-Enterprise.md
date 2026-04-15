@@ -79,12 +79,11 @@ Alternatively, you can use the [Google Cloud / G Suite Connector by Microsoft](h
 - Go to **Directory > Directory sync**
 - Click **Add Azure Active Directory**
 - Give it a name then click **Authorise and Save**
+    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-Add.png){:style="max-width: 250px; max-height: 500px;"}
 - You will get redirected to Entra ID for authentication
     - Note that you will require to authenticate with a Global Admin account in order to authorise the integration
 - Accept the **Google Directory Sync** app creation in Entra ID
-
-![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-Add.png){:style="max-width: 250px; max-height: 500px;"}
-![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-Authorise.png){:style="max-width: 250px; max-height: 500px;"}
+    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-Authorise.png){:style="max-width: 250px; max-height: 500px;"}
 
 ### 2.2 User sync
 - Under the **User sync** section, click **Set up user sync**
