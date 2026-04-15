@@ -89,7 +89,7 @@ This provides a unique user experience, offering one place to go for everything,
 
 **Users don’t need to know where their apps live. They just know where to go.**
 
-![](https://blog.beaugtech.com/assets/img/2026-04-01-Azurelab-replacement/Access-hub.png)
+![]({{site.url}}/images/2026-04-01-Azurelab-replacement/Access-hub.png)
 
 ### 3.2 The performance layer: Blast Extreme
 
