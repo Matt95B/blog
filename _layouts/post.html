@@ -18,10 +18,10 @@ layout: default
       <h1 class="post__title">{{ page.title | escape }}</h1>
       <div class="post__meta">
         <div class="post__author">
-          <a href="{{site.baseurl}}/about/" class="post__author-image">
+          <a href="{{site.baseurl}}/about" class="post__author-image">
             <img class="lazy" data-src="{{site.author.avatar}}" alt="{{site.author.name}}">
           </a>
-          <a href="{{site.baseurl}}/about/" class="post__author-name">{{site.author.name}}</a>
+          <a href="{{site.baseurl}}/about" class="post__author-name">{{site.author.name}}</a>
         </div>
         <time class="post__date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
       </div>

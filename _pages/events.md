@@ -76,7 +76,7 @@ permalink: /events
   .event__image-single img {
     width: 100%;
     height: auto;
-    border-radius: 6px;
+    border-radius: 10px;
     display: block;
   }
 
@@ -93,7 +93,7 @@ permalink: /events
   .event__images-multi img {
     width: 250px;
     height: auto;
-    border-radius: 6px;
+    border-radius: 10px;
     object-fit: cover;
   }
 
