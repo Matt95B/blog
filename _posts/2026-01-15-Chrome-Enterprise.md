@@ -36,7 +36,7 @@ Domain verification ensures no one else can register services using your organis
     - Add a new TXT record with the value copied earlier
 - Go back to your Google Admin Console tab and click **Confirm**
 
-![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-Domain.png)
+![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Domain.png)
 
 ### 1.3 Licenses
 To unlock Chrome Enterprise features:
@@ -52,7 +52,7 @@ For advanced security capabilities, add:
 
 Some vendors bundle Chrome Enterprise Premium into their offerings. For example, [Omnissa Secure Access Suite](https://www.omnissa.com/insights/blog/omnissa-one-2025-amsterdam-google-chrome-enterprise-premium-secure-browser) includes Chrome Enterprise Premium as part of the solution, so reach out to your Omnissa representative if you prefer to procure it that way. Buying the **Omnissa Secure Access Suite** instead of Chrome Enterprise Premium alone delivers secure browser access as part of a **full, identity-driven Digital Workspace**, including Hub Experience & Unified AppCatalog, modern VPN via Workspace ONE Tunnel, conditional access through Omnissa Access, and robust BYOD support. It also lays the foundation for an **Autonomous Workspace** journey, unifying security, access, and user experience under a single intelligent platform.
 
-![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-Licenses.png)
+![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Licenses.png)
 
 ### 1.4 Services review
 Before synchronising users, assess and restrict Google services to align with your security and governance requirements.
@@ -63,7 +63,7 @@ Navigate to:
 
 Disable unnecessary services to reduce exposure and complexity.
 
-![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-Apps.png)
+![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Apps.png)
 
 ---
 
@@ -85,7 +85,7 @@ Alternatively, you can use the [Google Cloud / G Suite Connector by Microsoft](h
 
 | SCIM Add | SCIM Authorise |
 |:-------------------:|:-------------------:|
-| [![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-Add.png)](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-Add.png) | [![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-Authorise.png)](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-Authorise.png) |
+| [![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-Add.png)]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-Add.png) | [![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-Authorise.png)]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-Authorise.png) |
 
 ### 2.2 User sync
 - Under the **User sync** section, click **Set up user sync**
@@ -110,11 +110,11 @@ Alternatively, you can use the [Google Cloud / G Suite Connector by Microsoft](h
 
 | User scope | OU | User attributes |
 |:-------------------:|:-------------------:|:-------------------:|
-| [![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-User.png)](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-User.png) | [![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-OU.png)](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-OU.png) | [![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-UserAttributes.png)](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-UserAttributes.png) |
+| [![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-User.png)]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-User.png) | [![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-OU.png)]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-OU.png) | [![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-UserAttributes.png)]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-UserAttributes.png) |
 
 | User activation | User decommission | User safeguard |
 |:-------------------:|:-------------------:|:-------------------:|
-| [![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-UserActivation.png)](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-UserActivation.png) | [![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-UserDecom.png)](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-UserDecom.png) | [![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-UserSafeguard.png)](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-UserSafeguard.png) |
+| [![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-UserActivation.png)]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-UserActivation.png) | [![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-UserDecom.png)]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-UserDecom.png) | [![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-UserSafeguard.png)]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-UserSafeguard.png) |
 
 ### 2.3 Group sync
 - Under the **Group sync** section, click **Set up group sync**
@@ -133,7 +133,7 @@ Alternatively, you can use the [Google Cloud / G Suite Connector by Microsoft](h
 
 | Group scope | Group attributes | Group decommission | Group safeguard |
 |:-------------------:|:-------------------:|:-------------------:|:-------------------:|
-| [![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-Group.png)](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-Group.png) | [![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-GroupAttributes.png)](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-GroupAttributes.png) | [![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-GroupDecom.png)](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-GroupDecom.png) | [![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-GroupSafeguard.png)](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SCIM-GroupSafeguard.png) |
+| [![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-Group.png)]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-Group.png) | [![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-GroupAttributes.png)]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-GroupAttributes.png) | [![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-GroupDecom.png)]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-GroupDecom.png) | [![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-GroupSafeguard.png)]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-GroupSafeguard.png) |
 
 ---
 
@@ -146,7 +146,7 @@ If using another IdP:
 - Create an SSO profile
 - Assign it to an OU or user group
 
-![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-SSO.png)
+![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SSO.png)
 
 ---
 
@@ -166,7 +166,7 @@ Now let's look at the foundation of your Chrome configuration.
     - Managed browser reporting upload frequency: **4 hours**
     - Device token management: **Delete token**
 
-![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-Settings1.png)
+![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Settings1.png)
 
 #### 4.1.2 Safe browsing
 - Under the **User & browser settings** tab search for `safe browsing`
@@ -176,7 +176,7 @@ Now let's look at the foundation of your Chrome configuration.
     - Allow download deep scanning for Safe Browsing-enabled users: **Enable Safe Browsing download deep scans**
     - Download restrictions: **Block malicious downloads**
 
-![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-Settings2.png)
+![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Settings2.png)
 
 #### 4.1.3 Third party device trust connector (optional)
 If your Identity Provider (IdP) supports device trust signals, integrating Google Chrome Enterprise enables context-aware access decisions based on browser trust. Chrome provides device signals such as managed browser status and disk encryption posture, allowing your IdP to enforce conditional access policies accordingly.
@@ -205,7 +205,7 @@ In this example, I’ll walk through the integration using Omnissa Access as the
 
 | Auth Methods | Chrome adapter |
 |:-------------------:|:-------------------:|
-| [![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Access-AuthMethod.png)](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Access-AuthMethod.png) | [![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Access-ChromeAdapter.png)](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Access-ChromeAdapter.png) |
+| [![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Access-AuthMethod.png)]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Access-AuthMethod.png) | [![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Access-ChromeAdapter.png)]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Access-ChromeAdapter.png) |
 
 Configure the device trust connector in the Google Admin console:
 - Login to your [Google Admin Console](https://admin.google.com)
@@ -218,7 +218,7 @@ Configure the device trust connector in the Google Admin console:
 
 | Connector | Config | Assign |
 |:-------------------:|:-------------------:|:-------------------:|
-| [![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-Connector.png)](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-Connector.png) | [![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-ConnectorConfig.png)](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-ConnectorConfig.png) | [![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-ConnectorAssign.png)](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-ConnectorAssign.png) |
+| [![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Connector.png)]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Connector.png) | [![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-ConnectorConfig.png)]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-ConnectorConfig.png) | [![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-ConnectorAssign.png)]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-ConnectorAssign.png) |
 
 Configure your conditional access policy:
 - Login to your Omnissa Access tenant
@@ -228,7 +228,7 @@ Configure your conditional access policy:
     - Device type: **Windows 10+** or **macOS** or **Chrome OS**
     - Add **Google Chrome Enterprise Device Signals** as a second authentication method
 
-![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Access-Policy.png)
+![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Access-Policy.png)
 
 With this configuration in place, Chrome will continuously send device trust signals to Omnissa Access during authentication. These signals can then be evaluated in real time to enforce access controls.
 
@@ -253,7 +253,7 @@ Managing browser extensions effectively is essential to maintaining a secure bro
         - Extension ID: **ekajlcmdfcigmdbphhifahdfjbkciflj**
         - Installation policy: **Force install + pin to browser toolbar** 
 
-![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-Extension1.png)
+![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Extension1.png)
 
 Once you have visibility into which extensions are being used across your environment, you can make an informed decision on how to manage them moving forward—typically by enforcing either an **allowlist** or **blocklist** using the settings below.
 
@@ -318,7 +318,7 @@ To configure the managed browser option, you need to download the configuration 
 - Click **Enroll**
 - Copy and/or download your token
 
-![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Google-Token.png)
+![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Token.png)
 
 #### 5.1.2 Windows deployment
 Deploy the enrolment token using your PCLM/UEM solution. In this instance I am leveraging Workspace ONE to deploy the configuration file.
@@ -357,14 +357,14 @@ Deploy the enrolment token using your PCLM/UEM solution. In this instance I am l
     - Save and Publish
     - Custom settings details are documented [here](https://support.google.com/chrome/a/answer/9793780)
 
-![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/WS1-Profile.png)
+![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/WS1-Profile.png)
 
 ### 5.2 Managed profile
 No additional configuration is required for Chrome managed profiles, as management is automatically enabled when users create a Chrome profile and sign in with their managed Google account. Users simply need to:
 - Create a Chrome profile
 - Sign in with their managed Google account
 
-![](https://blog.beaugtech.com/assets/img/2026-01-15-Chrome-Enterprise/Chrome-Profile.png)
+![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Chrome-Profile.png)
 
 ### 5.3 Confirm enrolment
 

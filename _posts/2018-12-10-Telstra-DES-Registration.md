@@ -7,7 +7,7 @@ author: Mathieu Beaugrand
 ---
 Telstra Device Enrolment Service (DES) portal keeps a record of all the compatible devices you have purchased from Telstra and allows you to add or remove these devices into the device manufacturer’s programs.
 
-![](https://blog.beaugtech.com/assets/img/2018-12-10-Telstra-DES-Registration/DES-Overview.png)
+![]({{site.url}}/images/2018-12-10-Telstra-DES-Registration/DES-Overview.png)
 
 ## Request a Telstra DES account
 Pre-Requisites:

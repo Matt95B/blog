@@ -26,7 +26,7 @@ This guide provides a clear, step-by-step walkthrough on how to create a dedicat
    - This could be a shared mailbox or distribution group.
 4. Create a **password**, then click **Next**.
 
-![](https://blog.beaugtech.com/assets/img/2020-06-15-AE-Registration/Google-Create-Account.png)
+![]({{site.url}}/images/2020-06-15-AE-Registration/Google-Create-Account.png)
 
 ---
 
@@ -46,7 +46,7 @@ This guide provides a clear, step-by-step walkthrough on how to create a dedicat
 1. Enter your **Phone Number**, **Birthday**, and **Gender**, then click **Next**.
 2. *Note:* The phone number will be used for **two-factor authentication (2FA)** for this account going forward.
 
-![](https://blog.beaugtech.com/assets/img/2020-06-15-AE-Registration/Google-MFA.png)
+![]({{site.url}}/images/2020-06-15-AE-Registration/Google-MFA.png)
 
 ---
 

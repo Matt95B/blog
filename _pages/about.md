@@ -12,4 +12,4 @@ As a lifelong learner, I continually explore emerging technologies to stay ahead
 
 What truly motivates me is collaborating with clients to design and implement practical, user-friendly EUC solutions that make a meaningful impact on their daily operations. Seeing these solutions improve productivity and simplify how people work is what makes this field so rewarding.
 
-![](https://blog.beaugtech.com/assets/img/me_banner.png)
+![]({{site.url}}/images/me_banner.png)

@@ -15,14 +15,14 @@ iOS devices check-in with the Apple server once every 7 days (daily for emergenc
 So why can’t we download over cellular the latest software a soon as it gets released by Apple? It all comes down to how the device/user checks for updates, which dictates how quickly you can download it over cellular.
 
 ### Scenario 1: non user initiated download
-![](https://blog.beaugtech.com/assets/img/2020-07-09-iOS-Software-Update-OTA/iOS-update-timeline-device.png)
+![]({{site.url}}/images/2020-07-09-iOS-Software-Update-OTA/iOS-update-timeline-device.png)
 
 The device will randomly check for an update within the first 7 days, at that point download is only possible when the device is plugged-in to power and connected to WiFi for the next 7 days (brings us up to day 14), then the requirement to be plugged-in to power is dropped for the next 7 days (brings us up to day 21), finally download over cellular is allowed.
 So based on the random number (0 to 7) allocated to the device for update check-in, it can take between 14 and 21 days for the download to be allowed over cellular once released.
 At any stage of the process the user must acknowledge and accept the update before it is installed on the device.
 
 ### Scenario 2: user initiated download
-![](https://blog.beaugtech.com/assets/img/2020-07-09-iOS-Software-Update-OTA/iOS-update-timeline-user.png)
+![]({{site.url}}/images/2020-07-09-iOS-Software-Update-OTA/iOS-update-timeline-user.png)
 
 User checks in settings if an update is available. If an update is found, Apple will try to auto-download it when the device is plugged-in to power and connected to WiFi for the next 7 days. If the auto-download cannot be completed, the user can still download the update manually while connected to WiFi (plugged-in to power not required) within the 7 days. After the 7 day window expires, the user is then allowed to download the update over cellular by doing a manual check again in settings.
 At any stage of the process the user must acknowledge and accept the update before it is installed on the device.
