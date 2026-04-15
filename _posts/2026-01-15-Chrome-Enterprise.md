@@ -83,9 +83,8 @@ Alternatively, you can use the [Google Cloud / G Suite Connector by Microsoft](h
     - Note that you will require to authenticate with a Global Admin account in order to authorise the integration
 - Accept the **Google Directory Sync** app creation in Entra ID
 
-| SCIM Add | SCIM Authorise |
-|:-------------------:|:-------------------:|
-| [![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-Add.png)]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-Add.png) | [![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-Authorise.png)]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-Authorise.png) |
+![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-Add.png){:style="max-width: 250px; max-height: 500px;"}
+![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-Authorise.png){:style="max-width: 250px; max-height: 500px;"}
 
 ### 2.2 User sync
 - Under the **User sync** section, click **Set up user sync**
