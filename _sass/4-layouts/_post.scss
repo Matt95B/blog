@@ -173,6 +173,7 @@
   height: 590px;
   margin-bottom: 32px;
   border-radius: 22px;
+  object-position: center;
   overflow: hidden;
   background-color: var(--background-color);
 
@@ -183,8 +184,7 @@
     width: 100%;
     height: 100%;
     border-radius: 2px;
-/*    object-fit: cover; */
-    object-position: center;
+    object-fit: cover;
     user-select: none;
   }
   
