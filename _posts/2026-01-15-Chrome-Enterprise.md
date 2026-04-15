@@ -70,10 +70,9 @@ Disable unnecessary services to reduce exposure and complexity.
 ## 2. User synchronisation
 Google Workspace supports several ways to synchronise users, and the right approach depends on your identity provider. In this case, I’ll use **SCIM provisioning** from Entra ID to Google Workspace via the native integration in the Google Admin Console.
 
-```
-**Note:** At the time of writing, this integration is in *beta*.
-Alternatively, you can use the [Google Cloud / G Suite Connector by Microsoft](https://learn.microsoft.com/en-us/entra/identity/saas-apps/g-suite-provisioning-tutorial) app from the Entra ID app gallery.
-```
+> [!NOTE]
+> **Note:** At the time of writing, this integration is in *beta*.
+> Alternatively, you can use the [Google Cloud / G Suite Connector by Microsoft](https://learn.microsoft.com/en-us/entra/identity/saas-apps/g-suite-provisioning-tutorial) app from the Entra ID app gallery.
 
 ### 2.1 SCIM configuration
 - Login to your [Google Admin Console](https://admin.google.com)
@@ -178,9 +177,8 @@ Now let's look at the foundation of your Chrome configuration.
 #### 4.1.3 Third party device trust connector (optional)
 If your Identity Provider (IdP) supports device trust signals, integrating Google Chrome Enterprise enables context-aware access decisions based on browser trust. Chrome provides device signals such as managed browser status and disk encryption posture, allowing your IdP to enforce conditional access policies accordingly.
 
-```
-**Note:** The Chrome Enterprise Device Trust integration enables security posture verification for **ChromeOS**, **Windows**, and **macOS** devices.
-```
+> [!NOTE]
+> **Note:** The Chrome Enterprise Device Trust integration enables security posture verification for **ChromeOS**, **Windows**, and **macOS** devices.
 
 In this example, I’ll walk through the integration using Omnissa Access as the IdP. Google Chrome Enterprise also supports integrations with other identity providers that offer device trust capabilities.
 - Login to your Omnissa Access tenant
@@ -193,7 +191,7 @@ In this example, I’ll walk through the integration using Omnissa Access as the
     - You will need those details later on in the Google Admin console
 - Configure the device signals as per your requirements
 
-```
+<div class="note">
 <p><strong>Note:</strong> Device signals that can be collected via <strong>Managed browser</strong> or <strong>Managed profile</strong> include:</p>
 
 <ul>
@@ -201,19 +199,19 @@ In this example, I’ll walk through the integration using Omnissa Access as the
   <li><strong>Firewall Status:</strong> This signal checks whether the device firewall is enabled. Devices will not be granted access if their firewall is in a disabled state.</li>
   <li><strong>Screen Lock Secured:</strong> This signal checks whether the device's screen lock is secured. Only devices with an enabled screen lock will be granted access.</li>
 </ul>
-```
+</div>
 
 Configure the device trust connector in the Google Admin console:
 - Login to your [Google Admin Console](https://admin.google.com)
 - Go to **Chrome browser > Connectors**
 - Click **+ New provider configuration**
-    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Connector.png)
+    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Connector.png){:style="max-width: 250px; max-height: 500px;"}
 - Find your IdP, then click **Set up**
 - Paste the **URLs matcher** and **service account** details copied from Omnissa Access
 - Click **Add configuration**
-    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-ConnectorConfig.png)
+    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-ConnectorConfig.png){:style="max-width: 250px; max-height: 500px;"}
 - Assign the connector configuration to the appropriate OU
-    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-ConnectorAssign.png)
+    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-ConnectorAssign.png){:style="max-width: 250px; max-height: 500px;"}
 
 Configure your conditional access policy:
 - Login to your Omnissa Access tenant
@@ -222,8 +220,7 @@ Configure your conditional access policy:
 - Configure the policy based on your access requirements
     - Device type: **Windows 10+** or **macOS** or **Chrome OS**
     - Add **Google Chrome Enterprise Device Signals** as a second authentication method
-
-![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Access-Policy.png)
+    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Access-Policy.png){:style="max-width: 250px; max-height: 500px;"}
 
 With this configuration in place, Chrome will continuously send device trust signals to Omnissa Access during authentication. These signals can then be evaluated in real time to enforce access controls.
 
