@@ -4,7 +4,9 @@
       <h3 class="widget__title">Explore tags</h3>
     </div>
     <div class="tag__cloud">
-      {{ site | tag_cloud }}
+      {% for tag in page.tags %}
+        <a href="{{ site.baseurl }}/posts?tag={{ tag }}" class="post__tag">{{ tag }}</a>
+      {% endfor %}
     </div>
   </div>
 </div>
