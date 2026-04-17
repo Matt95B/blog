@@ -37,7 +37,7 @@ permalink: /posts
     {% endunless %}
   {% endfor %}
 {% endfor %}
-{% assign all_tags = all_tags | sort %}
+{% assign all_tags = all_tags | sort_natural %}
 
 {% include author.html %}
 

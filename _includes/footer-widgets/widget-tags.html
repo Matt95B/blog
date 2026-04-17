@@ -12,7 +12,7 @@
           {% endunless %}
         {% endfor %}
       {% endfor %}
-      {% assign all_tags = all_tags | sort %}
+      {% assign all_tags = all_tags | sort_natural %}
       {% for tag in all_tags %}
         <a href="{{ site.baseurl }}/posts?tag={{ tag }}" class="post__tag">{{ tag }}</a>
       {% endfor %}
