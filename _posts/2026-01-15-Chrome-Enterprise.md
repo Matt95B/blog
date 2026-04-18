@@ -79,11 +79,11 @@ Alternatively, you can use the [Google Cloud / G Suite Connector by Microsoft](h
 - Go to **Directory > Directory sync**
 - Click **Add Azure Active Directory**
 - Give it a name then click **Authorise and Save**
-    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-Add.png){:style="max-width: 250px; max-height: 500px;"}
+    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-Add.png){:style="max-width: 300px; max-height: 500px;"}
 - You will get redirected to Entra ID for authentication
     - Note that you will require to authenticate with a Global Admin account in order to authorise the integration
 - Accept the **Google Directory Sync** app creation in Entra ID
-    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-Authorise.png){:style="max-width: 250px; max-height: 500px;"}
+    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-Authorise.png){:style="max-width: 300px; max-height: 500px;"}
 
 ### 2.2 User sync
 - Under the **User sync** section, click **Set up user sync**
@@ -92,25 +92,25 @@ Alternatively, you can use the [Google Cloud / G Suite Connector by Microsoft](h
             - Nested groups do not seem to work in this scenario
         - Copy the name of your Entra ID group and paste it into the field
         - Click **Verify**
-        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-User.png){:style="max-width: 250px; max-height: 500px;"}
+        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-User.png){:style="max-width: 300px; max-height: 500px;"}
     - Organizational unit (OU) selection
         - Select **Place users in a specific OU**
         - Click on **Select organizational unit**
         - Then select the top level OU of your domain
-        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-OU.png){:style="max-width: 250px; max-height: 500px;"}
+        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-OU.png){:style="max-width: 300px; max-height: 500px;"}
     - User attribute mapping
         - Map the user attributes as per your requirements
             - [Common user attribute mappings](https://support.google.com/a/answer/10344342?hl=en#step2&zippy=step-map-the-user-attributes)
-        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-UserAttributes.png){:style="max-width: 250px; max-height: 500px;"}
+        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-UserAttributes.png){:style="max-width: 300px; max-height: 500px;"}
     - Account activation
         - Select **Don't send activation email**
-        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-UserActivation.png){:style="max-width: 250px; max-height: 500px;"}
+        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-UserActivation.png){:style="max-width: 300px; max-height: 500px;"}
     - Deprovisioning
         - Click **Suspend user in Google Directory**
-        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-UserDecom.png){:style="max-width: 250px; max-height: 500px;"}
+        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-UserDecom.png){:style="max-width: 300px; max-height: 500px;"}
     - Safeguards
         - Set the safeguard as per your requirements
-        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-UserSafeguard.png){:style="max-width: 250px; max-height: 500px;"}
+        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-UserSafeguard.png){:style="max-width: 300px; max-height: 500px;"}
 
 ### 2.3 Group sync
 - Under the **Group sync** section, click **Set up group sync**
@@ -120,16 +120,16 @@ Alternatively, you can use the [Google Cloud / G Suite Connector by Microsoft](h
         - Copy the name of your Entra ID group and paste it into the field
         - Click **Verify**
         - Note that for a group to sync, the group must be a mail-enabled security group (see required group attributes below)
-        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-Group.png){:style="max-width: 250px; max-height: 500px;"}
+        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-Group.png){:style="max-width: 300px; max-height: 500px;"}
     - Required attributes
         - Leave the default values
-        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-GroupAttributes.png){:style="max-width: 250px; max-height: 500px;"}
+        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-GroupAttributes.png){:style="max-width: 300px; max-height: 500px;"}
     - Deprovisioning
         - Click **Delete group in your Google Directory**
-        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-GroupDecom.png){:style="max-width: 250px; max-height: 500px;"}
+        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-GroupDecom.png){:style="max-width: 300px; max-height: 500px;"}
     - Safeguards
         - Set the safeguard as per your requirements
-        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-GroupSafeguard.png){:style="max-width: 250px; max-height: 500px;"}
+        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-GroupSafeguard.png){:style="max-width: 300px; max-height: 500px;"}
 
 ---
 
@@ -184,9 +184,9 @@ In this example, I’ll walk through the integration using Omnissa Access as the
 - Login to your Omnissa Access tenant
 - Go to **Integrations > Authentication Methods**
 - Click on **Google Chrome Enterprise Device Signals** adapter
-    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Access-AuthMethod.png){:style="max-width: 250px; max-height: 500px;"}
+    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Access-AuthMethod.png){:style="max-width: 300px; max-height: 500px;"}
 - Enable the authentication method
-    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Access-ChromeAdapter.png){:style="max-width: 250px; max-height: 500px;"}
+    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Access-ChromeAdapter.png){:style="max-width: 300px; max-height: 500px;"}
 - Copy the **URLs matcher** & **IDP service account**
     - You will need those details later on in the Google Admin console
 - Configure the device signals as per your requirements
@@ -205,13 +205,13 @@ Configure the device trust connector in the Google Admin console:
 - Login to your [Google Admin Console](https://admin.google.com)
 - Go to **Chrome browser > Connectors**
 - Click **+ New provider configuration**
-    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Connector.png){:style="max-width: 250px; max-height: 500px;"}
+    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Connector.png){:style="max-width: 300px; max-height: 500px;"}
 - Find your IdP, then click **Set up**
 - Paste the **URLs matcher** and **service account** details copied from Omnissa Access
 - Click **Add configuration**
-    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-ConnectorConfig.png){:style="max-width: 250px; max-height: 500px;"}
+    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-ConnectorConfig.png){:style="max-width: 300px; max-height: 500px;"}
 - Assign the connector configuration to the appropriate OU
-    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-ConnectorAssign.png){:style="max-width: 250px; max-height: 500px;"}
+    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-ConnectorAssign.png){:style="max-width: 300px; max-height: 500px;"}
 
 Configure your conditional access policy:
 - Login to your Omnissa Access tenant
@@ -220,7 +220,7 @@ Configure your conditional access policy:
 - Configure the policy based on your access requirements
     - Device type: **Windows 10+** or **macOS** or **Chrome OS**
     - Add **Google Chrome Enterprise Device Signals** as a second authentication method
-    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Access-Policy.png){:style="max-width: 250px; max-height: 500px;"}
+    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Access-Policy.png){:style="max-width: 300px; max-height: 500px;"}
 
 With this configuration in place, Chrome will continuously send device trust signals to Omnissa Access during authentication. These signals can then be evaluated in real time to enforce access controls.
 
