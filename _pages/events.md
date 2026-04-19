@@ -109,6 +109,8 @@ permalink: /events
   }
 </style>
 
+<h2>List of events I attended and participated in over the years</h2>
+
 {% include author.html %}
 
 <div class="container">
