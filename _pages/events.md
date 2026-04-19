@@ -112,8 +112,6 @@ permalink: /events
 {% include author.html %}
 
 <div class="container">
-  <h4>List of events I attended and participated in over the years</h4>
-
   {% assign all_years = "" | split: "" %}
   {% assign all_types = "" | split: "" %}
   {% assign sorted_events = site.events | sort: "date" | reverse %}
@@ -132,6 +130,7 @@ permalink: /events
 
   <!-- Filters -->
   <div class="event-filters">
+    <h4>List of events I attended and participated in over the years</h4>
     <div class="event-filter-group">
       <span class="event-filter-label">Year:</span>
       <button class="filter-btn filter-year active" data-year="all" onclick="filterEvents(this, '.filter-year')">All</button>
