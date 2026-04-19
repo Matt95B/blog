@@ -13,6 +13,7 @@ To streamline this process, I began developing my own templates and tools to hel
 Success criteria are often overlooked or left until later in a project, yet they are critical for defining what a successful trial or POC looks like. Many customers find it difficult to start from a blank page, so I created a template to make this easier and guide the discussion from day one.
 
 [Omnissa-success-criteria.xlsx]({{site.url}}/images/2024-07-01-Omnissa-poc/Omnissa-success-criteria.xlsx)
+
 ![]({{site.url}}/images/2024-07-01-Omnissa-poc/Omnissa-success-criteria.png)
 
 ## Logical diagrams
@@ -20,7 +21,7 @@ To help clients better understand how the Omnissa platform components interact, 
 
 | UEM | Horizon | UEM + Horizon 8 |
 |:-------------------:|:-------------------:|:-------------------:|
-| [![]({{site.url}}/images/2024-07-01-Omnissa-poc/Logical-Diagrams/UEM.drawio.png)]({{site.url}}/images/2024-07-01-Omnissa-poc/Logical-Diagrams/UEM.drawio.png) | [![]({{site.url}}/images/2024-07-01-Omnissa-poc/Logical-Diagrams/Horizon.drawio.png)]({{site.url}}/images/2024-07-01-Omnissa-poc/Logical-Diagrams/Horizon.drawio.png) | [![]({{site.url}}/images/2024-07-01-Omnissa-poc/Logical-Diagrams/UEM+Horizon8.drawio.png)]({{site.url}}/images/2024-07-01-Omnissa-poc/Logical-Diagrams/UEM+Horizon8.drawio.png) |
+| ![]({{site.url}}/images/2024-07-01-Omnissa-poc/Logical-Diagrams/UEM.drawio.png) | ![]({{site.url}}/images/2024-07-01-Omnissa-poc/Logical-Diagrams/Horizon.drawio.png) | ![]({{site.url}}/images/2024-07-01-Omnissa-poc/Logical-Diagrams/UEM+Horizon8.drawio.png) |
 | [UEM.drawio]({{site.url}}/images/2024-07-01-Omnissa-poc/Logical-Diagrams/UEM.drawio) | [Horizon.drawio]({{site.url}}/images/2024-07-01-Omnissa-poc/Logical-Diagrams/Horizon.drawio) | [UEM+Horizon8.drawio]({{site.url}}/images/2024-07-01-Omnissa-poc/Logical-Diagrams/UEM+Horizon8.drawio) |
 
 ## Network diagrams
@@ -28,11 +29,12 @@ During a Proof of Concept, network diagrams help bridge the gap between design a
 
 | UEM | Horizon 8 |
 |:-------------------:|:-------------------:|
-| [![]({{site.url}}/images/2024-07-01-Omnissa-poc/Network-Diagrams/UEM-ACC-Connector-UAG-PowerShell.drawio.png)]({{site.url}}/images/2024-07-01-Omnissa-poc/Network-Diagrams/UEM-ACC-Connector-UAG-PowerShell.drawio.png) | [![]({{site.url}}/images/2024-07-01-Omnissa-poc/Network-Diagrams/Horizon8-CS-AppVol-UAG.drawio.png)]({{site.url}}/images/2024-07-01-Omnissa-poc/Network-Diagrams/Horizon8-CS-AppVol-UAG.drawio.png) |
+| ![]({{site.url}}/images/2024-07-01-Omnissa-poc/Network-Diagrams/UEM-ACC-Connector-UAG-PowerShell.drawio.png) | ![]({{site.url}}/images/2024-07-01-Omnissa-poc/Network-Diagrams/Horizon8-CS-AppVol-UAG.drawio.png) |
 | [UEM-ACC-Connector-UAG-PowerShell.drawio]({{site.url}}/images/2024-07-01-Omnissa-poc/Network-Diagrams/UEM-ACC-Connector-UAG-PowerShell.drawio) | [Horizon8-CS-AppVol-UAG.drawio]({{site.url}}/images/2024-07-01-Omnissa-poc/Network-Diagrams/Horizon8-CS-AppVol-UAG.drawio) |
 
 ## Prerequisites workbook
 I’ve also created a comprehensive prerequisites spreadsheet that captures all technical requirements in one place. It allows customers to record key configuration details as they work through the checklist. Once complete, the same document can be used as an as-built record, reducing duplication and saving time.
 
 [Omnissa-prerequisites.xlsx]({{site.url}}/images/2024-07-01-Omnissa-poc/Omnissa-prerequisites.xlsx)
+
 ![]({{site.url}}/images/2024-07-01-Omnissa-poc/Omnissa-prerequisites.png)
