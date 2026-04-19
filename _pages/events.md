@@ -109,13 +109,11 @@ permalink: /events
   }
 </style>
 
-<h3>List of events I attended and participated in over the years</h3>
-
 {% include author.html %}
 
 <div class="container">
-  <h3>List of events I attended and participated in over the years</h3>
-  
+  <h4>List of events I attended and participated in over the years</h4>
+
   {% assign all_years = "" | split: "" %}
   {% assign all_types = "" | split: "" %}
   {% assign sorted_events = site.events | sort: "date" | reverse %}
