@@ -52,7 +52,7 @@ disqus-identifier:  # Add your shortname for Disqus Comment. For example anvodst
 #-------------------------------
 # Google Analytics
 google-analytics: G-DP7WC78ZFJ # Add your identifier. For example UA-99631805-1.
-
+gtag: G-DP7WC78ZFJ
 
 #-------------------------------
 # Build Settings
