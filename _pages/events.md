@@ -214,4 +214,12 @@ permalink: /events
       card.style.display = (yearMatch && typeMatch) ? '' : 'none';
     });
   }
+
+  window.addEventListener("load", function () {
+    // Apply Lightense zoom to event images
+    Lightense(".event__image-single img, .event__images-multi img", {
+      padding: 60,
+      offset: 30
+    });
+  });
 </script>
