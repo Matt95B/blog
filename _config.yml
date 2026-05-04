@@ -11,7 +11,7 @@ url: "https://blog.beaugtech.com" # The base hostname & protocol for your site, 
 author:
   name: Mathieu Beaugrand
   title: Senior Solution Architect
-  description: Sharing practical insights on End User Computing (EUC) and modern workplace technologies.<p><small><i>The views and opinions expressed here are my own and do not necessarily reflect the official policies or positions of my current or past employers. I strive to keep all information accurate and up to date, but as with any technical content, there's always room for improvement. Feedback, suggestions, and corrections are always welcome!</i></small></p>
+  description: Sharing practical insights on End User Computing (EUC) and modern workplace technologies. I strive to keep all information accurate and up to date, but as with any technical content, there's always room for improvement. Feedback, suggestions, and corrections are always welcome!<p><small><i>The views and opinions expressed here are my own and do not necessarily reflect the official policies or positions of my current or past employers.</i></small></p>
   image: '/images/me_headshot.png'
   avatar: '/images/me_headshot.png'
 
