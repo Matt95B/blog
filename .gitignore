@@ -5,6 +5,5 @@ ehthumbs.db
 
 Gemfile.lock
 
-beautiful-jekyll-theme-*.gem
-
+# Drawio backup file
 *.drawio.bkp
