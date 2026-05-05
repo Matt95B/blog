@@ -41,4 +41,4 @@ I’ve also created a comprehensive prerequisites spreadsheet that captures all 
 
 ---
 
-{*Archive files*](https://github.com/Matt95B/blog/tree/main/images/2024-07-01-Omnissa-poc/Archive)
+[*Archive files*](https://github.com/Matt95B/blog/tree/main/images/2024-07-01-Omnissa-poc/Archive)
