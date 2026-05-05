@@ -49,4 +49,13 @@ I’ve also created a comprehensive prerequisites spreadsheet that captures all 
 
 ---
 
+## Adoption tracking
+A successful POC is only the starting point. The real value of the Omnissa platform is realised after the license is purchased, when features are actually adopted and embedded into day-to-day operations. One of the most common gaps I see is customers validate capabilities during the POC but struggle to track whether those capabilities are actually being used in production. That’s where an **Adoption Map** becomes incredibly useful. Think of it as the bridge between **"We bought it" → "We’re getting value from it"**. To make this easier, I’ve created a simple template you can use to track feature adoption across your environment.
+
+[Omnissa-adoption-map.xlsx]({{site.url}}/images/2024-07-01-Omnissa-poc/Omnissa-adoption-map.xlsx)
+
+![]({{site.url}}/images/2024-07-01-Omnissa-poc/Omnissa-adoption-map.png)
+
+---
+
 [*Archive files*](https://github.com/Matt95B/blog/tree/main/images/2024-07-01-Omnissa-poc/Archive)
