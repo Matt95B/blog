@@ -73,10 +73,32 @@ $DisplayNames = @(
 )
 
 # Registry paths for Win32 apps
-$RegistryPaths = @(
+## Build registry search paths dynamically
+$RegistryPaths = @()
+
+## Machine-wide uninstall locations
+$RegistryPaths += @(
     "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*",
     "HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*"
 )
+
+## Current user uninstall location
+$RegistryPaths += "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*"
+
+## Enumerate all loaded user profiles
+$UserSIDs = Get-ChildItem "Registry::HKEY_USERS" -ErrorAction SilentlyContinue |
+Where-Object {
+    $_.PSChildName -match "^S-1-5-21-[\d\-]+$"
+}
+
+foreach ($SID in $UserSIDs) {
+
+    $UserUninstallPath = "Registry::HKEY_USERS\$($SID.PSChildName)\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*"
+
+    if (Test-Path $UserUninstallPath) {
+        $RegistryPaths += $UserUninstallPath
+    }
+}
 
 # Collections
 $FoundApps    = @()
@@ -103,7 +125,7 @@ foreach ($Name in $DisplayNames) {
                     }
                 }
                 $MatchedNames += $Name
-                return
+                continue
             }
 
             if ($_.QuietUninstallString) {
@@ -114,7 +136,7 @@ foreach ($Name in $DisplayNames) {
                     Command     = $_.QuietUninstallString
                 }
                 $MatchedNames += $Name
-                return
+                continue
             }
 
             if ($_.UninstallString) {
