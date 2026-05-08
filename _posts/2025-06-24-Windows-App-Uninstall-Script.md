@@ -5,7 +5,7 @@ description: PowerShell script to uninstall Windows applications silently (where
 tags: [Windows, App, Script]
 author: Mathieu Beaugrand
 ---
-When deploying Windows devices using **Autopilot**, unwanted **Win32** or **AppX** apps can clutter user experience or cause security risk. Below is a PowerShell script you can run in SYSTEM context to silently uninstall these apps as part of the **Out-of-Box Experience (OOBE)**.
+When deploying Windows devices using **Autopilot**, unwanted **Win32** or **AppX** apps can clutter user experience or cause security risks. Below is a PowerShell script you can run in SYSTEM context to silently uninstall these apps as part of the **Out-of-Box Experience (OOBE)**.
 
 This PowerShell script:
 - Runs silently in the background without user interaction
@@ -62,7 +62,7 @@ The script below takes an array of application display names (exact or wildcard)
 - Safely exits if no matching applications are found
 
 {: .box-note}
-**Tip:** The script must be run in `SYSTEM` context
+**Tip:** The script must be run in `SYSTEM` context & `64-bit PowerShell`
 
 ```powershell
 # Define an array of app names (exact or partial match). For partial match use '*' symbol.
@@ -113,7 +113,7 @@ foreach ($Name in $DisplayNames) {
         Get-ItemProperty -Path $Path -ErrorAction SilentlyContinue |
         Where-Object { $_.DisplayName -like $Name } |
         ForEach-Object {
-            if ($_.UninstallString -match "\{[A-F0-9\-]{36}\}") {
+            if ($_.UninstallString -match "\{[A-Fa-f0-9\-]{36}\}") {
                 $ProductCode = $matches[0]
                 if ($SeenMSIs -notcontains $ProductCode) {
                     $SeenMSIs += $ProductCode
