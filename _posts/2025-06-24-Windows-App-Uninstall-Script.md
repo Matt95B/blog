@@ -100,6 +100,9 @@ foreach ($SID in $UserSIDs) {
     }
 }
 
+# Remove duplicate registry paths
+$RegistryPaths = $RegistryPaths | Select-Object -Unique
+
 # Collections
 $FoundApps    = @()
 $FoundAppx    = @()
