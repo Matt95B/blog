@@ -72,7 +72,8 @@ Create a dynamic device group to automatically include all Windows Autopilot dev
 
 The above rule automatically includes all devices registered with Windows Autopilot.
 
-If you require more granular targeting, Microsoft provides additional examples and guidance for Autopilot dynamic membership rules in their [documentation](https://learn.microsoft.com/en-us/autopilot/enrollment-autopilot).
+{: .box-note}
+**Note:** If you require more granular targeting, Microsoft provides additional examples and guidance for Autopilot dynamic membership rules in their documentation [here](https://learn.microsoft.com/en-us/autopilot/enrollment-autopilot).
 
 ### Autopilot profile
 
@@ -99,6 +100,9 @@ To view registered devices:
 - Select **Devices**
 - ![]({{site.url}}/images/2025-10-10-Autopilot-with-WS1/Intune-Autopilot-Devices.png){:style="max-width: 300px; max-height: 500px;"}
 
+{: .box-note}
+**Note:** If you need to onboard existing devices that were not registered with Windows Autopilot during procurement, Microsoft provides a script to extract the device hardware hash and import the devices into Autopilot. The process is documented [here](https://learn.microsoft.com/en-us/autopilot/add-devices)
+
 ---
 
 ## Workspace ONE considerations
@@ -120,4 +124,4 @@ To provide users with better visibility during onboarding, I recommend enabling 
 This provides users with a clear view of application installations, profile deployments, and configuration progress during device provisioning.
 
 ## User experience
-*Coming soon*
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DnnkEt-Whqs?si=TGzegZoDrDdrL6kN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
