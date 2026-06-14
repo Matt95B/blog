@@ -1,30 +1,29 @@
 ---
 layout: post
 title: Configure Windows Autopilot with Workspace ONE
-description: Step-by-step guide to configuring Windows Autopilot with Workspace ONE and Microsoft Entra ID
+description: Step by step guide to configuring Windows Autopilot with Workspace ONE and Microsoft Entra ID
 tags: [Windows, Workspace ONE, EntraID]
 author: Mathieu Beaugrand
 ---
 
-## Overview
-
+## 1. Overview
 Windows Autopilot is a collection of technologies designed to simplify the deployment and provisioning of new Windows devices. It enables devices to be pre-configured and automatically enrolled into your preferred Unified Endpoint Management (UEM) platform as soon as they are powered on and connected to the internet.
 
 To take advantage of Autopilot, your OEM or hardware reseller should pre-register devices to your Entra ID tenant during the fulfilment process. Be sure to discuss this requirement with your vendor when placing your device orders.
 
-Autopilot is one of several methods available for enrolling Windows devices into Workspace ONE. For a complete list of supported enrollment options, refer to the Omnissa documentation [here](https://docs.omnissa.com/bundle/Windows_Desktop_ManagementVSaaS/page/uemWindeskDeviceEnrollment.html).
+Autopilot is one of several methods available for enrolling Windows devices into Workspace ONE. For a complete list of supported enrolment options, refer to the Omnissa documentation [here](https://docs.omnissa.com/bundle/Windows_Desktop_ManagementVSaaS/page/uemWindeskDeviceEnrollment.html).
 
 ---
 
-## Entra ID integration
-### Workspace ONE UEM configuration
+## 2. Entra ID integration
+### 2.1 Workspace ONE UEM configuration
 The first step is to integrate your Workspace ONE UEM environment with Microsoft Entra ID.
 
 - Log in to your Workspace ONE UEM tenant.
 - Navigate to **Settings > All Settings > System > Enterprise Integration > Directory Services**
 - Configure the following settings:
   - Azure AD Integration: **Enabled**
-  - Directory ID: *Your_Entra ID_Tenant_ID*
+  - Directory ID: *Your_Entra_ID_Tenant_ID*
     - Your Tenant ID can be found in the Entra admin centre under **Entra ID > Manage > Properties**
   - Use Azure AD For Identity Services: **Enabled**
   - Immutable ID Mapping Attribute: `ms-DS-ConsistencyGuid`
@@ -35,7 +34,7 @@ The first step is to integrate your Workspace ONE UEM environment with Microsoft
   - These values will be required in the next section.
   - ![]({{site.url}}/images/2025-10-10-Autopilot-with-WS1/WS1-MDMURL.png){:style="max-width: 300px; max-height: 500px;"}
 
-### MDM authority
+### 2.2 MDM authority
 Next, configure Workspace ONE as the MDM authority within Microsoft Entra ID.
 - Log in to your Entra ID tenant - <https://portal.azure.com>
 - Navigate to **Entra ID > Manage > Mobility (MDM and WIP)**
@@ -54,9 +53,9 @@ Next, configure Workspace ONE as the MDM authority within Microsoft Entra ID.
 
 ---
 
-## Autopilot configuration
+## 3. Autopilot configuration
 
-### Entra ID device group
+### 3.1 Entra ID device group
 Create a dynamic device group to automatically include all Windows Autopilot devices registered in your tenant. This group will later be used to assign the Autopilot deployment profile.
 
 - Log in to your Entra ID tenant - <https://portal.azure.com>
@@ -75,8 +74,7 @@ The above rule automatically includes all devices registered with Windows Autopi
 {: .box-note}
 **Note:** If you require more granular targeting, Microsoft provides additional examples and guidance for Autopilot dynamic membership rules in their documentation [here](https://learn.microsoft.com/en-us/autopilot/enrollment-autopilot).
 
-### Autopilot profile
-
+### 3.2 Autopilot profile
 Now it’s time to create and assign the Autopilot deployment profile.
 
 - Log in to your Intune tenant - <https://intune.microsoft.com>
@@ -91,7 +89,7 @@ Now it’s time to create and assign the Autopilot deployment profile.
 {: .box-note}
 **Tip:** If you cannot access the Autopilot menus shown above, it is likely because your tenant does not have an Intune license assigned. Microsoft now restricts access to these pages based on licensing. Purchasing a single **Microsoft Intune Device Plan 1** license is typically sufficient to unlock the required administration pages.
 
-### Autopilot devices
+### 3.3 Autopilot devices
 As devices are registered by your OEM, they will automatically appear in the Windows Autopilot devices list. Because the deployment profile is assigned to the dynamic Entra ID group, newly registered devices will automatically receive the Autopilot configuration without any manual intervention.
 
 To view registered devices:
@@ -101,27 +99,28 @@ To view registered devices:
 - ![]({{site.url}}/images/2025-10-10-Autopilot-with-WS1/Intune-Autopilot-Devices.png){:style="max-width: 300px; max-height: 500px;"}
 
 {: .box-note}
-**Note:** If you need to onboard existing devices that were not registered with Windows Autopilot during procurement, Microsoft provides a script to extract the device hardware hash and import the devices into Autopilot. The process is documented [here](https://learn.microsoft.com/en-us/autopilot/add-devices)
+**Note:** If you need to onboard existing devices that were not registered with Windows Autopilot during procurement, Microsoft provides a script to extract the device hardware hash and import the devices into Autopilot. The process is documented [here](https://learn.microsoft.com/en-us/autopilot/add-devices).
 
 ---
 
-## Workspace ONE considerations
-
+## 4. Workspace ONE considerations
 There are a few additional Workspace ONE settings worth reviewing to optimise the Autopilot onboarding experience.
 
-### Intelligent Hub Deployment
-Ensure that Workspace ONE Intelligent Hub is automatically deployed during enrollment.
+### 4.1 Intelligent Hub Deployment
+Ensure that Workspace ONE Intelligent Hub is automatically deployed during enrolment.
 - Log in to your Workspace ONE UEM tenant
 - Navigate to **Settings > All Settings > Devices & Users > Microsoft > Windows > Intelligent Hub Application**
   - ![]({{site.url}}/images/2025-10-10-Autopilot-with-WS1/WS1-Hub.png){:style="max-width: 300px; max-height: 500px;"}
 
-### Status Tracking Page
+### 4.2 Status Tracking Page
 To provide users with better visibility during onboarding, I recommend enabling the Workspace ONE Status Tracking page during Out-of-Box Experience (OOBE).
 - Log in to your Workspace ONE UEM tenant
 - Navigate to **Settings > All Settings > Devices & Users > General > Enrollment > Optional Prompt**
-  - ![]({{site.url}}/images/2025-10-10-Autopilot-with-WS1/WS1-Hub.png){:style="max-width: 300px; max-height: 500px;"}
+  - ![]({{site.url}}/images/2025-10-10-Autopilot-with-WS1/WS1-TrackingPage.png){:style="max-width: 300px; max-height: 500px;"}
 
 This provides users with a clear view of application installations, profile deployments, and configuration progress during device provisioning.
 
-## User experience
+---
+
+## 5. User experience
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DnnkEt-Whqs?si=TGzegZoDrDdrL6kN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
