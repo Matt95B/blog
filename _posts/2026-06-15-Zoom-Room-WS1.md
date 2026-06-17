@@ -24,7 +24,7 @@ For new devices, I recommend leveraging Windows Autopilot to automate provisioni
 If you are new to Autopilot and Workspace ONE, review my previous [blog post]({{site.url}}/2025-10-10-Autopilot-with-WS1) to setup the base of your autopilot config.
 
 ### 2.1 Entra ID device group
-Create an Entra ID dynamic device group to automatically include all Windows based Room Room devices that are Autopilot registered in your tenant. This group will later be used to assign the Autopilot deployment profile.
+Create an Entra ID dynamic device group to automatically include all Windows based Zoom Room devices that are Autopilot registered in your tenant. This group will later be used to assign the Autopilot deployment profile.
 
 - Log in to your Entra ID tenant - <https://portal.azure.com>
 - Navigate to **Entra ID > Manage > Groups**
@@ -52,13 +52,13 @@ Now it’s time to create and assign the Autopilot deployment profile.
     - ![]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/Intune-Autopilot-Exclude.png){:style="max-width: 300px; max-height: 500px;"}
 
 ### 2.3 Autopilot devices
-As devices are registered by your OEM, they will automatically appear in the Windows Autopilot devices list. Now to make sure the Zoom Room devices get assigned to the Entra ID group previously created they need to be tagged accordingly.
+As devices are registered by your OEM, they will automatically appear in the Windows Autopilot devices list. To ensure Zoom Room devices are automatically added to the Entra ID dynamic device group created earlier, they must be assigned the appropriate Group Tag.
 
-To tag you Zomm Room devices:
+To tag you Zoom Room devices:
 - Log in to your Intune tenant - <https://intune.microsoft.com>
 - Navigate to **Devices > Device onboarding > Enrollment > Windows > Windows Autopilot**
 - Select **Devices**
-- Find the devices that are going to be used as Zoom Room in the list and assigned a `ZoomRoom` Group tag.
+- Locate the devices that will be used as Zoom Rooms and assign the `ZoomRoom` Group Tag.
 - ![]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/Intune-Autopilot-DevicesTag.png){:style="max-width: 300px; max-height: 500px;"}
 
 ---
@@ -75,17 +75,19 @@ Benefits include:
 - Easier lifecycle management
 
 ### 3.2 Service account
-Zoom Rooms devices are typically shared endpoints and should be managed using a device-centric management model rather than a user-centric enrollment process. However, Workspace ONE requires a user account to complete the enrollment process.
+Zoom Rooms devices are typically shared endpoints and should be managed using a device-centric management model rather than a user-centric. However, Workspace ONE requires a user account to complete the enrollment process.
 
-A common approach is to create a dedicated service account (for example, zoomroom@yourdomain.com) and use it to enroll all Zoom Rooms devices.
+A common approach is to create a dedicated service account (for example, zoomroom@yourdomain.com) and use it to enrol all Zoom Rooms devices.
 
-### 3.3 Applications
+### 3.3 Removing bloatwares
+Windows includes several pre-installed applications that provide little value on a dedicated Zoom Room endpoint. To automatically remove unnecessary applications and streamline the operating environment, I recommend reviewing my previous [blog article]({{site.url}}/2025-06-24-Windows-App-Uninstall-Script).
+
+### 3.4 Applications deployment
 Use Workspace ONE to deploy and manage the applications required on your Zoom Rooms devices. Where possible, I recommend leveraging the Enterprise Application Repository (EAR) first, as it can significantly simplify application deployment and ongoing patch management by providing pre-packaged and vendor-maintained applications.
 
 The specific applications you deploy will vary based on your requirements and room hardware, but common examples include:
 - Zoom Rooms
 - Workspace ONE Assist
-- Workspace ONE Experience Management
 - Endpoint Detection and Response (EDR) solutions
 - Security and monitoring tools
 
@@ -94,41 +96,130 @@ Depending on your room hardware and peripherals, you may also need to deploy:
 - Camera drivers
 - Touch panel software
 - Display management utilities
-- Vendor-specific applications and drivers
+- Vendor-specific applications
 
-![]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/Intune-Autopilot-DevicesTag.png)
+![]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/WS1-Apps.png)
 
-### 3.4 Device profiles
-This is by no means an extended list of configuration but should be the baseline
+### 3.5 Local account with auto logon
+Create a local standard account that will then auto logon making the device ready to use once booted.
 
-#### 3.4.1 Kiosk mode
-To lock down the device so it runs only the Zoom Rooms application, deploy a custom configuration profile:Navigate to Resources > Profiles & Baselines > Profiles > Add > Add Profile > Windows > Windows Desktop > Device Profile.Add the Custom Settings payload.Inject an OMA-DM XML configuration to map the custom shell to the Zoom Rooms executable (typically C:\Program Files\Zoom\ZoomRooms\bin\ZoomRooms.exe). This replaces the standard Windows Explorer shell with the Zoom interface upon login.
+{: .box-note}
+**Note:** Auto logon requires the account password to be stored locally on the device. Ensure the account has only the minimum permissions required and is used exclusively for Zoom Room operation.
 
-#### 3.4.2 Windows Security Baseline
-Although Zoom Rooms devices are dedicated endpoints, they should still adhere to organisational security standards.
-Recommended controls include:
-- BitLocker encryption
-- Firewall configuration
-- Credential protection
-- Device compliance monitoring
+- Log in to your Workspace ONE UEM tenant.
+- Navigate to **Resources > Scripting > Scripts > Add > Windows**
+  - Name: Windows - ZoomRoom - local account
+  - Run: System context
+  - Paste the below script
+  - ![]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/WS1-Script.png){:style="max-width: 300px; max-height: 500px;"}
+- Assign the Script to your Zoom Room OG
+  - Trigger: **Run Once Immediately**
 
-Though if you are using the templated baselines in Workspace ONE, a lot of the settings will be conflicitng with a Kiosk profile, so you will need to remove some of the pre-set settings.
+```powershell
+# Variables
+$Username = "ZoomRoom"
+$Password = "P@ssw0rd123!"  # Replace with your preferred password
+
+# Create account if it doesn't exist
+if (-not (Get-LocalUser -Name $Username -ErrorAction SilentlyContinue)) {
+
+    $SecurePassword = ConvertTo-SecureString $Password -AsPlainText -Force
+
+    New-LocalUser `
+        -Name $Username `
+        -Password $SecurePassword `
+        -FullName "Zoom Room Account" `
+        -Description "Dedicated account for Zoom Rooms"
+
+    Add-LocalGroupMember -Group "Users" -Member $Username
+
+    # Disable password expiry
+    Set-LocalUser -Name $Username -PasswordNeverExpires $true
+}
+
+# Configure auto logon
+$WinlogonKey = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon"
+
+Set-ItemProperty -Path $WinlogonKey -Name "AutoAdminLogon" -Value "1"
+Set-ItemProperty -Path $WinlogonKey -Name "DefaultUserName" -Value $Username
+Set-ItemProperty -Path $WinlogonKey -Name "DefaultPassword" -Value $Password
+Set-ItemProperty -Path $WinlogonKey -Name "ForceAutoLogon" -Value "1"
+Set-ItemProperty -Path $WinlogonKey -Name "DefaultDomainName" -Value $env:COMPUTERNAME
+```
+
+### 3.6 Zoom Room auto launch
+Need to add config for this
+
+### 3.7 Security controls
+Although Zoom Rooms are dedicated collaboration endpoints, they should still comply with your organisation's security standards. Restricting access to the underlying Windows operating system helps reduce the attack surface and prevents users from making unintended configuration changes.
+
+Recommended baseline controls include:
+- Hide taskbar
+- Disable Windows key
+- Disable Settings access
+- Disable Explorer access
+- Disable USB storage (optional)
+- Disable lock screen
+- Disable Cortana
+- Disable notifications
+
+- Log in to your Workspace ONE UEM tenant.
+- Navigate to **Resources > Profiles & Baselines > Profiles > Add > Add Profile > Windows ADMX > Device Profile**
+
+{: .box-note}
+**Note:**A lot of those settings are available in the templated baselines in Workspace ONE (ie. CIS level 1), though a lot of the pre-set settings will be conflicting with the local account and auto logon that we created earlier, so you will need to remove some of the pre-set settings if you want to use those templates.
+
+### 3.8 Power management
+Configure Workspace ONE Windows power management profiles to prevent the device from sleeping or hibernating during inactive hours.
+- Disable Power options
+- Disable sleep
+- Enable High Performance Power
+- Disable Hibernation
+- Never Sleep
+- Never Turn Off Display
+
+- Log in to your Workspace ONE UEM tenant.
+- Navigate to **Resources > Profiles & Baselines > Profiles > Add > Add Profile > Windows ADMX > Device Profile**
+
+Ensure BIOS/UEFI settings such as Wake-on-LAN and AC Power Recovery are enabled so devices automatically recover following a power outage. If supported by your hardware vendor, consider configuring these settings remotely through the vendor management platform rather than manually on each device.
+
+### 3.9 Windows Updates
+Workspace ONE can be used to manage Windows Update for Business, allowing administrators to:
+- Control feature updates
+- Control quality updates
+- Configure maintenance windows
+- Delay updates during critical business periods
+
+- Log in to your Workspace ONE UEM tenant.
+- Navigate to **Resources > Profiles & Baselines > Profiles > Add > Add Profile > Windows ADMX > Device Profile**
 
 
-#### 3.4.3 Power management
-3. Power and Auto-Login Settings
-To ensure the room system boots straight into the meeting software without requiring IT intervention:Configure Windows Kiosk or User accounts to auto-login using the local Zoom Room user credentials.Ensure BIOS/UEFI settings have Wake-on-LAN and "AC Power Recovery" enabled to turn the system on automatically following power outages.Configure Workspace ONE Windows power management profiles to prevent the device from sleeping or hibernating during inactive hours.
+### 3.10 Remote control
 
-#### 3.4.4 Windows Updates
-Workspace ONE can be used to manage Windows Update for Business policies, allowing administrators to:
-* Control feature updates
-* Control quality updates
-* Configure maintenance windows
-* Delay updates during critical business periods
+#### 3.10.1 Workspace ONE Assist
+Once Zoom Room devices are deployed, administrators need a reliable way to remotely troubleshoot and support them. Workspace ONE Assist provides remote screen control, remote shell access, file transfer capabilities, and other troubleshooting tools that allow support teams to quickly diagnose and resolve issues without requiring an onsite visit.
+
+If you are licensed for Workspace ONE Assist, simply deploy the Assist application to your Zoom Room devices and the remote support capabilities will be available immediately.
+
+#### 3.10.2 Intel vPro
+Remote support tools are extremely valuable, but what happens when Windows fails to boot or the device encounters a blue screen? This is where the Workspace ONE integration with Intel vPro can provide significant operational benefits.
+
+Intel vPro enables out-of-band management, allowing administrators to remotely access and manage supported devices below the operating system layer. This makes it possible to power on devices, access the BIOS, perform recovery actions, and troubleshoot issues even when Windows is unavailable.
+
+To integrate Intel vPro with Workspace ONE:
+- Log in to your Workspace ONE UEM tenant.
+- Navigate to **Settings > Integrations > Intel vPro**
+  - ![]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/WS1-vPro.png){:style="max-width: 300px; max-height: 500px;"}
+- Navigate to **Resources > Profiles & Baselines > Profiles > Add > Add Profile > Windows > Desktop > Device Profile**
+- Add the **Intel vPro** payload and **Enable** the feature
+  - ![]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/WS1-vProProfile.png){:style="max-width: 300px; max-height: 500px;"}
+- Assign the profile to your Zoom Room devices
+
+---
 
 ## 4. Conclusion
-Once configured, users simply walk into the meeting room and interact with the Zoom Rooms interface without needing access to the underlying Windows operating system.
+Once configured, users can simply walk into a meeting room and interact with the Zoom Rooms interface without requiring access to the underlying Windows operating system.
 
-By combining Zoom Rooms with Workspace ONE, organisations can deliver a secure, centrally managed meeting room experience while maintaining visibility and control over the Windows endpoint.
+By combining Zoom Rooms with Workspace ONE, organisations can deliver a secure, scalable, and centrally managed meeting room experience while maintaining full visibility and control over the Windows endpoint.
 
-Workspace ONE complements Zoom Rooms by providing enterprise-grade device management, security, application deployment, and reporting capabilities. Together, these platforms help organisations streamline meeting room operations while ensuring devices remain secure, compliant, and easy to manage throughout their lifecycle.
+Workspace ONE complements Zoom Rooms by providing enterprise-grade device provisioning, application lifecycle management, security controls, compliance monitoring, remote support, and reporting capabilities. Together, these platforms help simplify meeting room operations while ensuring devices remain secure, compliant, and easy to manage throughout their lifecycle.
