@@ -111,44 +111,78 @@ Create a local standard account that will then auto logon making the device read
   - Name: Windows - ZoomRoom - local account
   - Run: System context
   - Paste the below script
+    - ```powershell
+      # Variables
+      $Username = "ZoomRoom"
+      $Password = "P@ssw0rd123!"  # Replace with your preferred password
+
+      # Create account if it doesn't exist
+      if (-not (Get-LocalUser -Name $Username -ErrorAction SilentlyContinue)) {
+
+          $SecurePassword = ConvertTo-SecureString $Password -AsPlainText -Force
+
+          New-LocalUser `
+              -Name $Username `
+              -Password $SecurePassword `
+              -FullName "Zoom Room Account" `
+              -Description "Dedicated account for Zoom Rooms"
+
+          Add-LocalGroupMember -Group "Users" -Member $Username
+
+          # Disable password expiry
+          Set-LocalUser -Name $Username -PasswordNeverExpires $true
+      }
+
+      # Configure auto logon
+      $WinlogonKey = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon"
+
+      Set-ItemProperty -Path $WinlogonKey -Name "AutoAdminLogon" -Value "1"
+      Set-ItemProperty -Path $WinlogonKey -Name "DefaultUserName" -Value $Username
+      Set-ItemProperty -Path $WinlogonKey -Name "DefaultPassword" -Value $Password
+      Set-ItemProperty -Path $WinlogonKey -Name "ForceAutoLogon" -Value "1"
+      Set-ItemProperty -Path $WinlogonKey -Name "DefaultDomainName" -Value $env:COMPUTERNAME
+      ```
   - ![]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/WS1-Script.png){:style="max-width: 300px; max-height: 500px;"}
 - Assign the Script to your Zoom Room OG
   - Trigger: **Run Once Immediately**
 
-```powershell
-# Variables
-$Username = "ZoomRoom"
-$Password = "P@ssw0rd123!"  # Replace with your preferred password
-
-# Create account if it doesn't exist
-if (-not (Get-LocalUser -Name $Username -ErrorAction SilentlyContinue)) {
-
-    $SecurePassword = ConvertTo-SecureString $Password -AsPlainText -Force
-
-    New-LocalUser `
-        -Name $Username `
-        -Password $SecurePassword `
-        -FullName "Zoom Room Account" `
-        -Description "Dedicated account for Zoom Rooms"
-
-    Add-LocalGroupMember -Group "Users" -Member $Username
-
-    # Disable password expiry
-    Set-LocalUser -Name $Username -PasswordNeverExpires $true
-}
-
-# Configure auto logon
-$WinlogonKey = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon"
-
-Set-ItemProperty -Path $WinlogonKey -Name "AutoAdminLogon" -Value "1"
-Set-ItemProperty -Path $WinlogonKey -Name "DefaultUserName" -Value $Username
-Set-ItemProperty -Path $WinlogonKey -Name "DefaultPassword" -Value $Password
-Set-ItemProperty -Path $WinlogonKey -Name "ForceAutoLogon" -Value "1"
-Set-ItemProperty -Path $WinlogonKey -Name "DefaultDomainName" -Value $env:COMPUTERNAME
-```
-
 ### 3.6 Zoom Room auto launch
-Need to add config for this
+To provide a seamless meeting room experience, the Zoom Rooms application should start automatically after the device boots and the Zoom Room account signs in. This can be achieved by creating a startup entry for the Zoom Rooms executable.
+
+- Log in to your Workspace ONE UEM tenant.
+- Navigate to **Resources > Scripting > Scripts > Add > Windows**
+  - Name: Windows - ZoomRoom - auto launch
+  - Run: System context
+  - Paste the below script
+    - ```powershell
+      # Possible Zoom Rooms locations
+      $ZoomPaths = @(
+          "C:\Program Files\ZoomRooms\bin\ZoomRooms.exe",
+          "C:\Program Files (x86)\ZoomRooms\bin\ZoomRooms.exe"
+      )
+
+      # Find installed executable
+      $ZoomExe = $ZoomPaths | Where-Object { Test-Path $_ } | Select-Object -First 1
+
+      if (-not $ZoomExe) {
+          Write-Host "Zoom Rooms executable not found."
+          exit 1
+      }
+
+      # Create startup entry
+      $RunKey = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run"
+
+      New-ItemProperty `
+          -Path $RunKey `
+          -Name "ZoomRooms" `
+          -Value "`"$ZoomExe`"" `
+          -PropertyType String `
+          -Force
+
+      Write-Host "Zoom Rooms startup entry configured."
+      ```
+  - Assign the Script to your Zoom Room OG
+  - Trigger: **Run Once Immediately**
 
 ### 3.7 Security controls
 Although Zoom Rooms are dedicated collaboration endpoints, they should still comply with your organisation's security standards. Restricting access to the underlying Windows operating system helps reduce the attack surface and prevents users from making unintended configuration changes.
@@ -167,7 +201,7 @@ Recommended baseline controls include:
 - Navigate to **Resources > Profiles & Baselines > Profiles > Add > Add Profile > Windows ADMX > Device Profile**
 
 {: .box-note}
-**Note:**A lot of those settings are available in the templated baselines in Workspace ONE (ie. CIS level 1), though a lot of the pre-set settings will be conflicting with the local account and auto logon that we created earlier, so you will need to remove some of the pre-set settings if you want to use those templates.
+**Note:**A lot of those settings are also available in the templated baselines in Workspace ONE (ie. CIS level 1), though a lot of the pre-set settings will be conflicting with the local account and auto logon that we created earlier, so you will need to remove some of the pre-set settings if you want to use those templates.
 
 ### 3.8 Power management
 Configure Workspace ONE Windows power management profiles to prevent the device from sleeping or hibernating during inactive hours.
