@@ -5,8 +5,6 @@ description: Step by step guide to deploying and managing Zoom Rooms on Windows 
 tags: [Workspace ONE, Windows, EntraID, UC]
 author: Mathieu Beaugrand
 ---
-*UNDER CONSTRUCTION*
-
 ## 1. Overview
 Zoom Rooms provide a dedicated meeting room experience by transforming a Windows device into a purpose built collaboration endpoint. While Zoom offers its own management portal for application settings and room configuration, organisations still need a way to manage the underlying Windows operating system, security settings, and application lifecycle.
 
@@ -52,13 +50,13 @@ Now it’s time to create and assign the Autopilot deployment profile.
     - ![]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/Intune-Autopilot-Exclude.png){:style="max-width: 300px; max-height: 500px;"}
 
 ### 2.3 Autopilot devices
-As devices are registered by your OEM, they will automatically appear in the Windows Autopilot devices list. To ensure Zoom Room devices are automatically added to the Entra ID dynamic device group created earlier, they must be assigned the appropriate Group Tag.
+As devices are registered by your OEM, they will automatically appear in the Windows Autopilot devices list. To ensure Zoom Room devices are automatically added to the Entra ID dynamic device group created earlier, they must be assigned the appropriate **Group tag**.
 
 To tag you Zoom Room devices:
 - Log in to your Intune tenant - <https://intune.microsoft.com>
 - Navigate to **Devices > Device onboarding > Enrollment > Windows > Windows Autopilot**
 - Select **Devices**
-- Locate the devices that will be used as Zoom Rooms and assign the `ZoomRoom` Group Tag.
+- Locate the devices that will be used as Zoom Rooms and assign the `ZoomRoom` Group tag.
 - ![]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/Intune-Autopilot-DevicesTag.png){:style="max-width: 300px; max-height: 500px;"}
 
 ---
@@ -75,11 +73,11 @@ Benefits include:
 - Easier lifecycle management
 
 ### 3.2 Service account
-Zoom Rooms devices are typically shared endpoints and should be managed using a device-centric management model rather than a user-centric. However, Workspace ONE requires a user account to complete the enrollment process.
+Zoom Rooms devices are typically shared endpoints and should be managed using a device-centric management model rather than a user-centric. However, Workspace ONE requires a user account to complete the enrolment process.
 
 A common approach is to create a dedicated service account (for example, zoomroom@yourdomain.com) and use it to enrol all Zoom Rooms devices.
 
-### 3.3 Removing bloatwares
+### 3.3 Removing bloatware
 Windows includes several pre-installed applications that provide little value on a dedicated Zoom Room endpoint. To automatically remove unnecessary applications and streamline the operating environment, I recommend reviewing my previous [blog article]({{site.url}}/2025-06-24-Windows-App-Uninstall-Script).
 
 ### 3.4 Applications deployment
@@ -101,13 +99,15 @@ Depending on your room hardware and peripherals, you may also need to deploy:
 ![]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/WS1-Apps.png)
 
 ### 3.5 Local account with auto logon
-Create a local standard account that will then auto logon making the device ready to use once booted.
+Create a Windows local standard account that will then auto logon making the device ready to use once booted.
 
 {: .box-note}
 **Note:** Auto logon requires the account password to be stored locally on the device. Ensure the account has only the minimum permissions required and is used exclusively for Zoom Room operation.
 
 - Log in to your Workspace ONE UEM tenant.
-- Navigate to **Resources > Scripting > Scripts > Add > Windows**
+- Navigate to **Resources > Scripting > Scripts**
+- Create a Windows **Script**
+  - ![]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/WS1-Script.png){:style="max-width: 300px; max-height: 500px;"}
   - Name: Windows - ZoomRoom - local account
   - Run: System context
   - Paste the below script
@@ -142,15 +142,15 @@ Create a local standard account that will then auto logon making the device read
       Set-ItemProperty -Path $WinlogonKey -Name "ForceAutoLogon" -Value "1"
       Set-ItemProperty -Path $WinlogonKey -Name "DefaultDomainName" -Value $env:COMPUTERNAME
       ```
-  - ![]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/WS1-Script.png){:style="max-width: 300px; max-height: 500px;"}
-- Assign the Script to your Zoom Room OG
+  - Assign the Script to your Zoom Room OG
   - Trigger: **Run Once Immediately**
 
 ### 3.6 Zoom Room auto launch
 To provide a seamless meeting room experience, the Zoom Rooms application should start automatically after the device boots and the Zoom Room account signs in. This can be achieved by creating a startup entry for the Zoom Rooms executable.
 
 - Log in to your Workspace ONE UEM tenant.
-- Navigate to **Resources > Scripting > Scripts > Add > Windows**
+- Navigate to **Resources > Scripting > Scripts**
+- Create a Windows **Script**
   - Name: Windows - ZoomRoom - auto launch
   - Run: System context
   - Paste the below script
@@ -182,51 +182,68 @@ To provide a seamless meeting room experience, the Zoom Rooms application should
       Write-Host "Zoom Rooms startup entry configured."
       ```
   - Assign the Script to your Zoom Room OG
-  - Trigger: **Run Once Immediately**
+  - Trigger: **Startup**
 
 ### 3.7 Security controls
 Although Zoom Rooms are dedicated collaboration endpoints, they should still comply with your organisation's security standards. Restricting access to the underlying Windows operating system helps reduce the attack surface and prevents users from making unintended configuration changes.
 
 Recommended baseline controls include:
-- Hide taskbar
-- Disable Windows key
-- Disable Settings access
-- Disable Explorer access
-- Disable USB storage (optional)
-- Disable lock screen
-- Disable Cortana
-- Disable notifications
-
 - Log in to your Workspace ONE UEM tenant.
-- Navigate to **Resources > Profiles & Baselines > Profiles > Add > Add Profile > Windows ADMX > Device Profile**
+- Navigate to **Resources > Profiles & Baselines > Profiles**
+- Create a **Windows ADMX** profile with **Device** context
+  - Enable BitLocker
+    - BitLocker Drive Encryption > Operating System Drives > Require additional authentication at startup = Require TPM
+    - BitLocker Drive Encryption > Operating System Drives > Enforce drive encryption type on operating system drives
+  - Disable Windows Hello
+    - Windows Hello for Business > Use Windows Hello for Business
+  - Restrict Settings access
+    - Control Panel > Settings Page Visibility
+      - `showonly:network-wifi;bluetooth;windowsupdate;windowsupdate-action;activation;display`
+  - Disable USB storage
+    - Removable Storage Access > All Removable Storage classes: Deny all access
+  - Disable lock screen
+    - Control Panel - Personalization > Do not display the lock screen
+  - Disable Search
+    - Search > Allow Cortana
+    - Search > Configures search on the taskbar
+      - Search on the taskbar: Hide
+  - Disable notifications
+    - Start Menu and Taskbar > Notifications > Turn off toast notifications
+    - Start Menu and Taskbar > Notifications > Turn off notification network usage
 
 {: .box-note}
-**Note:**A lot of those settings are also available in the templated baselines in Workspace ONE (ie. CIS level 1), though a lot of the pre-set settings will be conflicting with the local account and auto logon that we created earlier, so you will need to remove some of the pre-set settings if you want to use those templates.
+**Note:** A lot of those settings are also available in the templated baselines in Workspace ONE (ie. CIS level 1), though a lot of the pre-set settings will be conflicting with the local account and auto logon that we created earlier, so you will need to remove some of the pre-set settings if you want to use those templates.
 
 ### 3.8 Power management
 Configure Workspace ONE Windows power management profiles to prevent the device from sleeping or hibernating during inactive hours.
-- Disable Power options
-- Disable sleep
-- Enable High Performance Power
-- Disable Hibernation
-- Never Sleep
-- Never Turn Off Display
-
 - Log in to your Workspace ONE UEM tenant.
-- Navigate to **Resources > Profiles & Baselines > Profiles > Add > Add Profile > Windows ADMX > Device Profile**
+- Navigate to **Resources > Profiles & Baselines > Profiles**
+- Create a **Windows ADMX** profile with **Device** context
+  - Enable High Performance Power
+    - Power Management > Select an Active Power Plan
+  - Disable sleep menu
+    - File Explorer > Show hibernate in the power options menu
+    - File Explorer > Show sleep in power options menu
+  - Never Sleep
+    - Power Management > Sleep Settings > Specify the system sleep timeout (plugged in) = 0 (Never)
+  - Disable sleep
+    - System > Power Management > Sleep Settings > Allow standby states (S1-S3) when sleeping (plugged in)
+  - Never Turn Off Display
+    - Power Management > Video and Display Settings > Turn off the display (plugged in) = 0 (Never)
 
-Ensure BIOS/UEFI settings such as Wake-on-LAN and AC Power Recovery are enabled so devices automatically recover following a power outage. If supported by your hardware vendor, consider configuring these settings remotely through the vendor management platform rather than manually on each device.
+In addition, ensure BIOS/UEFI settings such as **Wake-on-LAN** and **AC Power Recovery** are enabled so devices automatically recover following a power outage. If supported by your hardware vendor, consider configuring these settings remotely through the vendor management platform rather than manually on each device.
 
 ### 3.9 Windows Updates
-Workspace ONE can be used to manage Windows Update for Business, allowing administrators to:
-- Control feature updates
-- Control quality updates
-- Configure maintenance windows
-- Delay updates during critical business periods
-
+Workspace ONE can be used to manage Windows Update for Business, allowing administrators to keep those devices up to date.
 - Log in to your Workspace ONE UEM tenant.
-- Navigate to **Resources > Profiles & Baselines > Profiles > Add > Add Profile > Windows ADMX > Device Profile**
-
+- Navigate to **Resources > Profiles & Baselines > Profiles**
+- Create a **Windows ADMX** profile with **Device** context
+  - Windows Update > Legacy Policies > Always automatically restart at the scheduled time = Enabled
+  - Windows Update > Manage end user experience
+    - Configure Automatic Updates: Enabled
+    - Configure automatic updating: 4 - Auto download and schedule the install
+      - Schedule: Select an out of office hour
+    - Turn off auto-restart for updates during active hours: Enabled
 
 ### 3.10 Remote control
 
@@ -244,7 +261,8 @@ To integrate Intel vPro with Workspace ONE:
 - Log in to your Workspace ONE UEM tenant.
 - Navigate to **Settings > Integrations > Intel vPro**
   - ![]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/WS1-vPro.png){:style="max-width: 300px; max-height: 500px;"}
-- Navigate to **Resources > Profiles & Baselines > Profiles > Add > Add Profile > Windows > Desktop > Device Profile**
+- Navigate to **Resources > Profiles & Baselines > Profiles**
+- Create a **Windows Desktop** profile with **Device** context
 - Add the **Intel vPro** payload and **Enable** the feature
   - ![]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/WS1-vProProfile.png){:style="max-width: 300px; max-height: 500px;"}
 - Assign the profile to your Zoom Room devices
