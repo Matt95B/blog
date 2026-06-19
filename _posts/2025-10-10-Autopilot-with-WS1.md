@@ -2,7 +2,7 @@
 layout: post
 title: Configure Windows Autopilot with Workspace ONE
 description: Step by step guide to configuring Windows Autopilot with Workspace ONE and Microsoft Entra ID
-tags: [Windows, Workspace ONE, EntraID]
+tags: [Windows, Workspace ONE, Entra ID]
 author: Mathieu Beaugrand
 ---
 

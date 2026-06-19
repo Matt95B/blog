@@ -2,7 +2,7 @@
 layout: post
 title: Enhance your Google Chrome security with Chrome Enterprise
 description: A practical guide to configuring Google Chrome Enterprise using the Google Admin Console, whether devices are managed or unmanaged
-tags: [Browser, EntraID, Workspace ONE, Essential 8]
+tags: [Browser, Entra ID, Workspace ONE, Essential 8]
 author: Mathieu Beaugrand
 ---
 Today, the majority of enterprise applications are accessed through a web browser rather than a thick client. As a result, **the browser has effectively become the new endpoint**, making browser security more critical than ever.

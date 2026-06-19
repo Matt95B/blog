@@ -2,7 +2,7 @@
 layout: post
 title: Manage Windows based Zoom Rooms with Workspace ONE
 description: Step by step guide to deploying and managing Zoom Rooms on Windows using Workspace ONE UEM
-tags: [Workspace ONE, Windows, EntraID, UC]
+tags: [Workspace ONE, Windows, Entra ID, UC]
 author: Mathieu Beaugrand
 ---
 ## 1. Overview

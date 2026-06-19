@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Bulk create EntraID users via PowerShell
+title: Bulk create Entra ID users via PowerShell
 description: PowerShell scripts to create Entra ID users in bulk from a CSV file
-tags: [EntraID, Script]
+tags: [Entra ID, Script]
 author: Mathieu Beaugrand
 ---
 Creating users in Microsoft Entra ID (formerly Azure AD) is a common task for tenant onboarding, lab builds, trials, or Proof of Concept (POC) engagements. When dealing with multiple users, automating the process can save significant time and ensure consistency. This PowerShell approach gives you flexibility to automate the user creation, licenses assignment and setup the prefered MFA method directly via Microsoft Graph.

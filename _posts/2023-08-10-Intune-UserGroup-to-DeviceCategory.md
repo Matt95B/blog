@@ -2,7 +2,7 @@
 layout: post
 title: Automate Intune Device Categories via User Group Membership
 description: Assign Intune device categories to devices based on user security group membership through Microsoft Graph
-tags: [Intune, EntraID, Script]
+tags: [Intune, Entra ID, Script]
 author: Mathieu Beaugrand
 ---
 Some Intune scenarios are better served by **device-based targeting** rather than user-based targeting. However, Intune does not natively provide a way to automatically map **user group membership** to **device group membership**. As a result, administrators are often left managing device assignments manually.

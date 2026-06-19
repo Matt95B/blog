@@ -12,7 +12,7 @@ This solution is made up of several key components, each playing a critical role
 The section below provides a high-level overview of the components making up the solutions, while the remainder of this blog will dive deeper into the configuration details.
 
 - Identity
-    - On-premises Active Directory (AD) synchronised to EntraID via cloud sync
+    - On-premises Active Directory (AD) synchronised to Entra ID via cloud sync
     - AirWatch Cloud Connector (ACC) deployed on-premises to synchronise users to Workspace ONE UEM
     - Access Cloud Connected deployed on-premises to synchronise users to Omnissa Access
     - *Note that SCIM 2.0 can also be configured for cloud only deployment*
@@ -25,8 +25,8 @@ The section below provides a high-level overview of the components making up the
     - Launcher used to create consistent experience and restrict access
     - Shared device mode with CICO (Check-in/Check-out)
         - Clear data and cache on logoff
-    - Workspace ONE UEM integrated with EntraID for device compliance and MSAL
-    - Omnissa Access integrated with UEM and federated with EntraID
+    - Workspace ONE UEM integrated with Entra ID for device compliance and MSAL
+    - Omnissa Access integrated with UEM and federated with Entra ID
     - Workspace ONE Assist for remote view/control
 - Mobile Threat Defense *(not documented in this blog post)*
     - Activated within Hub automatically
@@ -155,7 +155,7 @@ The [Microsoft Authentication Library (MSAL)](https://learn.microsoft.com/en-us/
 To configure Microsoft SSO, login to your Workspace ONE UEM console, go to **Groups & Settings > All Settings > System > Enterprise Integration > Directory Services**.
 
 - Azure AD Integration: **Enabled**
-    - Directory ID: *add-your-entraid-tenantid*
+    - Directory ID: *add-your-entra-id-tenantid*
     - Azure AD for Identity Services: **Enabled**
     - ms-DS-ConsistencyGuid: `ms-DS-ConsistencyGuid`
     - Mapping Attribute Data Type: **Binary**
@@ -165,7 +165,7 @@ To configure Microsoft SSO, login to your Workspace ONE UEM console, go to **Gro
     - ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Directory1.png){:style="max-width: 300px; max-height: 500px;"}
 - Confirm that **Workspace ONE UEM MSAL SSO** is listed in **Entra ID Console > Enterprise Applications**
 - Azure Active Directory
-    - Tenant Name: *add-your-entraid-tenantname*
+    - Tenant Name: *add-your-entra-id-tenantname*
     - Use compliance data in Azure conditional access policies: **Enabled**
     - Use compliance data in Azure conditional access policies for iOS, Android, and macOS: **Enabled**
     - Perform a **Sync**
@@ -189,7 +189,7 @@ Next, you’ll need to create a signing key to securely issue the custom claim (
 
 Run the below `PowerShell` script, and replace the placeholder attributes with your tenant details.
 ```powershell
-./setCustomSigningKey.ps1 -CertFriendlyName "create-cert-friendlyname" -Password "create-a-pwd" -TenantId "add-your-entraid-tenantid" -ApplicationObjectId "msal-app-object-id" -SelfSigned “Y”
+./setCustomSigningKey.ps1 -CertFriendlyName "create-cert-friendlyname" -Password "create-a-pwd" -TenantId "add-your-entra-id-tenantid" -ApplicationObjectId "msal-app-object-id" -SelfSigned “Y”
 ```
 
 {: .box-note}
@@ -212,7 +212,7 @@ To create your MS Authenticator shared device mode config:
 - Create an AppConfig
     - Shared Device Mode: **Enable**
     - Prefill UPN in Shared Device Mode: *Leave this field blank*
-    - Shared Device Mode Tenant Identifier: *add-your-entraid-tenantid*
+    - Shared Device Mode Tenant Identifier: *add-your-entra-id-tenantid*
     - Shared Device Mode Registration token: `{SharedDeviceRegistrationToken}`
     - Suppress camera consent for QR code: **Enable**
     - ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-MSA-AppConfig.png){:style="max-width: 300px; max-height: 500px;"}
@@ -233,7 +233,7 @@ The last configuration item for the MSAL integration is to configure Intelligent
 
 ## 5. Workspace ONE UEM
 ### 5.1 Authentication settings
-Workspace ONE UEM supports several authentication workflows. In this setup, I’ve configured Workspace ONE UEM to use Omnissa Access as the authentication source. This in turn allows for Workspace ONE Launcher to use SAML for authentication instead of Active Directory. Omnissa Access is then federated with EntraID, so any authentication for device enrolment or Intelligent Hub will leverage EntraID conditional access policies.
+Workspace ONE UEM supports several authentication workflows. In this setup, I’ve configured Workspace ONE UEM to use Omnissa Access as the authentication source. This in turn allows for Workspace ONE Launcher to use SAML for authentication instead of Active Directory. Omnissa Access is then federated with Entra ID, so any authentication for device enrolment or Intelligent Hub will leverage Entra ID conditional access policies.
 
 Also you need to make sure that your Google integration is set to:
 - Management Mode: **Work Managed**
