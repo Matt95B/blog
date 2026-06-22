@@ -187,7 +187,7 @@ To provide a seamless meeting room experience, the Zoom Rooms application should
 ### 3.7 Security controls
 Although Zoom Rooms are dedicated collaboration endpoints, they should still comply with your organisation's security standards. Restricting access to the underlying Windows operating system helps reduce the attack surface and prevents users from making unintended configuration changes.
 
-Recommended baseline controls include:
+Recommended controls include:
 - Log in to your Workspace ONE UEM tenant.
 - Navigate to **Resources > Profiles & Baselines > Profiles**
 - Create a **Windows ADMX** profile with **Device** context
@@ -195,21 +195,25 @@ Recommended baseline controls include:
     - BitLocker Drive Encryption > Operating System Drives > Require additional authentication at startup = Require TPM
     - BitLocker Drive Encryption > Operating System Drives > Enforce drive encryption type on operating system drives
   - Disable Windows Hello
-    - Windows Hello for Business > Use Windows Hello for Business
+    - Windows Hello for Business > Use Windows Hello for Business = Disabled
   - Restrict Settings access
     - Control Panel > Settings Page Visibility
-      - `showonly:network-wifi;bluetooth;windowsupdate;windowsupdate-action;activation;display`
+      - `showonly:network-wifi;bluetooth;windowsupdate;windowsupdate-action;display`
+      - Settings list: [Link](https://learn.microsoft.com/en-us/windows/apps/develop/launch/launch-settings#ms-settings-uri-scheme-reference)
   - Disable USB storage
     - Removable Storage Access > All Removable Storage classes: Deny all access
   - Disable lock screen
     - Control Panel - Personalization > Do not display the lock screen
   - Disable Search
-    - Search > Allow Cortana
+    - Search > Allow Cortana = Disabled
     - Search > Configures search on the taskbar
       - Search on the taskbar: Hide
   - Disable notifications
     - Start Menu and Taskbar > Notifications > Turn off toast notifications
     - Start Menu and Taskbar > Notifications > Turn off notification network usage
+  - Enable Location Services
+    - App Privacy > Let Windows apps access location
+      - Default for all apps: Force Allow
 
 {: .box-note}
 **Note:** A lot of those settings are also available in the templated baselines in Workspace ONE (ie. CIS level 1), though a lot of the pre-set settings will be conflicting with the local account and auto logon that we created earlier, so you will need to remove some of the pre-set settings if you want to use those templates.
@@ -222,12 +226,12 @@ Configure Workspace ONE Windows power management profiles to prevent the device 
   - Enable High Performance Power
     - Power Management > Select an Active Power Plan
   - Disable sleep menu
-    - File Explorer > Show hibernate in the power options menu
-    - File Explorer > Show sleep in power options menu
+    - File Explorer > Show hibernate in the power options menu = Disabled
+    - File Explorer > Show sleep in power options menu = Disabled
   - Never Sleep
     - Power Management > Sleep Settings > Specify the system sleep timeout (plugged in) = 0 (Never)
   - Disable sleep
-    - System > Power Management > Sleep Settings > Allow standby states (S1-S3) when sleeping (plugged in)
+    - System > Power Management > Sleep Settings > Allow standby states (S1-S3) when sleeping (plugged in) = Disabled
   - Never Turn Off Display
     - Power Management > Video and Display Settings > Turn off the display (plugged in) = 0 (Never)
 
@@ -266,6 +270,9 @@ To integrate Intel vPro with Workspace ONE:
 - Add the **Intel vPro** payload and **Enable** the feature
   - ![]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/WS1-vProProfile.png){:style="max-width: 300px; max-height: 500px;"}
 - Assign the profile to your Zoom Room devices
+- Download the Intel vPro driver from intel website and deploy it with Workspace ONE
+  - [Download link](https://www.intel.com/content/www/us/en/download/682431/intel-management-engine-drivers-for-windows-10-and-windows-11.html)
+  - [Deployment guide](https://techzone.omnissa.com/resource/chip-cloud-management-intel®-vpro)
 
 ---
 
