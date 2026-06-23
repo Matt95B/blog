@@ -218,7 +218,7 @@ Recommended controls include:
   - Navigate to **Resources > Scripting > Scripts**
   - Create a Windows **Script**
   - ```powershell
-    Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\tzautoupdate -Name Start -Value “3”
+    Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\tzautoupdate -Name Start -Value "3"
     Start-Service tzautoupdate
     ```
   - Assign the Script to your Zoom Room OG
