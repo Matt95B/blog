@@ -214,6 +214,15 @@ Recommended controls include:
   - Enable Location Services
     - App Privacy > Let Windows apps access location
       - Default for all apps: Force Allow
+- Set the timezone automatically
+  - Navigate to **Resources > Scripting > Scripts**
+  - Create a Windows **Script**
+  - ```powershell
+    Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\tzautoupdate -Name Start -Value “3”
+    Start-Service tzautoupdate
+    ```
+  - Assign the Script to your Zoom Room OG
+  - Trigger: **Run Once Immediately**
 
 {: .box-note}
 **Note:** A lot of those settings are also available in the templated baselines in Workspace ONE (ie. CIS level 1), though a lot of the pre-set settings will be conflicting with the local account and auto logon that we created earlier, so you will need to remove some of the pre-set settings if you want to use those templates.
