@@ -58,4 +58,4 @@ A successful POC is only the starting point. The real value of the Omnissa platf
 
 ---
 
-[*Archive files*](https://github.com/Matt95B/blog/tree/main/images/2024-07-01-Omnissa-poc/Archive)
+[*Archived files*](https://github.com/Matt95B/blog/tree/main/images/2024-07-01-Omnissa-poc/Archive)
