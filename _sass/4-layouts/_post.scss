@@ -24,9 +24,12 @@
 .post-top-ad {
   width: 100%;
   margin: 20px auto 30px;
-  max-width: 100%;
   text-align: center;
   overflow: hidden;
+  
+  &:has(ins.adsbygoogle[data-ad-status="unfilled"]) {
+    display: none;
+  }
 }
 
 .post__info,
