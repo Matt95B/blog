@@ -32,6 +32,17 @@
   }
 }
 
+.post-bottom-ad {
+  width: 100%;
+  margin: 20px auto 30px;
+  text-align: center;
+  overflow: hidden;
+  
+  &:has(ins.adsbygoogle[data-ad-status="unfilled"]) {
+    display: none;
+  }
+}
+
 .post__info,
 .page__info {
   max-width: 720px;
