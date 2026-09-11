@@ -55,12 +55,17 @@ The payload exposes a number of elevation modes, but for an application that req
 - Repeat for any additional executables the application depends on.
 - Select **Save and Publish** to push the profile to your pilot assignment group.
 
-{: .box-note}
-**Note:** Publisher-based rules remain the easiest to maintain long term, but only work if the vendor consistently signs their binaries, not every vendor does. To confirm, on a reference machine with the app installed, confirm the path and check whether the binary is signed:
-> Get-AuthenticodeSignature -FilePath "C:\Program Files\AppFolder\App.exe" | Select-Object Status, SignerCertificate | Format-List
-If the binary isn't consistently signed across updates, or you'd rather pin to an exact known-good build, grab its hash instead:
-> Get-FileHash -Path "C:\Program Files (x86)\AppFolder\App.exe" -Algorithm SHA256
-A hash-based rule pins to that exact file. Every time the vendor ships an update that replaces the executable, you'll need to refresh the hash, a path-based rule avoids this maintenance overhead if you're comfortable elevating anything running from that install location.
+<div class="box-note">
+<p><strong>Note:</strong> Publisher-based rules remain the easiest to maintain long term, but only work if the vendor consistently signs their binaries, not every vendor does. To confirm, on a reference machine with the app installed, confirm the path and check whether the binary is signed:</p>
+<pre><code>function greetMe() {
+    Get-AuthenticodeSignature -FilePath "C:\Program Files\AppFolder\App.exe" | Select-Object Status, SignerCertificate | Format-List
+}</code></pre>
+<p>If the binary isn't consistently signed across updates, or you'd rather pin to an exact known-good build, grab its hash instead:</p>
+<pre><code>function greetMe() {
+    Get-FileHash -Path "C:\Program Files (x86)\AppFolder\App.exe" -Algorithm SHA256
+}</code></pre>
+<p>A hash-based rule pins to that exact file. Every time the vendor ships an update that replaces the executable, you'll need to refresh the hash, a path-based rule avoids this maintenance overhead if you're comfortable elevating anything running from that install location.</p>
+</div>
 
 ---
 
