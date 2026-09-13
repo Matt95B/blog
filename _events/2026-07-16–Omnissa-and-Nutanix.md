@@ -1,6 +1,6 @@
 ---
 layout: default
-name: Modern Workspaces Without Compromise - Simplifying EUC with Nutanix and Omnissa
+name: Modern workspaces without compromise - Simplifying EUC with Nutanix and Omnissa
 date: 2026-07-16
 type: Webinar
 role: Presenter

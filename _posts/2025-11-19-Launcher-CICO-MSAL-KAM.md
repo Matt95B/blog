@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Workspace ONE Launcher with CICO, MSAL & KAM
-description: Samsung shared device use case with CICO (Check-in, Check-out), MSAL (Microsoft Authentication Library) and Knox Authentication Manager (KAM)
-tags: [Workspace ONE, Android, Launcher, Shared Device, SSO, MSAL, Knox]
+description: Samsung shared device use case with Launcher CICO (Check-in, Check-out), MSAL (Microsoft Authentication Library) and Knox Authentication Manager (KAM)
+tags: [Workspace ONE, Android, Frontline, SSO, Knox]
 author: Mathieu Beaugrand
 ---
 I was recently invited to present at a Samsung Expert training event to demonstrate how solutions from Omnissa seamlessly integrate with and enhance the capabilities of Samsung Knox. To support this presentation, I built a full demo environment showcasing how KME (Knox Mobile Enrollment), KSP (Knox Service Plugin), and KAM (Knox Authentication Manager) when combined with Workspace ONE create a powerful, end-to-end solution uniquely positioned to address frontline workforce needs.
