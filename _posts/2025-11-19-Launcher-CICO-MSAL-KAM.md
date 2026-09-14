@@ -46,7 +46,7 @@ Workspace ONE supports a number of [enrolment flags](https://docs.omnissa.com/bu
 
 To create your KME profile, login to the [Samsung Knox Admin portal](http://samsungknox.com/en), in the KME blade, select **Profiles** and **Create profile**.
 
-![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/KME-Profile.png){:style="max-width: 300px; max-height: 500px;"}  ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/KME-EMM.png){:style="max-width: 300px; max-height: 500px;"}  ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/KME-DPC.png){:style="max-width: 300px; max-height: 500px;"}
+![KME-Profile]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/KME-Profile.png){:style="max-width: 300px; max-height: 500px;"}  ![KME-EMM]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/KME-EMM.png){:style="max-width: 300px; max-height: 500px;"}  ![KME-DPC]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/KME-DPC.png){:style="max-width: 300px; max-height: 500px;"}
 
 Additional flags used in the KME profile:
 ```json
@@ -64,18 +64,18 @@ To create your KSP config:
 - Login to your Workspace ONE UEM console
 - Go to **Resources > Native Apps > Public**
 - Locate the KSP app (or import it via Google Managed Play if needed), **Select** it and click **Assign**.
-    - ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-Assign.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![WS1-App-KSP-Assign]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-Assign.png){:style="max-width: 300px; max-height: 500px;"}
 - Distribution
     - Assignment Groups: *select-your-smart-group*
     - Delivery: **Auto**
-    - ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-Distribution.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![WS1-App-KSP-Distribution]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-Distribution.png){:style="max-width: 300px; max-height: 500px;"}
 - Restrictions - Managed Access: **Enabled**
-    - ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-Restrictions.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![WS1-App-KSP-Restrictions]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-Restrictions.png){:style="max-width: 300px; max-height: 500px;"}
 - Create an AppConfig
     - Knox license: *add-your-knox-license*
-        - ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-AppConfig.png){:style="max-width: 300px; max-height: 500px;"}
+        - ![WS1-App-KSP-AppConfig]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-AppConfig.png){:style="max-width: 300px; max-height: 500px;"}
     - Device-wide policies
-        - ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-AppConfig-1.png){:style="max-width: 300px; max-height: 500px;"}
+        - ![WS1-App-KSP-AppConfig-1]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-AppConfig-1.png){:style="max-width: 300px; max-height: 500px;"}
         - Enable device policy controls: **Enable**
         - Application management policies
             - Enable application management controls: **Enable**
@@ -86,7 +86,7 @@ To create your KSP config:
             - Clear Data Block List: `com.samsung.android.knox.kam, com.samsung.android.knox.kpu`
             - Enable Permission controls: **Enable**
     - Permission Controls
-        - ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-AppConfig-2.png){:style="max-width: 300px; max-height: 500px;"}
+        - ![WS1-App-KSP-AppConfig-2]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KSP-AppConfig-2.png){:style="max-width: 300px; max-height: 500px;"}
         - Permission Policy: **ALL**, Package: `com.airwatch.lockdown.launcher/com.airwatch.lockdown.launcher`
         - Permission Policy: **ALL**, Package: `com.airwatch.androidagent/com.airwatch.androidagent`
         - Permission Policy: **ALL**, Package: `com.airwatch.tunnel/com.airwatch.tunnel`
@@ -108,17 +108,17 @@ To create your KAM config:
 - Login to your Workspace ONE UEM console
 - Go to **Resources > Native Apps > Public**
 - Locate the KAM app (or import it via Google Managed Play if needed), **Select** it and click **Assign**.
-    - ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-Assign.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![WS1-App-KAM-Assign]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-Assign.png){:style="max-width: 300px; max-height: 500px;"}
 - Distribution
     - Assignment Groups: *select-your-smart-group*
     - Delivery: **Auto**
-    - ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-Distribution.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![WS1-App-KAM-Distribution]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-Distribution.png){:style="max-width: 300px; max-height: 500px;"}
 - Restrictions - Managed Access: **Enabled**
-    - ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-Restrictions.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![WS1-App-KAM-Restrictions]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-Restrictions.png){:style="max-width: 300px; max-height: 500px;"}
 - Create an AppConfig
     - Knox license: *add-your-knox-license*
-        - ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-AppConfig.png){:style="max-width: 300px; max-height: 500px;"}
-    - ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-AppConfig-1.png){:style="max-width: 300px; max-height: 500px;"}
+        - ![WS1-App-KAM-AppConfig]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-AppConfig.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![WS1-App-KAM-AppConfig-1]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-AppConfig-1.png){:style="max-width: 300px; max-height: 500px;"}
     - Customize KAM home screen
         - Title: *add-your-company-name*
         - Description: *add-a-description*
@@ -139,7 +139,7 @@ To create your KAM config:
         - Sync send UDP port: `49158`
         - Sync receive UDP port: `49159`
         - Sync TCP port: `7788`
-        - ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-AppConfig-2.png){:style="max-width: 300px; max-height: 500px;"}
+        - ![WS1-App-KAM-AppConfig-2]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-KAM-AppConfig-2.png){:style="max-width: 300px; max-height: 500px;"}
     - Manage KAM behavior
         - Leave un-configured
 
@@ -162,14 +162,14 @@ To configure Microsoft SSO, login to your Workspace ONE UEM console, go to **Gro
     - Automatically revoke user tokens when wiping devices: **Enabled**
     - Android Shared Device Checkout: **Enabled**
     - You will be redirected to Microsoft Entra. Log in with an administrator account for your Microsoft Entra tenant and authorise Workspace ONE UEM to obtain information about your directory users.
-    - ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Directory1.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![WS1-Settings-Directory1]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Directory1.png){:style="max-width: 300px; max-height: 500px;"}
 - Confirm that **Workspace ONE UEM MSAL SSO** is listed in **Entra ID Console > Enterprise Applications**
 - Azure Active Directory
     - Tenant Name: *add-your-entra-id-tenantname*
     - Use compliance data in Azure conditional access policies: **Enabled**
     - Use compliance data in Azure conditional access policies for iOS, Android, and macOS: **Enabled**
     - Perform a **Sync**
-    - ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Directory2.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![WS1-Settings-Directory2]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Directory2.png){:style="max-width: 300px; max-height: 500px;"}
 
 #### 4.1.1 Additional steps for hybrid setup
 The following steps are only required if your have synchronised your users from on-premises Active Directory to Workspace ONE UEM via AirWatch Cloud Connector (ie. Your are not using Omnissa Identiy Services).
@@ -183,7 +183,7 @@ Then login to **Microsoft Entra admin center**, go to **Enterprise Applications*
     - Name: `on-premises-immutable-id`
     - Source: **Attribute**
     - Source attribute: `user.onpremisesimmutableid`
-    - ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/Entra-MSAL-SSO-Claim.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![Entra-MSAL-SSO-Claim]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/Entra-MSAL-SSO-Claim.png){:style="max-width: 300px; max-height: 500px;"}
 
 Next, you’ll need to create a signing key to securely issue the custom claim (Immutable ID). This signing key is made up of three components, a public key file, a private key file, and the password used to decrypt that private key. To generate the certificate, download the PowerShell script provided by Omnissa called: [Set Custom Signing Key - Microsoft SSO](https://customerconnect.omnissa.com/downloads/details?downloadGroup=WS1-UEM-SS&productId=1589&rPId=118923).
 
@@ -215,7 +215,7 @@ To create your MS Authenticator shared device mode config:
     - Shared Device Mode Tenant Identifier: *add-your-entra-id-tenantid*
     - Shared Device Mode Registration token: `{SharedDeviceRegistrationToken}`
     - Suppress camera consent for QR code: **Enable**
-    - ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-MSA-AppConfig.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![WS1-App-MSA-AppConfig]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-App-MSA-AppConfig.png){:style="max-width: 300px; max-height: 500px;"}
 
 {: .box-note}
 **Tip:** If you are using an Android Restrictions profile, ensure the setting **Allow adding/deleting accounts** is set to **Enable**.
@@ -227,7 +227,7 @@ The last configuration item for the MSAL integration is to configure Intelligent
 - Go to **Groups & Settings > All Settings > Devices & Users > Android > Intelligent Hub Settings**.
 - Register as Shared Device with Azure for Conditional Access: **Enabled**
 - Global sign-in/sign-out using MSAL: **Enabled**
-- ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Hub-MSAL.png){:style="max-width: 300px; max-height: 500px;"}
+- ![WS1-Settings-Hub-MSAL]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Hub-MSAL.png){:style="max-width: 300px; max-height: 500px;"}
 
 ---
 
@@ -242,7 +242,7 @@ Also you need to make sure that your Google integration is set to:
 
 | EMM Registration | Enrollment |
 |:-------------------:|:-------------------:|
-| ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-EMMRegistration.png) | ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Enrollment.png) |
+| ![WS1-Settings-EMMRegistration]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-EMMRegistration.png) | ![WS1-Settings-Enrollment]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Enrollment.png) |
 
 ### 5.2 Multi-user staging account
 Workspace ONE UEM supports several staging workflows. In this setup, I’ve configured a multi-user staging account so that each device only needs to be staged once. Thereafter, frontline workers simply sign in at the start of their shift and sign out when they finish. At logoff, user specific data is cleared and the device returns to its clean, staged state, ready for the next worker.
@@ -258,14 +258,14 @@ To configure a mutli-user staging account
     - Single User Devices: **Disabled**
     - Multi User Devices: **Enabled**
     - Android Shared Device Mode: **Launcher**
-    - ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Accounts-Staging.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![WS1-Accounts-Staging]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Accounts-Staging.png){:style="max-width: 300px; max-height: 500px;"}
 
 ### 5.3 Shared device settings
 Next you need to ensure that the shared device settings in Workspace ONE UEM are configured to align with your use case. In this setup I've configured the shared device settings as per below.
 
 | Grouping | Logout |
 |:-------------------:|:-------------------:|
-| ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Shared1.png) | ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Shared2.png) |
+| ![WS1-Settings-Shared1]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Shared1.png) | ![WS1-Settings-Shared2]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-Shared2.png) |
 
 ### 5.4 Intelligent Hub SDK
 If you want to enhance the user experience and remove the welcome and privacy sreens when signing into Hub or any Workspace ONE SDK enabled apps, I recommend using the below custom SDK settings.
@@ -288,7 +288,7 @@ If you want to enhance the user experience and remove the welcome and privacy sr
 {: .box-note}
 **Tip:** Only use `mtdSettings` and `CaptureDexData` if you are licensed for those add-ons.
 
-![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-SDK.png)
+![WS1-Settings-SDK]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Settings-SDK.png)
 
 ### 5.5 Workspace ONE Launcher
 Now onto the last piece of the puzzle, configuring Workspace ONE Launcher to customise the device layout.
@@ -318,15 +318,15 @@ To create a Launcher profile:
 
 | Launcher config 1 | Launcher config 2 | Launcher config 3 | Launcher config 4 |
 |:-------------------:|:-------------------:|:-------------------:|:-------------------:|
-| ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher1.png) | ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher2.png) | ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher3.png) | ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher4.png) |
+| ![WS1-Profile-Launcher1]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher1.png) | ![WS1-Profile-Launcher2]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher2.png) | ![WS1-Profile-Launcher3]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher3.png) | ![WS1-Profile-Launcher4]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher4.png) |
 
 | Launcher config 5 | Launcher config 6 | Launcher config 7 | Launcher config 8 |
 |:-------------------:|:-------------------:|:-------------------:|:-------------------:|
-| ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher5.png) | ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher6.png) | ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher7.png) | ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher8.png) |
+| ![WS1-Profile-Launcher5]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher5.png) | ![WS1-Profile-Launcher6]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher6.png) | ![WS1-Profile-Launcher7]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher7.png) | ![WS1-Profile-Launcher8]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher8.png) |
 
 | Launcher canvas | Launcher hidden apps | Launcher layout | Launcher for you |
 |:-------------------:|:-------------------:|:-------------------:|:-------------------:|
-| ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Canvas.png) | ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-CanvasHidden.png) | ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Layout.png) | ![]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Foryou.png) |
+| ![WS1-Profile-Launcher-Canvas]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Canvas.png) | ![WS1-Profile-Launcher-CanvasHidden]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-CanvasHidden.png) | ![WS1-Profile-Launcher-Layout]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Layout.png) | ![WS1-Profile-Launcher-Foryou]({{site.url}}/images/2025-11-19-Launcher-CICO-MSAL-KAM/WS1-Profile-Launcher-Foryou.png) |
 
 ## User experience
 

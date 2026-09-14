@@ -36,7 +36,7 @@ Domain verification ensures no one else can register services using your organis
     - Add a new TXT record with the value copied earlier
 - Go back to your Google Admin Console tab and click **Confirm**
 
-![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Domain.png)
+![Google-Domain]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Domain.png)
 
 ### 1.3 Licenses
 To unlock Chrome Enterprise features:
@@ -52,7 +52,7 @@ For advanced security capabilities, add:
 
 Some vendors bundle Chrome Enterprise Premium into their offerings. For example, [Omnissa Secure Access Suite](https://www.omnissa.com/insights/blog/omnissa-one-2025-amsterdam-google-chrome-enterprise-premium-secure-browser) includes Chrome Enterprise Premium as part of the solution, so reach out to your Omnissa representative if you prefer to procure it that way. Buying the **Omnissa Secure Access Suite** instead of Chrome Enterprise Premium alone delivers secure browser access as part of a **full, identity-driven Digital Workspace**, including Hub Experience & Unified AppCatalog, modern VPN via Workspace ONE Tunnel, conditional access through Omnissa Access, and robust BYOD support. It also lays the foundation for an **Autonomous Workspace** journey, unifying security, access, and user experience under a single intelligent platform.
 
-![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Licenses.png)
+![Google-Licenses]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Licenses.png)
 
 ### 1.4 Services review
 Before synchronising users, assess and restrict Google services to align with your security and governance requirements.
@@ -63,7 +63,7 @@ Navigate to:
 
 Disable unnecessary services to reduce exposure and complexity.
 
-![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Apps.png)
+![Google-Apps]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Apps.png)
 
 ---
 
@@ -79,11 +79,11 @@ Alternatively, you can use the [Google Cloud / G Suite Connector by Microsoft](h
 - Go to **Directory > Directory sync**
 - Click **Add Azure Active Directory**
 - Give it a name then click **Authorise and Save**
-    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-Add.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![Google-SCIM-Add]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-Add.png){:style="max-width: 300px; max-height: 500px;"}
 - You will get redirected to Entra ID for authentication
     - Note that you will require to authenticate with a Global Admin account in order to authorise the integration
 - Accept the **Google Directory Sync** app creation in Entra ID
-    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-Authorise.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![Google-SCIM-Authorise]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-Authorise.png){:style="max-width: 300px; max-height: 500px;"}
 
 ### 2.2 User sync
 - Under the **User sync** section, click **Set up user sync**
@@ -92,25 +92,25 @@ Alternatively, you can use the [Google Cloud / G Suite Connector by Microsoft](h
             - Nested groups do not seem to work in this scenario
         - Copy the name of your Entra ID group and paste it into the field
         - Click **Verify**
-        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-User.png){:style="max-width: 300px; max-height: 500px;"}
+        - ![Google-SCIM-User]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-User.png){:style="max-width: 300px; max-height: 500px;"}
     - Organizational unit (OU) selection
         - Select **Place users in a specific OU**
         - Click on **Select organizational unit**
         - Then select the top level OU of your domain
-        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-OU.png){:style="max-width: 300px; max-height: 500px;"}
+        - ![Google-SCIM-OU]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-OU.png){:style="max-width: 300px; max-height: 500px;"}
     - User attribute mapping
         - Map the user attributes as per your requirements
             - [Common user attribute mappings](https://support.google.com/a/answer/10344342?hl=en#step2&zippy=step-map-the-user-attributes)
-        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-UserAttributes.png){:style="max-width: 300px; max-height: 500px;"}
+        - ![Google-SCIM-UserAttributes]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-UserAttributes.png){:style="max-width: 300px; max-height: 500px;"}
     - Account activation
         - Select **Don't send activation email**
-        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-UserActivation.png){:style="max-width: 300px; max-height: 500px;"}
+        - ![Google-SCIM-UserActivation]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-UserActivation.png){:style="max-width: 300px; max-height: 500px;"}
     - Deprovisioning
         - Click **Suspend user in Google Directory**
-        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-UserDecom.png){:style="max-width: 300px; max-height: 500px;"}
+        - ![Google-SCIM-UserDecom]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-UserDecom.png){:style="max-width: 300px; max-height: 500px;"}
     - Safeguards
         - Set the safeguard as per your requirements
-        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-UserSafeguard.png){:style="max-width: 300px; max-height: 500px;"}
+        - ![Google-SCIM-UserSafeguard]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-UserSafeguard.png){:style="max-width: 300px; max-height: 500px;"}
 
 ### 2.3 Group sync
 - Under the **Group sync** section, click **Set up group sync**
@@ -120,16 +120,16 @@ Alternatively, you can use the [Google Cloud / G Suite Connector by Microsoft](h
         - Copy the name of your Entra ID group and paste it into the field
         - Click **Verify**
         - Note that for a group to sync, the group must be a mail-enabled security group (see required group attributes below)
-        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-Group.png){:style="max-width: 300px; max-height: 500px;"}
+        - ![Google-SCIM-Group]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-Group.png){:style="max-width: 300px; max-height: 500px;"}
     - Required attributes
         - Leave the default values
-        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-GroupAttributes.png){:style="max-width: 300px; max-height: 500px;"}
+        - ![Google-SCIM-GroupAttributes]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-GroupAttributes.png){:style="max-width: 300px; max-height: 500px;"}
     - Deprovisioning
         - Click **Delete group in your Google Directory**
-        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-GroupDecom.png){:style="max-width: 300px; max-height: 500px;"}
+        - ![Google-SCIM-GroupDecom]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-GroupDecom.png){:style="max-width: 300px; max-height: 500px;"}
     - Safeguards
         - Set the safeguard as per your requirements
-        - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-GroupSafeguard.png){:style="max-width: 300px; max-height: 500px;"}
+        - ![Google-SCIM-GroupSafeguard]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SCIM-GroupSafeguard.png){:style="max-width: 300px; max-height: 500px;"}
 
 ---
 
@@ -142,7 +142,7 @@ If using another IdP:
 - Create an SSO profile
 - Assign it to an OU or user group
 
-![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SSO.png)
+![Google-SSO]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-SSO.png)
 
 ---
 
@@ -162,7 +162,7 @@ Now let's look at the foundation of your Chrome configuration.
     - Managed browser reporting upload frequency: **4 hours**
     - Device token management: **Delete token**
 
-![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Settings1.png)
+![Google-Settings1]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Settings1.png)
 
 #### 4.1.2 Safe browsing
 - Under the **User & browser settings** tab search for `safe browsing`
@@ -172,7 +172,7 @@ Now let's look at the foundation of your Chrome configuration.
     - Allow download deep scanning for Safe Browsing-enabled users: **Enable Safe Browsing download deep scans**
     - Download restrictions: **Block malicious downloads**
 
-![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Settings2.png)
+![Google-Settings2]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Settings2.png)
 
 #### 4.1.3 Third party device trust connector (optional)
 If your Identity Provider (IdP) supports device trust signals, integrating Google Chrome Enterprise enables context-aware access decisions based on browser trust. Chrome provides device signals such as managed browser status and disk encryption posture, allowing your IdP to enforce conditional access policies accordingly.
@@ -184,9 +184,9 @@ In this example, I’ll walk through the integration using Omnissa Access as the
 - Login to your Omnissa Access tenant
 - Go to **Integrations > Authentication Methods**
 - Click on **Google Chrome Enterprise Device Signals** adapter
-    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Access-AuthMethod.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![Access-AuthMethod]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Access-AuthMethod.png){:style="max-width: 300px; max-height: 500px;"}
 - Enable the authentication method
-    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Access-ChromeAdapter.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![Access-ChromeAdapter]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Access-ChromeAdapter.png){:style="max-width: 300px; max-height: 500px;"}
 - Copy the **URLs matcher** & **IDP service account**
     - You will need those details later on in the Google Admin console
 - Configure the device signals as per your requirements
@@ -205,13 +205,13 @@ Configure the device trust connector in the Google Admin console:
 - Login to your [Google Admin Console](https://admin.google.com)
 - Go to **Chrome browser > Connectors**
 - Click **+ New provider configuration**
-    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Connector.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![Google-Connector]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Connector.png){:style="max-width: 300px; max-height: 500px;"}
 - Find your IdP, then click **Set up**
 - Paste the **URLs matcher** and **service account** details copied from Omnissa Access
 - Click **Add configuration**
-    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-ConnectorConfig.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![Google-ConnectorConfig]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-ConnectorConfig.png){:style="max-width: 300px; max-height: 500px;"}
 - Assign the connector configuration to the appropriate OU
-    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-ConnectorAssign.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![Google-ConnectorAssign]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-ConnectorAssign.png){:style="max-width: 300px; max-height: 500px;"}
 
 Configure your conditional access policy:
 - Login to your Omnissa Access tenant
@@ -220,7 +220,7 @@ Configure your conditional access policy:
 - Configure the policy based on your access requirements
     - Device type: **Windows 10+** or **macOS** or **Chrome OS**
     - Add **Google Chrome Enterprise Device Signals** as a second authentication method
-    - ![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Access-Policy.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![Access-Policy]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Access-Policy.png){:style="max-width: 300px; max-height: 500px;"}
 
 With this configuration in place, Chrome will continuously send device trust signals to Omnissa Access during authentication. These signals can then be evaluated in real time to enforce access controls.
 
@@ -245,7 +245,7 @@ Managing browser extensions effectively is essential to maintaining a secure bro
         - Extension ID: **ekajlcmdfcigmdbphhifahdfjbkciflj**
         - Installation policy: **Force install + pin to browser toolbar** 
 
-![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Extension1.png)
+![Google-Extension1]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Extension1.png)
 
 Once you have visibility into which extensions are being used across your environment, you can make an informed decision on how to manage them moving forward—typically by enforcing either an **allowlist** or **blocklist** using the settings below.
 
@@ -310,7 +310,7 @@ To configure the managed browser option, you need to download the configuration 
 - Click **Enroll**
 - Copy and/or download your token
 
-![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Token.png)
+![Google-Token]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Token.png)
 
 #### 5.1.2 Windows deployment
 Deploy the enrolment token using your PCLM/UEM solution. In this instance I am leveraging Workspace ONE to deploy the configuration file.
@@ -349,14 +349,14 @@ Deploy the enrolment token using your PCLM/UEM solution. In this instance I am l
     - Save and Publish
     - Custom settings details are documented [here](https://support.google.com/chrome/a/answer/9793780)
 
-![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/WS1-Profile.png)
+![WS1-Profile]({{site.url}}/images/2026-01-15-Chrome-Enterprise/WS1-Profile.png)
 
 ### 5.2 Managed profile
 No additional configuration is required for Chrome managed profiles, as management is automatically enabled when users create a Chrome profile and sign in with their managed Google account. Users simply need to:
 - Create a Chrome profile
 - Sign in with their managed Google account
 
-![]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Chrome-Profile.png)
+![Chrome-Profile]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Chrome-Profile.png)
 
 ### 5.3 Confirm enrolment
 

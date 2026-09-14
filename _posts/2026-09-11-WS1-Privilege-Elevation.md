@@ -43,7 +43,7 @@ Before configuring privilege elevation, check the following:
 - Configure the **General** settings, including a descriptive name (for example, `Windows - Privilege Elevation - LOB Apps`) and an assignment group. I'd recommend starting with a small pilot Smart Group rather than assigning to all devices.
 - Select the **Privilege Elevation** payload.
 
-![]({{site.url}}/images/2026-09-11-WS1-Privilege-Elevation/WS1-Profile-PE.png)
+![WS1-Profile-PE]({{site.url}}/images/2026-09-11-WS1-Privilege-Elevation/WS1-Profile-PE.png)
 
 ### 3.2 Choose an elevation type
 
@@ -51,7 +51,7 @@ The payload exposes a number of elevation modes, but for an application that req
 
 - Under **Privilege Elevation Type**, select **Path-based Elevated Application** (or **Hash** if you want to pin to an exact build).
 - Paste the application's executable path and click **Add**
-    - ![]({{site.url}}/images/2026-09-11-WS1-Privilege-Elevation/WS1-Profile-PE-Path.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![WS1-Profile-PE-Path]({{site.url}}/images/2026-09-11-WS1-Privilege-Elevation/WS1-Profile-PE-Path.png){:style="max-width: 300px; max-height: 500px;"}
 - Repeat for any additional executables the application depends on.
 - Select **Save and Publish** to push the profile to your pilot assignment group.
 

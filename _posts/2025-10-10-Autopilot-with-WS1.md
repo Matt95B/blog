@@ -29,24 +29,24 @@ The first step is to integrate your Workspace ONE UEM environment with Microsoft
   - Immutable ID Mapping Attribute: `ms-DS-ConsistencyGuid`
   - Mapping Attribute Data Type: **Binary**
   - Windows OOBE: **Enabled**
-  - ![]({{site.url}}/images/2025-10-10-Autopilot-with-WS1/WS1-Entra.png){:style="max-width: 300px; max-height: 500px;"}
+  - ![WS1-Entra]({{site.url}}/images/2025-10-10-Autopilot-with-WS1/WS1-Entra.png){:style="max-width: 300px; max-height: 500px;"}
 - Under the Azure Active Directory section, copy the MDM Discovery URL and MDM Terms of Use URL.
   - These values will be required in the next section.
-  - ![]({{site.url}}/images/2025-10-10-Autopilot-with-WS1/WS1-MDMURL.png){:style="max-width: 300px; max-height: 500px;"}
+  - ![WS1-MDMURL]({{site.url}}/images/2025-10-10-Autopilot-with-WS1/WS1-MDMURL.png){:style="max-width: 300px; max-height: 500px;"}
 
 ### 2.2 MDM authority
 Next, configure Workspace ONE as the MDM authority within Microsoft Entra ID.
 - Log in to your Entra ID tenant - <https://portal.azure.com>
 - Navigate to **Entra ID > Manage > Mobility (MDM and WIP)**
-  - ![]({{site.url}}/images/2025-10-10-Autopilot-with-WS1/Entra-MDM.png){:style="max-width: 300px; max-height: 500px;"}
+  - ![Entra-MDM]({{site.url}}/images/2025-10-10-Autopilot-with-WS1/Entra-MDM.png){:style="max-width: 300px; max-height: 500px;"}
 - Click **Add application**
 - Search for **AirWatch by Omnissa** and click **Create**
-  - ![]({{site.url}}/images/2025-10-10-Autopilot-with-WS1/Entra-Search.png){:style="max-width: 300px; max-height: 500px;"}
+  - ![Entra-Search]({{site.url}}/images/2025-10-10-Autopilot-with-WS1/Entra-Search.png){:style="max-width: 300px; max-height: 500px;"}
   - Configure the following settings:
     - MDM User Scope: **All**
     - MDM Discovery URL: *Paste the URL copied earlier*
     - MDM Terms of Use URL: *Paste the URL copied earlier*
-    - ![]({{site.url}}/images/2025-10-10-Autopilot-with-WS1/Entra-AirWatch.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![Entra-AirWatch]({{site.url}}/images/2025-10-10-Autopilot-with-WS1/Entra-AirWatch.png){:style="max-width: 300px; max-height: 500px;"}
 
 {: .box-note}
 **Note:** If Microsoft Intune is also configured in your tenant, ensure its **MDM User Scope** is set to **None** to prevent enrolment conflicts.
@@ -67,7 +67,7 @@ Create a dynamic device group to automatically include all Windows Autopilot dev
   - Microsoft Entra roles can be assigned to the group: **No**
   - Membership type: **Dynamic Device**
   - Rule syntax: `(device.devicePhysicalIDs -any (_ -startsWith "[ZTDid]"))`
-    - ![]({{site.url}}/images/2025-10-10-Autopilot-with-WS1/Entra-Group.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![Entra-Group]({{site.url}}/images/2025-10-10-Autopilot-with-WS1/Entra-Group.png){:style="max-width: 300px; max-height: 500px;"}
 
 The above rule automatically includes all devices registered with Windows Autopilot.
 
@@ -82,9 +82,9 @@ Now it’s time to create and assign the Autopilot deployment profile.
 - Select **Deployment profiles**
 - Click **Create profile**
   - Configure the profile according to your requirements
-    - ![]({{site.url}}/images/2025-10-10-Autopilot-with-WS1/Intune-Autopilot.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![Intune-Autopilot]({{site.url}}/images/2025-10-10-Autopilot-with-WS1/Intune-Autopilot.png){:style="max-width: 300px; max-height: 500px;"}
   - Assign the profile to the Entra ID device group created in the previous step
-    - ![]({{site.url}}/images/2025-10-10-Autopilot-with-WS1/Intune-Autopilot-Assign.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![Intune-Autopilot-Assign]({{site.url}}/images/2025-10-10-Autopilot-with-WS1/Intune-Autopilot-Assign.png){:style="max-width: 300px; max-height: 500px;"}
 
 {: .box-note}
 **Tip:** If you cannot access the Autopilot menus shown above, it is likely because your tenant does not have an Intune license assigned. Microsoft now restricts access to these pages based on licensing. Purchasing a single **Microsoft Intune Device Plan 1** license is typically sufficient to unlock the required administration pages.
@@ -96,7 +96,7 @@ To view registered devices:
 - Log in to your Intune tenant - <https://intune.microsoft.com>
 - Navigate to **Devices > Device onboarding > Enrollment > Windows > Windows Autopilot**
 - Select **Devices**
-- ![]({{site.url}}/images/2025-10-10-Autopilot-with-WS1/Intune-Autopilot-Devices.png){:style="max-width: 300px; max-height: 500px;"}
+- ![Intune-Autopilot-Devices]({{site.url}}/images/2025-10-10-Autopilot-with-WS1/Intune-Autopilot-Devices.png){:style="max-width: 300px; max-height: 500px;"}
 
 {: .box-note}
 **Note:** If you need to onboard existing devices that were not registered with Windows Autopilot during procurement, Microsoft provides a script to extract the device hardware hash and import the devices into Autopilot. The process is documented [here](https://learn.microsoft.com/en-us/autopilot/add-devices).
@@ -110,13 +110,13 @@ There are a few additional Workspace ONE settings worth reviewing to optimise th
 Ensure that Workspace ONE Intelligent Hub is automatically deployed during enrolment.
 - Log in to your Workspace ONE UEM tenant
 - Navigate to **Settings > All Settings > Devices & Users > Microsoft > Windows > Intelligent Hub Application**
-  - ![]({{site.url}}/images/2025-10-10-Autopilot-with-WS1/WS1-Hub.png){:style="max-width: 300px; max-height: 500px;"}
+  - ![WS1-Hub]({{site.url}}/images/2025-10-10-Autopilot-with-WS1/WS1-Hub.png){:style="max-width: 300px; max-height: 500px;"}
 
 ### 4.2 Status Tracking Page
 To provide users with better visibility during onboarding, I recommend enabling the Workspace ONE Status Tracking page during Out-of-Box Experience (OOBE).
 - Log in to your Workspace ONE UEM tenant
 - Navigate to **Settings > All Settings > Devices & Users > General > Enrollment > Optional Prompt**
-  - ![]({{site.url}}/images/2025-10-10-Autopilot-with-WS1/WS1-TrackingPage.png){:style="max-width: 300px; max-height: 500px;"}
+  - ![WS1-TrackingPage]({{site.url}}/images/2025-10-10-Autopilot-with-WS1/WS1-TrackingPage.png){:style="max-width: 300px; max-height: 500px;"}
 
 This provides users with a clear view of application installations, profile deployments, and configuration progress during device provisioning.
 

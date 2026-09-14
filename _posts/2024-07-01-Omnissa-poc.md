@@ -16,7 +16,7 @@ Success criteria are often overlooked or left until later in a project, yet they
 
 [Omnissa-success-criteria.xlsx]({{site.url}}/images/2024-07-01-Omnissa-poc/Omnissa-success-criteria.xlsx)
 
-![]({{site.url}}/images/2024-07-01-Omnissa-poc/Omnissa-success-criteria.png)
+![Omnissa-success-criteria]({{site.url}}/images/2024-07-01-Omnissa-poc/Omnissa-success-criteria.png)
 
 ---
 
@@ -25,7 +25,7 @@ To help clients better understand how the Omnissa platform components interact, 
 
 | UEM | Horizon | UEM + Horizon 8 |
 |:-------------------:|:-------------------:|:-------------------:|
-| ![]({{site.url}}/images/2024-07-01-Omnissa-poc/Logical-Diagrams/UEM.drawio.png) | ![]({{site.url}}/images/2024-07-01-Omnissa-poc/Logical-Diagrams/Horizon.drawio.png) | ![]({{site.url}}/images/2024-07-01-Omnissa-poc/Logical-Diagrams/UEM+Horizon8.drawio.png) |
+| ![UEM.drawio]({{site.url}}/images/2024-07-01-Omnissa-poc/Logical-Diagrams/UEM.drawio.png) | ![Horizon.drawio]({{site.url}}/images/2024-07-01-Omnissa-poc/Logical-Diagrams/Horizon.drawio.png) | ![UEM+Horizon8.drawio]({{site.url}}/images/2024-07-01-Omnissa-poc/Logical-Diagrams/UEM+Horizon8.drawio.png) |
 | [UEM.drawio]({{site.url}}/images/2024-07-01-Omnissa-poc/Logical-Diagrams/UEM.drawio) | [Horizon.drawio]({{site.url}}/images/2024-07-01-Omnissa-poc/Logical-Diagrams/Horizon.drawio) | [UEM+Horizon8.drawio]({{site.url}}/images/2024-07-01-Omnissa-poc/Logical-Diagrams/UEM+Horizon8.drawio) |
 
 ---
@@ -35,7 +35,7 @@ During a Proof of Concept, network diagrams help bridge the gap between design a
 
 | UEM | Horizon 8 |
 |:-------------------:|:-------------------:|
-| ![]({{site.url}}/images/2024-07-01-Omnissa-poc/Network-Diagrams/UEM-ACC-Connector-UAG-PowerShell.drawio.png) | ![]({{site.url}}/images/2024-07-01-Omnissa-poc/Network-Diagrams/Horizon8-CS-AppVol-UAG.drawio.png) |
+| ![UEM-ACC-Connector-UAG-PowerShell.drawio]({{site.url}}/images/2024-07-01-Omnissa-poc/Network-Diagrams/UEM-ACC-Connector-UAG-PowerShell.drawio.png) | ![Horizon8-CS-AppVol-UAG.drawio]({{site.url}}/images/2024-07-01-Omnissa-poc/Network-Diagrams/Horizon8-CS-AppVol-UAG.drawio.png) |
 | [UEM-ACC-Connector-UAG-PowerShell.drawio]({{site.url}}/images/2024-07-01-Omnissa-poc/Network-Diagrams/UEM-ACC-Connector-UAG-PowerShell.drawio) | [Horizon8-CS-AppVol-UAG.drawio]({{site.url}}/images/2024-07-01-Omnissa-poc/Network-Diagrams/Horizon8-CS-AppVol-UAG.drawio) |
 
 ---
@@ -45,7 +45,7 @@ I’ve also created a comprehensive prerequisites spreadsheet that captures all 
 
 [Omnissa-prerequisites.xlsx]({{site.url}}/images/2024-07-01-Omnissa-poc/Omnissa-prerequisites.xlsx)
 
-![]({{site.url}}/images/2024-07-01-Omnissa-poc/Omnissa-prerequisites.png)
+![Omnissa-prerequisites]({{site.url}}/images/2024-07-01-Omnissa-poc/Omnissa-prerequisites.png)
 
 ---
 
@@ -54,7 +54,7 @@ A successful POC is only the starting point. The real value of the Omnissa platf
 
 [Omnissa-adoption-map.xlsx]({{site.url}}/images/2024-07-01-Omnissa-poc/Omnissa-adoption-map.xlsx)
 
-![]({{site.url}}/images/2024-07-01-Omnissa-poc/Omnissa-adoption-map.png)
+![Omnissa-adoption-map]({{site.url}}/images/2024-07-01-Omnissa-poc/Omnissa-adoption-map.png)
 
 ---
 

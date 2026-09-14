@@ -33,7 +33,7 @@ Create an Entra ID dynamic device group to automatically include all Windows bas
   - Microsoft Entra roles can be assigned to the group: **No**
   - Membership type: **Dynamic Device**
   - Rule syntax: `(device.devicePhysicalIds -any (_ -eq "[OrderID]:ZoomRoom"))`
-    - ![]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/Entra-Group.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![Entra-Group]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/Entra-Group.png){:style="max-width: 300px; max-height: 500px;"}
 
 ### 2.2 Autopilot profile
 Now it’s time to create and assign the Autopilot deployment profile.
@@ -43,11 +43,11 @@ Now it’s time to create and assign the Autopilot deployment profile.
 - Select **Deployment profiles**
 - Click **Create profile**
   - Configure the profile according to your requirements
-    - ![]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/Intune-Autopilot.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![Intune-Autopilot]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/Intune-Autopilot.png){:style="max-width: 300px; max-height: 500px;"}
   - Assign the profile to the Entra ID device group created in the previous step
-    - ![]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/Intune-Autopilot-Assign.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![Intune-Autopilot-Assign]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/Intune-Autopilot-Assign.png){:style="max-width: 300px; max-height: 500px;"}
   - If you have another Autopilot profile that includes all your Autopilot devices, make sure to exclude the Zoom Room group from this profile to avoid conflict.
-    - ![]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/Intune-Autopilot-Exclude.png){:style="max-width: 300px; max-height: 500px;"}
+    - ![Intune-Autopilot-Exclude]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/Intune-Autopilot-Exclude.png){:style="max-width: 300px; max-height: 500px;"}
 
 ### 2.3 Autopilot devices
 As devices are registered by your OEM, they will automatically appear in the Windows Autopilot devices list. To ensure Zoom Room devices are automatically added to the Entra ID dynamic device group created earlier, they must be assigned the appropriate **Group tag**.
@@ -57,7 +57,7 @@ To tag you Zoom Room devices:
 - Navigate to **Devices > Device onboarding > Enrollment > Windows > Windows Autopilot**
 - Select **Devices**
 - Locate the devices that will be used as Zoom Rooms and assign the `ZoomRoom` Group tag.
-- ![]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/Intune-Autopilot-DevicesTag.png){:style="max-width: 300px; max-height: 500px;"}
+- ![Intune-Autopilot-DevicesTag]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/Intune-Autopilot-DevicesTag.png){:style="max-width: 300px; max-height: 500px;"}
 
 ---
 
@@ -96,7 +96,7 @@ Depending on your room hardware and peripherals, you may also need to deploy:
 - Display management utilities
 - Vendor-specific applications
 
-![]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/WS1-Apps.png)
+![WS1-Apps]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/WS1-Apps.png)
 
 ### 3.5 Local account with auto logon
 Create a Windows local standard account that will then auto logon making the device ready to use once booted.
@@ -107,7 +107,7 @@ Create a Windows local standard account that will then auto logon making the dev
 - Log in to your Workspace ONE UEM tenant.
 - Navigate to **Resources > Scripting > Scripts**
 - Create a Windows **Script**
-  - ![]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/WS1-Script.png){:style="max-width: 300px; max-height: 500px;"}
+  - ![WS1-Script]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/WS1-Script.png){:style="max-width: 300px; max-height: 500px;"}
   - Name: Windows - ZoomRoom - local account
   - Run: System context
   - Paste the below script
@@ -273,11 +273,11 @@ Intel vPro enables out-of-band management, allowing administrators to remotely a
 To integrate Intel vPro with Workspace ONE:
 - Log in to your Workspace ONE UEM tenant.
 - Navigate to **Settings > Integrations > Intel vPro**
-  - ![]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/WS1-vPro.png){:style="max-width: 300px; max-height: 500px;"}
+  - ![WS1-vPro]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/WS1-vPro.png){:style="max-width: 300px; max-height: 500px;"}
 - Navigate to **Resources > Profiles & Baselines > Profiles**
 - Create a **Windows Desktop** profile with **Device** context
 - Add the **Intel vPro** payload and **Enable** the feature
-  - ![]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/WS1-vProProfile.png){:style="max-width: 300px; max-height: 500px;"}
+  - ![WS1-vProProfile]({{site.url}}/images/2026-06-15-Zoom-Room-WS1/WS1-vProProfile.png){:style="max-width: 300px; max-height: 500px;"}
 - Assign the profile to your Zoom Room devices
 - Download the Intel vPro driver from intel website and deploy it with Workspace ONE
   - [Download link](https://www.intel.com/content/www/us/en/download/682431/intel-management-engine-drivers-for-windows-10-and-windows-11.html)
