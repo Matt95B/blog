@@ -52,6 +52,8 @@ For advanced security capabilities, add:
 
 Some vendors bundle Chrome Enterprise Premium into their offerings. For example, [Omnissa Secure Access Suite](https://www.omnissa.com/insights/blog/omnissa-one-2025-amsterdam-google-chrome-enterprise-premium-secure-browser) includes Chrome Enterprise Premium as part of the solution, so reach out to your Omnissa representative if you prefer to procure it that way. Buying the **Omnissa Secure Access Suite** instead of Chrome Enterprise Premium alone delivers secure browser access as part of a **full, identity-driven Digital Workspace**, including Hub Experience & Unified AppCatalog, modern VPN via Workspace ONE Tunnel, conditional access through Omnissa Access, and robust BYOD support. It also lays the foundation for an **Autonomous Workspace** journey, unifying security, access, and user experience under a single intelligent platform.
 
+![Omnissa-SAS]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Omnissa-SAS.png)
+
 ![Google-Licenses]({{site.url}}/images/2026-01-15-Chrome-Enterprise/Google-Licenses.png)
 
 ### 1.4 Services review
