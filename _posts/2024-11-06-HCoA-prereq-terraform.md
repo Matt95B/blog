@@ -75,7 +75,9 @@ $resource_providers_list | ForEach-Object {
 }
 ```
 
+
 2\. Edit the `terraform.tfvars` file and adjust the variables to suit your environment.
+
 
 3\. Open your preferred terminal and browse to your Terraform deployment
 folder:
@@ -83,21 +85,25 @@ folder:
 cd ~/Downloads/Terraform_HCoAdeploy
 ```
 
+
 4\. Log in to your Azure environment and select your Azure subscription where you want to deploy Horizon Cloud
 ``` powershell
 az login
 az account set --subscription "Your Azure Subscription Name"
 ```
 
+
 5\. On the very first run, you need to get the Terraform Providers.
 ```powershell
 terraform init
 ```
 
+
 6\. Test your config using
 ```powershell
 terraform validate
 ```
+
 
 7\. Now you will be able to deploy against your settings:
 ```powershell
@@ -105,11 +111,13 @@ terraform plan -out HCoADeploy
 terraform apply HCoADeploy
 ```
 
+
 8\. Copy and save the output details once the script finishes, you will need those details when deploying the Horizon Edge. In addition, run the below commands to reveal the sensitive values.
 ```powershell
 terraform output service_principal_pwd_id
 terraform output service_principal_pwd_key
 ```
+
 
 9\. Implement the reminder of the pre-requisites for Horizon Cloud as per the [documentation](https://docs.omnissa.com/bundle/HorizonCloudServicesUsingNextGenGuide/page/RequirementsChecklistforDeployingaMicrosoftAzureEdge.html).
 
