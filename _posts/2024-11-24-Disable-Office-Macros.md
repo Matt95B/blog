@@ -2,7 +2,7 @@
 layout: post
 title: Disable Microsoft Office macros
 description: A step-by-step guide for disabling Microsoft Office macros 
-tags: [Workspace ONE, Office, Macros, Windows, macOS, Script, Essential 8]
+tags: [Workspace ONE, Office, Macros, Windows, macOS, Script, ASD Essentials]
 author: Mathieu Beaugrand
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: Privilege elevation for Windows with Workspace ONE
 description: Step by step guide to configuring Privilege Elevation profiles in Workspace ONE UEM
-tags: [Workspace ONE, Windows, DEM, Essential 8]
+tags: [Workspace ONE, Windows, DEM, ASD Essentials]
 author: Mathieu Beaugrand
 ---
 
